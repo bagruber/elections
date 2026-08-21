@@ -6,10 +6,11 @@
 // verschöbe sich beim Umschalten die Karte unter dem Blick weg, und zwei
 // Ansichten ließen sich nicht mehr vergleichen.
 //
-// Drei Ansichten:
-//   stärkste — je Gemeinde eine Farbe, die Liste mit den meisten Sitzen
-//   sitze    — je Sitz ein Feld, gefärbt nach Fraktion
-//   liste    — eine Liste ausgewählt, ihre Stärke als Sättigung der Fläche
+// Vier Ansichten:
+//   stärkste    — je Gemeinde eine Farbe, die Liste mit den meisten Sitzen
+//   sitze       — je Sitz ein Feld, gefärbt nach Fraktion
+//   liste       — eine Liste ausgewählt, ihre Stärke als Sättigung der Fläche
+//   veränderung — dieselbe Liste, aber Gewinn und Verlust seit der Wahl davor
 
 import { hexmap } from "hexagonalmap";
 import { toSVG } from "hexagonalmap/svg";
@@ -37,6 +38,21 @@ export function layout({ gebiete, grenze, wahl, fidelity = 0.6, orientation = "p
   });
 }
 
+/**
+ * Der Wert einer Liste in einer Gemeinde. Ausgewählt wird immer eine Gruppe der
+ * Kreislegende — „Freie Wähler" etwa —, in der Gemeinde stehen aber die
+ * Einzellisten. Wo mehrere davon zur selben Gruppe gehören, werden sie addiert:
+ * in Langenbach sitzen FW und FWO, und die Karte soll dort beides zeigen.
+ *
+ * @param {"anteil"|"veraenderung"|"sitze"} feld
+ */
+export function wert(gemeinde, liste, feld = "anteil") {
+  const treffer = (gemeinde?.ergebnis ?? []).filter((e) => (e.gruppe ?? e.id) === liste);
+  if (!treffer.length) return null;
+  const werte = treffer.map((e) => e[feld]).filter((v) => v != null);
+  return werte.length ? werte.reduce((a, b) => a + b, 0) : null;
+}
+
 /** Die Liste mit den meisten Sitzen; bei Gleichstand entscheidet der Stimmenanteil. */
 export function stärkste(gemeinde) {
   return gemeinde.ergebnis.reduce((a, b) =>
@@ -56,13 +72,34 @@ const MUSTER = `<defs><pattern id="ohne-liste" width="7" height="7" patternTrans
 </pattern></defs>`;
 
 /**
+ * Wie stark die Skala einer einzelnen Liste an die Karte gekoppelt wird.
+ *
+ * 0 hieße: jede Liste bekommt ihre eigene Skala, die bei ihrem eigenen
+ * Spitzenwert endet. Dann sieht eine FDP mit sieben Prozent genauso satt aus
+ * wie eine CSU mit zweiundvierzig, und der Vergleich zwischen Listen ist
+ * verloren. 1 hieße: alle Listen teilen sich die Skala bis zum stärksten Wert
+ * der ganzen Karte. Dann bleibt die FDP überall gleich blass, und der Vergleich
+ * zwischen Gemeinden ist verloren.
+ *
+ * 0,5 legt die Obergrenze auf das geometrische Mittel aus beidem — aus dem
+ * Spitzenwert der Liste und dem stärksten Wert der Karte. Die FDP erreicht
+ * damit an ihrer besten Stelle 42 Prozent der Skala statt 18 (absolut) oder 100
+ * (dynamisch): schwach erkennbar, aber innerlich noch abgestuft.
+ */
+export const KOPPLUNG = 0.5;
+
+/** Die Farben für Gewinn und Verlust. */
+const GEWINN = "#01665e";
+const VERLUST = "#8c510a";
+
+/**
  * Zeichnet eine Ansicht.
  *
  * @param {object} layout   Ergebnis von layout()
  * @param {object} wahl     Datensatz, der die Farben trägt
  * @param {object} options
- * @param {"stärkste"|"sitze"|"liste"} options.ansicht
- * @param {string} [options.liste]   Listen-ID für die Ansicht „liste"
+ * @param {"stärkste"|"sitze"|"liste"|"veränderung"} options.ansicht
+ * @param {string} [options.liste]   Listen-ID für „liste" und „veränderung"
  * @param {boolean} [options.beschriftung]
  */
 export function zeichne(layout, wahl, { ansicht, liste, breite = 1000, beschriftung = true } = {}) {
@@ -87,7 +124,10 @@ export function zeichne(layout, wahl, { ansicht, liste, breite = 1000, beschrift
       (region) => (gemeindeVon(region)?.ergebnis ?? []).map((e) => ({ key: e.id, value: e.sitze ?? 0 })),
       "blocks"
     );
-    const farben = new Map(wahl.listen.map((l) => [l.id, l.farbe]));
+    // Die Farben kommen aus den Gemeindeergebnissen, nicht aus wahl.listen:
+    // dort stehen die Gruppen der Kreislegende („Freie Wähler“, „Gemeinsame
+    // Wahlvorschläge“), split() teilt die Felder aber nach den Einzellisten auf.
+    const farben = new Map(wahl.gemeinden.flatMap((g) => g.ergebnis.map((e) => [e.id, e.farbe])));
     return mitMuster(
       toSVG(layout, {
         ...gemeinsam,
@@ -103,20 +143,43 @@ export function zeichne(layout, wahl, { ansicht, liste, breite = 1000, beschrift
   }
 
   if (ansicht === "liste") {
-    const werte = wahl.gemeinden.map((g) => g.ergebnis.find((e) => e.id === liste)?.anteil).filter((v) => v != null);
-    const höchster = Math.max(...werte, 0);
+    const { decke } = spanne(wahl, liste);
     const grundfarbe = wahl.listen.find((l) => l.id === liste)?.farbe ?? "#666";
+    const anteilVon = (region) => wert(gemeindeVon(region), liste, "anteil");
 
     return mitMuster(
       toSVG(layout, {
         ...gemeinsam,
         fill: (region) => {
-          const anteil = gemeindeVon(region)?.ergebnis.find((e) => e.id === liste)?.anteil;
-          return anteil == null ? OHNE : mische(GRUND, grundfarbe, höchster ? anteil / höchster : 0);
+          const anteil = anteilVon(region);
+          return anteil == null ? OHNE : mische(GRUND, grundfarbe, decke ? anteil / decke : 0);
         },
         labelColour: (region) => {
-          const anteil = gemeindeVon(region)?.ergebnis.find((e) => e.id === liste)?.anteil;
-          return anteil != null && höchster && anteil / höchster > 0.55 ? "#faf7f0" : "#1b1814";
+          const anteil = anteilVon(region);
+          return anteil != null && decke && anteil / decke > 0.55 ? "#faf7f0" : "#1b1814";
+        },
+      })
+    );
+  }
+
+  if (ansicht === "veränderung") {
+    const { ausschlag } = schwankung(wahl, liste);
+    const punkteVon = (region) => wert(gemeindeVon(region), liste, "veraenderung");
+
+    return mitMuster(
+      toSVG(layout, {
+        ...gemeinsam,
+        fill: (region) => {
+          const punkte = punkteVon(region);
+          if (punkte == null) return OHNE;
+          // Die Mitte ist der Grundton: keine Veränderung heißt keine Farbe.
+          // Nach oben und unten läuft je ein eigener Ton, damit sich Vorzeichen
+          // und Betrag getrennt ablesen lassen.
+          return mische(GRUND, punkte >= 0 ? GEWINN : VERLUST, ausschlag ? Math.abs(punkte) / ausschlag : 0);
+        },
+        labelColour: (region) => {
+          const punkte = punkteVon(region);
+          return punkte != null && ausschlag && Math.abs(punkte) / ausschlag > 0.5 ? "#faf7f0" : "#1b1814";
         },
       })
     );
@@ -144,11 +207,74 @@ function mitMuster(svg) {
 ${MUSTER}`);
 }
 
-/** Die Bandbreite, die eine Listen-Ansicht abdeckt — die Legende braucht sie. */
+/**
+ * Die Bandbreite, die eine Listen-Ansicht abdeckt — die Legende braucht sie.
+ * `decke` ist der Wert, bei dem die Skala endet: nicht der Spitzenwert dieser
+ * Liste und nicht der der Karte, sondern das geometrische Mittel aus beidem.
+ * Warum, steht bei KOPPLUNG.
+ */
 export function spanne(wahl, liste) {
-  const werte = wahl.gemeinden.map((g) => g.ergebnis.find((e) => e.id === liste)?.anteil).filter((v) => v != null);
-  return { höchster: Math.max(...werte, 0), gemeinden: werte.length };
+  const werte = wahl.gemeinden.map((g) => wert(g, liste, "anteil")).filter((v) => v != null);
+  const höchster = Math.max(...werte, 0);
+  // Die Referenz zählt Gruppen, nicht Einzellisten — sonst wären die beiden
+  // Maßstäbe verschieden und die Skala hinge schief.
+  const stark = starkesErgebnis(alleGruppenwerte(wahl, "anteil"));
+  return {
+    höchster,
+    stark,
+    decke: höchster > 0 ? höchster ** (1 - KOPPLUNG) * stark ** KOPPLUNG : 0,
+    gemeinden: werte.length,
+  };
 }
+
+/**
+ * Was auf dieser Karte als starkes Ergebnis gilt: der Wert, den nur jedes
+ * zehnte Gemeindeergebnis übertrifft.
+ *
+ * Nicht das Maximum — das wäre hier 99,8 Prozent, weil in Hörgertshausen nur
+ * eine einzige Liste angetreten ist. Ein solcher Sonderfall zöge jede Skala so
+ * weit hoch, dass selbst die CSU nirgends mehr voll sättigt. Werte oberhalb der
+ * Grenze laufen einfach ans obere Ende; das ist der Sinn einer robusten Skala
+ * und kein Verlust, denn ganz oben ist ganz oben.
+ */
+/** Alle Gemeindewerte, nach Gruppen zusammengefasst — der Maßstab der Karte. */
+function alleGruppenwerte(wahl, feld) {
+  return wahl.gemeinden.flatMap((g) => [...new Set(g.ergebnis.map((e) => e.gruppe ?? e.id))].map((id) => wert(g, id, feld)));
+}
+
+function starkesErgebnis(werte) {
+  const sortiert = werte.filter((v) => v != null).sort((a, b) => a - b);
+  return sortiert.length ? sortiert[Math.floor((sortiert.length - 1) * 0.9)] : 0;
+}
+
+/**
+ * Dasselbe für Gewinn und Verlust. Der Ausschlag ist symmetrisch: eine Skala,
+ * die nach oben weiter reicht als nach unten, ließe drei Punkte Verlust
+ * kräftiger aussehen als drei Punkte Gewinn.
+ */
+export function schwankung(wahl, liste) {
+  const werte = wahl.gemeinden.map((g) => wert(g, liste, "veraenderung")).filter((v) => v != null);
+  if (!werte.length) return { ausschlag: 0, gemeinden: 0, tief: null, hoch: null };
+
+  const eigener = Math.max(...werte.map(Math.abs));
+  const stark = starkesErgebnis(alleGruppenwerte(wahl, "veraenderung").map((v) => (v == null ? null : Math.abs(v))));
+  return {
+    ausschlag: eigener ** (1 - KOPPLUNG) * stark ** KOPPLUNG,
+    eigener,
+    stark,
+    tief: Math.min(...werte),
+    hoch: Math.max(...werte),
+    gemeinden: werte.length,
+  };
+}
+
+/** Die Farbe für einen Veränderungswert — Legende und Karte müssen dieselbe zeigen. */
+export function farbeVeraenderung(punkte, ausschlag) {
+  if (punkte == null) return OHNE;
+  return mische(GRUND, punkte >= 0 ? GEWINN : VERLUST, ausschlag ? Math.abs(punkte) / ausschlag : 0);
+}
+
+export { GRUND, GEWINN, VERLUST };
 
 /**
  * Mischt zwei Farben in OKLab statt in sRGB. Der Unterschied ist hier keine

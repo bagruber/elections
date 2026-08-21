@@ -91,7 +91,7 @@ export function leseAkdb(html) {
 
   const listen = [];
   const kennzahlen = {};
-  for (const zeile of [...uebersicht.matchAll(/<tr[\s\S]*?<\/tr>/g)].map((m) => m[0])) {
+  for (const zeile of ohneWaehlerbenannte([...uebersicht.matchAll(/<tr[\s\S]*?<\/tr>/g)].map((m) => m[0]))) {
     const felder = [...zeile.matchAll(/<(?:th|td)[\s\S]*?<\/(?:th|td)>/g)].map((m) => text(m[0]));
     if (felder.length < 3 || !/\d/.test(felder[1])) continue;
 
@@ -100,11 +100,90 @@ export function leseAkdb(html) {
       kennzahlen[KENNZAHLEN[bezeichnung]] = zahl(anzahl);
       if (bezeichnung === "Wähler") kennzahlen.wahlbeteiligung = zahl(anteil);
     } else if (!/Ungültige/.test(bezeichnung)) {
-      listen.push({ name: bezeichnung, stimmen: zahl(anzahl), anteil: zahl(anteil), veraenderung: zahl(veraenderung) });
+      // Hinter dem Kürzel steht der ausgeschriebene Name im abbr-Titel. Ohne ihn
+      // wäre „FWI" nicht von „FWO" zu unterscheiden — und nicht zu entscheiden,
+      // ob beide zu den Freien Wählern gehören.
+      const lang = text(zeile.match(/<abbr title="([^"]*)"/)?.[1] ?? "") || null;
+      listen.push({
+        name: bezeichnung,
+        lang: lang === bezeichnung ? null : lang,
+        stimmen: zahl(anzahl),
+        anteil: zahl(anteil),
+        veraenderung: zahl(veraenderung),
+      });
     }
   }
 
   return { gebiet, listen, kennzahlen };
+}
+
+/**
+ * Das Ergebnis der Vergleichswahl, aus der Vergleichsgrafik derselben Seite.
+ *
+ * Warum nicht aus der Spalte „Gewinn und Verlust in %-Punkten" der
+ * Übersichtstabelle: die stimmt nicht. In Allershausen etwa führt die Tabelle
+ * für die AfD −16,8 Punkte, während dieselbe Seite in der Grafik 4,1 % für 2020
+ * und 10,4 % für 2026 ausweist — also +6,3. Für CSU, SPD und Die Linke passt
+ * die Spalte, für die übrigen sechs Listen nicht. Die Grafik trägt beide
+ * Ergebnisse als Zahl; daraus lässt sich die Veränderung selbst ausrechnen und
+ * gegen die Anteile prüfen, statt einer Spalte zu glauben.
+ *
+ * @returns {{ vergleichswahl: string, listen: Array<{name, anteil, vorher, veraenderung}> }|null}
+ */
+export function leseVergleich(html) {
+  for (const treffer of html.matchAll(/data-chartdata="([^"]*)"\s+data-chartoptions="([^"]*)"/g)) {
+    const titel = entwerte(treffer[2]).match(/"title":"([^"]*)"/)?.[1] ?? "";
+    if (!/^Vergleich\s*[-–]\s*\S/.test(titel)) continue;
+
+    const reihen = JSON.parse(entwerte(treffer[1])).dataSeries ?? [];
+    const [jetzt, vorher] = reihen.map((r) => r.dataSets);
+    if (!jetzt || !vorher) continue;
+
+    const alt = new Map(vorher.map((d) => [d.label, d.value]));
+    return {
+      vergleichswahl: titel.replace(/^Vergleich\s*[-–]\s*/, ""),
+      listen: jetzt.map((d) => ({
+        name: d.label,
+        anteil: runde(d.value),
+        vorher: alt.has(d.label) ? runde(alt.get(d.label)) : null,
+        // Wer neu antritt, hat keinen Vorwert — das ist etwas anderes als null
+        // Veränderung und bleibt deshalb leer.
+        veraenderung: alt.has(d.label) ? runde(d.value - alt.get(d.label)) : null,
+      })),
+    };
+  }
+  return null;
+}
+
+const runde = (v) => (Number.isFinite(v) ? Math.round(v * 10) / 10 : null);
+
+/** Entschlüsselt einen Attributwert, ohne ihn sonst anzurühren. */
+function entwerte(wert) {
+  return wert
+    .replace(/&#(\d+);/g, (_, d) => String.fromCharCode(+d))
+    .replace(/&(\w+);/g, (m, n) => ENTITAETEN[n] ?? m);
+}
+
+/**
+ * Nimmt die wählerbenannten Personen aus der Übersicht. Wo nur ein
+ * Wahlvorschlag antritt — in Hörgertshausen ist es einer für alle zwölf Sitze —
+ * schreiben Wählerinnen und Wähler eigene Namen auf den Zettel. Die Software
+ * führt jeden davon als eigene Zeile, unmittelbar vor der Summenzeile der
+ * Gruppe. Wahlvorschläge sind das nicht: sie bekämen keinen Sitz und stünden
+ * mit drei Stimmen als eigene Liste in der Legende.
+ */
+function ohneWaehlerbenannte(zeilen) {
+  const summe = zeilen.findIndex((z) => text(z).startsWith("Wählerbenannte Personen"));
+  if (summe < 0) return zeilen;
+
+  // Die Einzelnamen tragen dasselbe neutrale Listenzeichen wie ihre Summenzeile,
+  // echte Wahlvorschläge ihre eigene Farbe. Daran hängt die Blockgrenze.
+  const zeichen = (z) => z.match(/partei__farbe[^>]*color:\s*(#[0-9a-fA-F]{3,6})/)?.[1]?.toLowerCase() ?? null;
+  const neutral = zeichen(zeilen[summe]);
+  let erste = summe;
+  while (neutral && erste > 0 && zeichen(zeilen[erste - 1]) === neutral) erste--;
+
+  return [...zeilen.slice(0, erste), ...zeilen.slice(summe + 1)];
 }
 
 /**
@@ -146,7 +225,9 @@ export function leseGewaehlte(html) {
   }
 
   for (const tabelle of tabellen) {
-    if (!titel(tabelle[0]).startsWith("Kandidatenstimmen")) continue;
+    // Dieselbe Tabelle heißt je nach Fassung „Kandidatenstimmen" oder
+    // „Ergebnisse aller Bewerberinnen und Bewerber".
+    if (!/^(Kandidatenstimmen|Ergebnisse aller Bewerber)/.test(titel(tabelle[0]))) continue;
     // Der Listenname steht nicht in der Tabelle, sondern in der Überschrift davor.
     const davor = html.slice(Math.max(0, tabelle.index - 1500), tabelle.index);
     const liste = text([...davor.matchAll(/<h[1-6][^>]*>([\s\S]*?)<\/h[1-6]>/g)].at(-1)?.[1] ?? "");

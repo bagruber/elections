@@ -11,14 +11,27 @@
     },
     "kreistag": "https://kreistagswahl.kreis-freising.de/ergebnisse_gemeinde_{ags}.html",
     "gemeinden": {
+      "09178115": "https://wahlen.vg-zolling.de/2026/gr/ergebnisse_gemeinde_09178115.html",
+      "09178116": "https://wahl.rathaus-au.de/3mgr/ergebnisse.html",
       "09178120": "https://wahlen.osrz-akdb.de/ob-p/178120/2/20260308/gemeinderatswahl_gemeinde/index.html",
       "09178122": "https://wahlen.osrz-akdb.de/ob-p/178122/2/20260308/gemeinderatswahl_gemeinde/index.html",
       "09178123": "https://wahlen.osrz-akdb.de/ob-p/178123/0/20260308/gemeinderatswahl_gemeinde/index.html",
       "09178124": "https://wahl.freising.de/Stadtrat_2026/",
+      "09178125": "https://vg-mauern.de/gemeinderatswahl-2026/ergebnisse_gemeinde_09178125.html",
+      "09178129": "https://wahlen.vg-zolling.de/2026/gr/ergebnisse_gemeinde_09178129.html",
       "09178130": "https://www.hallbergmoos.de/wahlen/Kommunal2026/",
+      "09178132": "https://vg-mauern.de/gemeinderatswahl-2026/ergebnisse_gemeinde_09178132.html",
+      "09178133": "https://www.hohenkammer.de/Wahlen/GR-2026/ergebnisse_gemeinde_09178133.html",
       "09178136": "https://wahlen.osrz-akdb.de/ob-p/178136/2/20260308/gemeinderatswahl_gemeinde/index.html",
+      "09178137": "https://wahlen.kranzberg.de/2026_GR/",
+      "09178138": "https://www.gemeinde-langenbach.de/site/assets/uploads/gemeinderatswahl/ergebnisse.html",
+      "09178140": "https://www.marzling.de/wahlen/2026gr/ergebnisse.html",
+      "09178142": "https://vg-mauern.de/gemeinderatswahl-2026/ergebnisse_gemeinde_09178142.html",
       "09178143": "https://wahlen.osrz-akdb.de/ob-p/178143/2/20260308/gemeinderatswahl_gemeinde/index.html",
-      "09178144": "https://markt-nandlstadt.de/wahlen2026/ergebnisse.html"
+      "09178144": "https://markt-nandlstadt.de/wahlen2026/ergebnisse.html",
+      "09178155": "https://vg-mauern.de/gemeinderatswahl-2026/ergebnisse_gemeinde_09178155.html",
+      "09178156": "https://wahlen.vg-zolling.de/2026/gr/ergebnisse_gemeinde_09178156.html",
+      "09178157": "https://wahlen.vg-zolling.de/2026/gr/ergebnisse_gemeinde_09178157.html"
     }
   }
 }

@@ -101,6 +101,12 @@ main {
   gap: 0.4rem;
 }
 
+/* display: grid schlägt sonst die eingebaute Regel für [hidden], und die
+   Steuerelemente stünden auch dort, wo sie nichts steuern. */
+[hidden] {
+  display: none !important;
+}
+
 select {
   font: inherit;
   font-size: 0.9375rem;
@@ -140,6 +146,13 @@ select {
   color: var(--paper);
 }
 
+/* Wo eine Ebene keinen prüfbaren Vergleich hat, bleibt der Knopf sichtbar, aber
+   erkennbar außer Betrieb — verschwände er, sprünge die Leiste beim Umschalten. */
+.segmented button:disabled {
+  color: var(--rule);
+  cursor: not-allowed;
+}
+
 .segmented button:focus-visible,
 select:focus-visible {
   outline: 2px solid var(--accent);
@@ -156,6 +169,16 @@ select:focus-visible {
   color: var(--ink-soft);
   font-size: 0.8125rem;
   line-height: 1.5;
+}
+
+.hinweis p {
+  margin: 0;
+}
+
+.hinweis p + p {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--rule);
 }
 
 /* Karte */
@@ -238,10 +261,45 @@ figcaption {
   font-size: 0.875rem;
 }
 
+.legende-mass {
+  margin: 0.5rem 0 0;
+  font-size: var(--label);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
 .legende li {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 0.5rem;
+}
+
+.legende-wert {
+  color: var(--ink-soft);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Der Balken trägt die Größenverhältnisse nach, ohne eine Spalte zu belegen:
+   eine dünne Linie unter der Zeile, in der Farbe der Liste. Der Name bleibt
+   das, was zuerst gelesen wird. */
+.legende li.mit-balken {
+  position: relative;
+  padding-bottom: 0.3rem;
+}
+
+.legende li.mit-balken::after {
+  content: "";
+  position: absolute;
+  left: 1.35rem;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  border-radius: 1px;
+  background: linear-gradient(to right, var(--balkenfarbe) var(--balken), transparent var(--balken));
+  opacity: 0.55;
 }
 
 .ablesung li {
@@ -281,6 +339,47 @@ figcaption {
   margin: 0.75rem 0 0;
   color: var(--ink-soft);
   font-size: 0.8125rem;
+}
+
+/* Herkunft — welche Angabe aus welcher Quelle stammt. Bei zwei Quellen, die
+   verschieden viel wissen, gehört das auf die Seite und nicht nur ins README. */
+
+.herkunft {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+}
+
+.herkunft dl {
+  margin: 0.75rem 0 0;
+  display: grid;
+  grid-template-columns: minmax(9rem, auto) 1fr;
+  gap: 0.4rem 1.25rem;
+  font-size: 0.875rem;
+}
+
+.herkunft dt {
+  font-weight: 620;
+}
+
+.herkunft dd {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.herkunft dd strong {
+  color: var(--ink);
+  font-weight: 560;
+}
+
+@media (max-width: 40rem) {
+  .herkunft dl {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+  .herkunft dd {
+    margin-bottom: 0.6rem;
+  }
 }
 
 /* Tabelle — der zweite Kanal neben der Farbe. Sie ist nicht nur Beiwerk:

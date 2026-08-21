@@ -43,6 +43,9 @@
             <button type="button" role="radio" aria-checked="true" data-ansicht="stärkste">Stärkste Liste</button>
             <button type="button" role="radio" aria-checked="false" data-ansicht="sitze">Sitzverteilung</button>
             <button type="button" role="radio" aria-checked="false" data-ansicht="liste">Eine Liste</button>
+            <button type="button" role="radio" aria-checked="false" data-ansicht="veränderung" id="knopf-veränderung">
+              Gewinn und Verlust
+            </button>
           </div>
         </div>
 
@@ -72,6 +75,7 @@
       <div class="unten">
         <section class="legende" aria-labelledby="legende-titel">
           <h2 id="legende-titel">Legende</h2>
+          <p class="legende-mass" id="legende-mass"></p>
           <ul id="legende"></ul>
         </section>
 
@@ -80,6 +84,11 @@
           <div id="ablesung"><p class="leer">Auf eine Fläche zeigen.</p></div>
         </section>
       </div>
+
+      <section class="herkunft" aria-labelledby="herkunft-titel">
+        <h2 id="herkunft-titel">Woher die Zahlen kommen</h2>
+        <div id="herkunft"></div>
+      </section>
 
       <section class="tabelle" aria-labelledby="tabelle-titel">
         <h2 id="tabelle-titel">Alle Zahlen</h2>

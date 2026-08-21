@@ -7,7 +7,7 @@
 // woher eine Zahl kommt. Aufbereitet wird erst in baue.mjs.
 
 import { mkdir, writeFile, readFile } from "node:fs/promises";
-import { genesis, leseAkdb, leseGewaehlte, zaehleSitze } from "./quellen.mjs";
+import { genesis, leseAkdb, leseGewaehlte, leseVergleich, zaehleSitze } from "./quellen.mjs";
 
 const wurzel = new URL("../", import.meta.url);
 const register = JSON.parse(await readFile(new URL("data/register.json", wurzel), "utf8"));
@@ -36,8 +36,12 @@ const gemeinden = ergebnisSchluessel(sitzCsv);
 const kreistag = {};
 for (const ags of gemeinden) {
   const html = await hole(wahl.kreistag.replace("{ags}", ags));
-  kreistag[ags] = leseAkdb(html);
-  console.log(`kreistag  ${ags}  ${kreistag[ags].gebiet}  ${kreistag[ags].listen.length} Listen`);
+  // Die Vergleichsgrafik trägt beide Wahlen als Zahl. Sie ist die einzige
+  // belastbare Quelle für Gewinn und Verlust: die Spalte in der Übersicht
+  // daneben weicht bei zwei Dritteln der Listen davon ab.
+  kreistag[ags] = { ...leseAkdb(html), vergleich: leseVergleich(html) };
+  const v = kreistag[ags].vergleich;
+  console.log(`kreistag  ${ags}  ${kreistag[ags].gebiet}  ${kreistag[ags].listen.length} Listen  ${v ? `Vergleich: ${v.vergleichswahl}` : "ohne Vergleich"}`);
 }
 await writeFile(new URL("kreistag.json", ordner), JSON.stringify(kreistag, null, 2), "utf8");
 
@@ -57,10 +61,20 @@ for (const [ags, url] of Object.entries(wahl.gemeinden ?? {})) {
 }
 await writeFile(new URL("gemeinden.json", ordner), JSON.stringify(oertlich, null, 2), "utf8");
 
-async function hole(url) {
-  const antwort = await fetch(url);
-  if (!antwort.ok) throw new Error(`HTTP ${antwort.status}`);
-  return antwort.text();
+// Zwei Dutzend Abrufe hintereinander sind für manche Gemeindeserver zu viel;
+// Kranzberg bricht dann die Verbindung ab und antwortet einen Atemzug später
+// wieder anstandslos. Ein zweiter Versuch ist billiger als eine Lücke.
+async function hole(url, versuche = 3) {
+  for (let i = 1; ; i++) {
+    try {
+      const antwort = await fetch(url);
+      if (!antwort.ok) throw new Error(`HTTP ${antwort.status}`);
+      return await antwort.text();
+    } catch (e) {
+      if (i >= versuche) throw e;
+      await new Promise((fertig) => setTimeout(fertig, 1000 * i));
+    }
+  }
 }
 
 /** Achtstellige Gemeindeschlüssel aus einer GENESIS-CSV, ohne den Kreis selbst. */

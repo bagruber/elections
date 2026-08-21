@@ -4,54 +4,63 @@
     "listen": [
       {
         "name": "CSU",
+        "lang": "Christlich-Soziale Union in Bayern e.V.",
         "stimmen": 58967,
         "anteil": 36.2,
         "veraenderung": 1.2
       },
       {
         "name": "FREIE WÄHLER",
+        "lang": "FREIE WÄHLER/Freie Wähler - Kreis Freising e.V.",
         "stimmen": 37528,
         "anteil": 23.1,
         "veraenderung": 8.7
       },
       {
         "name": "AfD",
+        "lang": "Alternative für Deutschland",
         "stimmen": 16972,
         "anteil": 10.4,
         "veraenderung": -16.8
       },
       {
         "name": "GRÜNE",
+        "lang": "BÜNDNIS 90/DIE GRÜNEN",
         "stimmen": 20724,
         "anteil": 12.7,
         "veraenderung": 8.6
       },
       {
         "name": "SPD",
+        "lang": "Sozialdemokratische Partei Deutschlands",
         "stimmen": 12981,
         "anteil": 8,
         "veraenderung": 2
       },
       {
         "name": "FSM",
+        "lang": "Freisinger Mitte e.V.",
         "stimmen": 3079,
         "anteil": 1.9,
         "veraenderung": -2.5
       },
       {
         "name": "ÖDP",
+        "lang": "Ökologisch-Demokratische Partei",
         "stimmen": 2563,
         "anteil": 1.6,
         "veraenderung": -2.5
       },
       {
         "name": "FDP",
+        "lang": "Freie Demokratische Partei",
         "stimmen": 6638,
         "anteil": 4.1,
         "veraenderung": 1.1
       },
       {
         "name": "Die Linke",
+        "lang": null,
         "stimmen": 3260,
         "anteil": 2,
         "veraenderung": 0.3
@@ -62,6 +71,65 @@
       "waehler": 2742,
       "wahlbeteiligung": 60.2,
       "gueltige": 162712
+    },
+    "vergleich": {
+      "vergleichswahl": "Kreistagswahl 2020",
+      "listen": [
+        {
+          "name": "CSU",
+          "anteil": 36.2,
+          "vorher": 35,
+          "veraenderung": 1.2
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "anteil": 23.1,
+          "vorher": 27.2,
+          "veraenderung": -4.2
+        },
+        {
+          "name": "AfD",
+          "anteil": 10.4,
+          "vorher": 4.1,
+          "veraenderung": 6.3
+        },
+        {
+          "name": "GRÜNE",
+          "anteil": 12.7,
+          "vorher": 14.3,
+          "veraenderung": -1.6
+        },
+        {
+          "name": "SPD",
+          "anteil": 8,
+          "vorher": 6,
+          "veraenderung": 2
+        },
+        {
+          "name": "FSM",
+          "anteil": 1.9,
+          "vorher": 4.1,
+          "veraenderung": -2.2
+        },
+        {
+          "name": "ÖDP",
+          "anteil": 1.6,
+          "vorher": 3,
+          "veraenderung": -1.4
+        },
+        {
+          "name": "FDP",
+          "anteil": 4.1,
+          "vorher": 4.4,
+          "veraenderung": -0.4
+        },
+        {
+          "name": "Die Linke",
+          "anteil": 2,
+          "vorher": 1.7,
+          "veraenderung": 0.3
+        }
+      ]
     }
   },
   "09178115": {
@@ -69,54 +137,63 @@
     "listen": [
       {
         "name": "CSU",
+        "lang": "Christlich-Soziale Union in Bayern e.V.",
         "stimmen": 24973,
         "anteil": 26.7,
         "veraenderung": 2.1
       },
       {
         "name": "FREIE WÄHLER",
+        "lang": "FREIE WÄHLER/Freie Wähler - Kreis Freising e.V.",
         "stimmen": 21704,
         "anteil": 23.2,
         "veraenderung": 4.9
       },
       {
         "name": "AfD",
+        "lang": "Alternative für Deutschland",
         "stimmen": 13591,
         "anteil": 14.5,
         "veraenderung": -8.4
       },
       {
         "name": "GRÜNE",
+        "lang": "BÜNDNIS 90/DIE GRÜNEN",
         "stimmen": 12372,
         "anteil": 13.2,
         "veraenderung": 5.6
       },
       {
         "name": "SPD",
+        "lang": "Sozialdemokratische Partei Deutschlands",
         "stimmen": 8009,
         "anteil": 8.5,
         "veraenderung": 3.2
       },
       {
         "name": "FSM",
+        "lang": "Freisinger Mitte e.V.",
         "stimmen": 6237,
         "anteil": 6.7,
         "veraenderung": 3.6
       },
       {
         "name": "ÖDP",
+        "lang": "Ökologisch-Demokratische Partei",
         "stimmen": 3057,
         "anteil": 3.3,
         "veraenderung": -9.2
       },
       {
         "name": "FDP",
+        "lang": "Freie Demokratische Partei",
         "stimmen": 1669,
         "anteil": 1.8,
         "veraenderung": -1.6
       },
       {
         "name": "Die Linke",
+        "lang": null,
         "stimmen": 2082,
         "anteil": 2.2,
         "veraenderung": -0.2
@@ -127,6 +204,65 @@
       "waehler": 1502,
       "wahlbeteiligung": 68.7,
       "gueltige": 93694
+    },
+    "vergleich": {
+      "vergleichswahl": "Kreistagswahl 2020",
+      "listen": [
+        {
+          "name": "CSU",
+          "anteil": 26.7,
+          "vorher": 24.6,
+          "veraenderung": 2.1
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "anteil": 23.2,
+          "vorher": 22.9,
+          "veraenderung": 0.2
+        },
+        {
+          "name": "AfD",
+          "anteil": 14.5,
+          "vorher": 7.6,
+          "veraenderung": 6.9
+        },
+        {
+          "name": "GRÜNE",
+          "anteil": 13.2,
+          "vorher": 18.3,
+          "veraenderung": -5.1
+        },
+        {
+          "name": "SPD",
+          "anteil": 8.5,
+          "vorher": 5.3,
+          "veraenderung": 3.2
+        },
+        {
+          "name": "FSM",
+          "anteil": 6.7,
+          "vorher": 12.5,
+          "veraenderung": -5.8
+        },
+        {
+          "name": "ÖDP",
+          "anteil": 3.3,
+          "vorher": 3.4,
+          "veraenderung": -0.1
+        },
+        {
+          "name": "FDP",
+          "anteil": 1.8,
+          "vorher": 3,
+          "veraenderung": -1.2
+        },
+        {
+          "name": "Die Linke",
+          "anteil": 2.2,
+          "vorher": 2.5,
+          "veraenderung": -0.2
+        }
+      ]
     }
   },
   "09178116": {
@@ -134,54 +270,63 @@
     "listen": [
       {
         "name": "CSU",
+        "lang": "Christlich-Soziale Union in Bayern e.V.",
         "stimmen": 64443,
         "anteil": 34.7,
         "veraenderung": 2.5
       },
       {
         "name": "FREIE WÄHLER",
+        "lang": "FREIE WÄHLER/Freie Wähler - Kreis Freising e.V.",
         "stimmen": 47462,
         "anteil": 25.6,
         "veraenderung": 11.8
       },
       {
         "name": "AfD",
+        "lang": "Alternative für Deutschland",
         "stimmen": 28272,
         "anteil": 15.2,
         "veraenderung": -20.1
       },
       {
         "name": "GRÜNE",
+        "lang": "BÜNDNIS 90/DIE GRÜNEN",
         "stimmen": 15991,
         "anteil": 8.6,
         "veraenderung": 1.5
       },
       {
         "name": "SPD",
+        "lang": "Sozialdemokratische Partei Deutschlands",
         "stimmen": 8321,
         "anteil": 4.5,
         "veraenderung": 0.3
       },
       {
         "name": "FSM",
+        "lang": "Freisinger Mitte e.V.",
         "stimmen": 7274,
         "anteil": 3.9,
         "veraenderung": 1.7
       },
       {
         "name": "ÖDP",
+        "lang": "Ökologisch-Demokratische Partei",
         "stimmen": 4762,
         "anteil": 2.6,
         "veraenderung": 0.4
       },
       {
         "name": "FDP",
+        "lang": "Freie Demokratische Partei",
         "stimmen": 5365,
         "anteil": 2.9,
         "veraenderung": 1.3
       },
       {
         "name": "Die Linke",
+        "lang": null,
         "stimmen": 3846,
         "anteil": 2.1,
         "veraenderung": 0.7
@@ -192,6 +337,65 @@
       "waehler": 3241,
       "wahlbeteiligung": 67.1,
       "gueltige": 185736
+    },
+    "vergleich": {
+      "vergleichswahl": "Kreistagswahl 2020",
+      "listen": [
+        {
+          "name": "CSU",
+          "anteil": 34.7,
+          "vorher": 32.2,
+          "veraenderung": 2.5
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "anteil": 25.6,
+          "vorher": 35.3,
+          "veraenderung": -9.8
+        },
+        {
+          "name": "AfD",
+          "anteil": 15.2,
+          "vorher": 7.1,
+          "veraenderung": 8.1
+        },
+        {
+          "name": "GRÜNE",
+          "anteil": 8.6,
+          "vorher": 13.7,
+          "veraenderung": -5.1
+        },
+        {
+          "name": "SPD",
+          "anteil": 4.5,
+          "vorher": 4.2,
+          "veraenderung": 0.3
+        },
+        {
+          "name": "FSM",
+          "anteil": 3.9,
+          "vorher": 2.2,
+          "veraenderung": 1.7
+        },
+        {
+          "name": "ÖDP",
+          "anteil": 2.6,
+          "vorher": 1.6,
+          "veraenderung": 1
+        },
+        {
+          "name": "FDP",
+          "anteil": 2.9,
+          "vorher": 2.3,
+          "veraenderung": 0.6
+        },
+        {
+          "name": "Die Linke",
+          "anteil": 2.1,
+          "vorher": 1.4,
+          "veraenderung": 0.7
+        }
+      ]
     }
   },
   "09178120": {
@@ -199,54 +403,63 @@
     "listen": [
       {
         "name": "CSU",
+        "lang": "Christlich-Soziale Union in Bayern e.V.",
         "stimmen": 134124,
         "anteil": 32.4,
         "veraenderung": 4.1
       },
       {
         "name": "FREIE WÄHLER",
+        "lang": "FREIE WÄHLER/Freie Wähler - Kreis Freising e.V.",
         "stimmen": 69081,
         "anteil": 16.7,
         "veraenderung": -6.4
       },
       {
         "name": "AfD",
+        "lang": "Alternative für Deutschland",
         "stimmen": 38515,
         "anteil": 9.3,
         "veraenderung": -4.1
       },
       {
         "name": "GRÜNE",
+        "lang": "BÜNDNIS 90/DIE GRÜNEN",
         "stimmen": 67986,
         "anteil": 16.4,
         "veraenderung": 12
       },
       {
         "name": "SPD",
+        "lang": "Sozialdemokratische Partei Deutschlands",
         "stimmen": 48778,
         "anteil": 11.8,
         "veraenderung": -4.3
       },
       {
         "name": "FSM",
+        "lang": "Freisinger Mitte e.V.",
         "stimmen": 12888,
         "anteil": 3.1,
         "veraenderung": -0.7
       },
       {
         "name": "ÖDP",
+        "lang": "Ökologisch-Demokratische Partei",
         "stimmen": 12468,
         "anteil": 3,
         "veraenderung": -0.4
       },
       {
         "name": "FDP",
+        "lang": "Freie Demokratische Partei",
         "stimmen": 14795,
         "anteil": 3.6,
         "veraenderung": -1.5
       },
       {
         "name": "Die Linke",
+        "lang": null,
         "stimmen": 14703,
         "anteil": 3.6,
         "veraenderung": 1.2
@@ -257,6 +470,65 @@
       "waehler": 6602,
       "wahlbeteiligung": 59.5,
       "gueltige": 413338
+    },
+    "vergleich": {
+      "vergleichswahl": "Kreistagswahl 2020",
+      "listen": [
+        {
+          "name": "CSU",
+          "anteil": 32.4,
+          "vorher": 28.3,
+          "veraenderung": 4.1
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "anteil": 16.7,
+          "vorher": 13.4,
+          "veraenderung": 3.3
+        },
+        {
+          "name": "AfD",
+          "anteil": 9.3,
+          "vorher": 4.5,
+          "veraenderung": 4.9
+        },
+        {
+          "name": "GRÜNE",
+          "anteil": 16.4,
+          "vorher": 23.1,
+          "veraenderung": -6.7
+        },
+        {
+          "name": "SPD",
+          "anteil": 11.8,
+          "vorher": 16.1,
+          "veraenderung": -4.3
+        },
+        {
+          "name": "FSM",
+          "anteil": 3.1,
+          "vorher": 3.5,
+          "veraenderung": -0.3
+        },
+        {
+          "name": "ÖDP",
+          "anteil": 3,
+          "vorher": 5,
+          "veraenderung": -2
+        },
+        {
+          "name": "FDP",
+          "anteil": 3.6,
+          "vorher": 3.8,
+          "veraenderung": -0.2
+        },
+        {
+          "name": "Die Linke",
+          "anteil": 3.6,
+          "vorher": 2.3,
+          "veraenderung": 1.2
+        }
+      ]
     }
   },
   "09178122": {
@@ -264,54 +536,63 @@
     "listen": [
       {
         "name": "CSU",
+        "lang": "Christlich-Soziale Union in Bayern e.V.",
         "stimmen": 38945,
         "anteil": 34.4,
         "veraenderung": -6.1
       },
       {
         "name": "FREIE WÄHLER",
+        "lang": "FREIE WÄHLER/Freie Wähler - Kreis Freising e.V.",
         "stimmen": 34474,
         "anteil": 30.5,
         "veraenderung": 20.5
       },
       {
         "name": "AfD",
+        "lang": "Alternative für Deutschland",
         "stimmen": 18689,
         "anteil": 16.5,
         "veraenderung": -14.9
       },
       {
         "name": "GRÜNE",
+        "lang": "BÜNDNIS 90/DIE GRÜNEN",
         "stimmen": 8299,
         "anteil": 7.3,
         "veraenderung": 0.6
       },
       {
         "name": "SPD",
+        "lang": "Sozialdemokratische Partei Deutschlands",
         "stimmen": 4647,
         "anteil": 4.1,
         "veraenderung": 0.2
       },
       {
         "name": "FSM",
+        "lang": "Freisinger Mitte e.V.",
         "stimmen": 1439,
         "anteil": 1.3,
         "veraenderung": -1.1
       },
       {
         "name": "ÖDP",
+        "lang": "Ökologisch-Demokratische Partei",
         "stimmen": 2963,
         "anteil": 2.6,
         "veraenderung": 0.9
       },
       {
         "name": "FDP",
+        "lang": "Freie Demokratische Partei",
         "stimmen": 1918,
         "anteil": 1.7,
         "veraenderung": 0
       },
       {
         "name": "Die Linke",
+        "lang": null,
         "stimmen": 1838,
         "anteil": 1.6,
         "veraenderung": -0.2
@@ -322,6 +603,65 @@
       "waehler": 1893,
       "wahlbeteiligung": 68.8,
       "gueltige": 113212
+    },
+    "vergleich": {
+      "vergleichswahl": "Kreistagswahl 2020",
+      "listen": [
+        {
+          "name": "CSU",
+          "anteil": 34.4,
+          "vorher": 40.5,
+          "veraenderung": -6.1
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "anteil": 30.5,
+          "vorher": 31.4,
+          "veraenderung": -0.9
+        },
+        {
+          "name": "AfD",
+          "anteil": 16.5,
+          "vorher": 6.7,
+          "veraenderung": 9.8
+        },
+        {
+          "name": "GRÜNE",
+          "anteil": 7.3,
+          "vorher": 10,
+          "veraenderung": -2.7
+        },
+        {
+          "name": "SPD",
+          "anteil": 4.1,
+          "vorher": 3.9,
+          "veraenderung": 0.2
+        },
+        {
+          "name": "FSM",
+          "anteil": 1.3,
+          "vorher": 1.7,
+          "veraenderung": -0.4
+        },
+        {
+          "name": "ÖDP",
+          "anteil": 2.6,
+          "vorher": 1.7,
+          "veraenderung": 0.9
+        },
+        {
+          "name": "FDP",
+          "anteil": 1.7,
+          "vorher": 2.4,
+          "veraenderung": -0.7
+        },
+        {
+          "name": "Die Linke",
+          "anteil": 1.6,
+          "vorher": 1.8,
+          "veraenderung": -0.2
+        }
+      ]
     }
   },
   "09178123": {
@@ -329,54 +669,63 @@
     "listen": [
       {
         "name": "CSU",
+        "lang": "Christlich-Soziale Union in Bayern e.V.",
         "stimmen": 38199,
         "anteil": 27.3,
         "veraenderung": -1.5
       },
       {
         "name": "FREIE WÄHLER",
+        "lang": "FREIE WÄHLER/Freie Wähler - Kreis Freising e.V.",
         "stimmen": 36344,
         "anteil": 25.9,
         "veraenderung": 9.2
       },
       {
         "name": "AfD",
+        "lang": "Alternative für Deutschland",
         "stimmen": 21811,
         "anteil": 15.6,
         "veraenderung": -11.5
       },
       {
         "name": "GRÜNE",
+        "lang": "BÜNDNIS 90/DIE GRÜNEN",
         "stimmen": 18806,
         "anteil": 13.4,
         "veraenderung": 5.1
       },
       {
         "name": "SPD",
+        "lang": "Sozialdemokratische Partei Deutschlands",
         "stimmen": 6001,
         "anteil": 4.3,
         "veraenderung": -0.1
       },
       {
         "name": "FSM",
+        "lang": "Freisinger Mitte e.V.",
         "stimmen": 2960,
         "anteil": 2.1,
         "veraenderung": -1.8
       },
       {
         "name": "ÖDP",
+        "lang": "Ökologisch-Demokratische Partei",
         "stimmen": 4384,
         "anteil": 3.1,
         "veraenderung": -0.3
       },
       {
         "name": "FDP",
+        "lang": "Freie Demokratische Partei",
         "stimmen": 8364,
         "anteil": 6,
         "veraenderung": 0.4
       },
       {
         "name": "Die Linke",
+        "lang": null,
         "stimmen": 3298,
         "anteil": 2.4,
         "veraenderung": 0.3
@@ -387,6 +736,65 @@
       "waehler": 2328,
       "wahlbeteiligung": 58.6,
       "gueltige": 140167
+    },
+    "vergleich": {
+      "vergleichswahl": "Kreistagswahl 2020",
+      "listen": [
+        {
+          "name": "CSU",
+          "anteil": 27.3,
+          "vorher": 28.7,
+          "veraenderung": -1.5
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "anteil": 25.9,
+          "vorher": 27.1,
+          "veraenderung": -1.1
+        },
+        {
+          "name": "AfD",
+          "anteil": 15.6,
+          "vorher": 8.3,
+          "veraenderung": 7.3
+        },
+        {
+          "name": "GRÜNE",
+          "anteil": 13.4,
+          "vorher": 16.7,
+          "veraenderung": -3.3
+        },
+        {
+          "name": "SPD",
+          "anteil": 4.3,
+          "vorher": 4.4,
+          "veraenderung": -0.1
+        },
+        {
+          "name": "FSM",
+          "anteil": 2.1,
+          "vorher": 3.4,
+          "veraenderung": -1.3
+        },
+        {
+          "name": "ÖDP",
+          "anteil": 3.1,
+          "vorher": 5.5,
+          "veraenderung": -2.4
+        },
+        {
+          "name": "FDP",
+          "anteil": 6,
+          "vorher": 3.9,
+          "veraenderung": 2.1
+        },
+        {
+          "name": "Die Linke",
+          "anteil": 2.4,
+          "vorher": 2,
+          "veraenderung": 0.3
+        }
+      ]
     }
   },
   "09178124": {
@@ -394,54 +802,63 @@
     "listen": [
       {
         "name": "CSU",
+        "lang": "Christlich-Soziale Union in Bayern e.V.",
         "stimmen": 214705,
         "anteil": 16.3,
         "veraenderung": 3.9
       },
       {
         "name": "FREIE WÄHLER",
+        "lang": "FREIE WÄHLER/Freie Wähler - Kreis Freising e.V.",
         "stimmen": 151233,
         "anteil": 11.5,
         "veraenderung": -16.8
       },
       {
         "name": "AfD",
+        "lang": "Alternative für Deutschland",
         "stimmen": 92288,
         "anteil": 7,
         "veraenderung": -3.7
       },
       {
         "name": "GRÜNE",
+        "lang": "BÜNDNIS 90/DIE GRÜNEN",
         "stimmen": 336361,
         "anteil": 25.5,
         "veraenderung": 20.9
       },
       {
         "name": "SPD",
+        "lang": "Sozialdemokratische Partei Deutschlands",
         "stimmen": 97009,
         "anteil": 7.3,
         "veraenderung": 1.2
       },
       {
         "name": "FSM",
+        "lang": "Freisinger Mitte e.V.",
         "stimmen": 273035,
         "anteil": 20.7,
         "veraenderung": 18.2
       },
       {
         "name": "ÖDP",
+        "lang": "Ökologisch-Demokratische Partei",
         "stimmen": 57706,
         "anteil": 4.4,
         "veraenderung": -21.4
       },
       {
         "name": "FDP",
+        "lang": "Freie Demokratische Partei",
         "stimmen": 29240,
         "anteil": 2.2,
         "veraenderung": -3.8
       },
       {
         "name": "Die Linke",
+        "lang": null,
         "stimmen": 68882,
         "anteil": 5.2,
         "veraenderung": 1.4
@@ -452,6 +869,65 @@
       "waehler": 21037,
       "wahlbeteiligung": 58.3,
       "gueltige": 1320459
+    },
+    "vergleich": {
+      "vergleichswahl": "Kreistagswahl 2020",
+      "listen": [
+        {
+          "name": "CSU",
+          "anteil": 16.3,
+          "vorher": 12.3,
+          "veraenderung": 3.9
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "anteil": 11.5,
+          "vorher": 10.7,
+          "veraenderung": 0.7
+        },
+        {
+          "name": "AfD",
+          "anteil": 7,
+          "vorher": 4.6,
+          "veraenderung": 2.4
+        },
+        {
+          "name": "GRÜNE",
+          "anteil": 25.5,
+          "vorher": 28.3,
+          "veraenderung": -2.8
+        },
+        {
+          "name": "SPD",
+          "anteil": 7.3,
+          "vorher": 6.1,
+          "veraenderung": 1.2
+        },
+        {
+          "name": "FSM",
+          "anteil": 20.7,
+          "vorher": 25.7,
+          "veraenderung": -5.1
+        },
+        {
+          "name": "ÖDP",
+          "anteil": 4.4,
+          "vorher": 6,
+          "veraenderung": -1.6
+        },
+        {
+          "name": "FDP",
+          "anteil": 2.2,
+          "vorher": 2.4,
+          "veraenderung": -0.2
+        },
+        {
+          "name": "Die Linke",
+          "anteil": 5.2,
+          "vorher": 3.8,
+          "veraenderung": 1.4
+        }
+      ]
     }
   },
   "09178125": {
@@ -459,54 +935,63 @@
     "listen": [
       {
         "name": "CSU",
+        "lang": "Christlich-Soziale Union in Bayern e.V.",
         "stimmen": 16517,
         "anteil": 34.6,
         "veraenderung": -0.6
       },
       {
         "name": "FREIE WÄHLER",
+        "lang": "FREIE WÄHLER/Freie Wähler - Kreis Freising e.V.",
         "stimmen": 13558,
         "anteil": 28.4,
         "veraenderung": 15.6
       },
       {
         "name": "AfD",
+        "lang": "Alternative für Deutschland",
         "stimmen": 6817,
         "anteil": 14.3,
         "veraenderung": -15.3
       },
       {
         "name": "GRÜNE",
+        "lang": "BÜNDNIS 90/DIE GRÜNEN",
         "stimmen": 4283,
         "anteil": 9,
         "veraenderung": -0.1
       },
       {
         "name": "SPD",
+        "lang": "Sozialdemokratische Partei Deutschlands",
         "stimmen": 2334,
         "anteil": 4.9,
         "veraenderung": 1
       },
       {
         "name": "FSM",
+        "lang": "Freisinger Mitte e.V.",
         "stimmen": 981,
         "anteil": 2.1,
         "veraenderung": 0.7
       },
       {
         "name": "ÖDP",
+        "lang": "Ökologisch-Demokratische Partei",
         "stimmen": 643,
         "anteil": 1.3,
         "veraenderung": -2.8
       },
       {
         "name": "FDP",
+        "lang": "Freie Demokratische Partei",
         "stimmen": 1368,
         "anteil": 2.9,
         "veraenderung": 1.4
       },
       {
         "name": "Die Linke",
+        "lang": null,
         "stimmen": 1262,
         "anteil": 2.6,
         "veraenderung": 0.1
@@ -517,6 +1002,65 @@
       "waehler": 887,
       "wahlbeteiligung": 69.5,
       "gueltige": 47763
+    },
+    "vergleich": {
+      "vergleichswahl": "Kreistagswahl 2020",
+      "listen": [
+        {
+          "name": "CSU",
+          "anteil": 34.6,
+          "vorher": 35.2,
+          "veraenderung": -0.6
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "anteil": 28.4,
+          "vorher": 29.6,
+          "veraenderung": -1.2
+        },
+        {
+          "name": "AfD",
+          "anteil": 14.3,
+          "vorher": 9.1,
+          "veraenderung": 5.2
+        },
+        {
+          "name": "GRÜNE",
+          "anteil": 9,
+          "vorher": 12.8,
+          "veraenderung": -3.8
+        },
+        {
+          "name": "SPD",
+          "anteil": 4.9,
+          "vorher": 3.8,
+          "veraenderung": 1
+        },
+        {
+          "name": "FSM",
+          "anteil": 2.1,
+          "vorher": 4.2,
+          "veraenderung": -2.1
+        },
+        {
+          "name": "ÖDP",
+          "anteil": 1.3,
+          "vorher": 1.5,
+          "veraenderung": -0.1
+        },
+        {
+          "name": "FDP",
+          "anteil": 2.9,
+          "vorher": 1.3,
+          "veraenderung": 1.5
+        },
+        {
+          "name": "Die Linke",
+          "anteil": 2.6,
+          "vorher": 2.6,
+          "veraenderung": 0.1
+        }
+      ]
     }
   },
   "09178129": {
@@ -524,54 +1068,63 @@
     "listen": [
       {
         "name": "CSU",
+        "lang": "Christlich-Soziale Union in Bayern e.V.",
         "stimmen": 31002,
         "anteil": 31.8,
         "veraenderung": 3.5
       },
       {
         "name": "FREIE WÄHLER",
+        "lang": "FREIE WÄHLER/Freie Wähler - Kreis Freising e.V.",
         "stimmen": 20777,
         "anteil": 21.3,
         "veraenderung": 1.7
       },
       {
         "name": "AfD",
+        "lang": "Alternative für Deutschland",
         "stimmen": 11952,
         "anteil": 12.3,
         "veraenderung": -14.4
       },
       {
         "name": "GRÜNE",
+        "lang": "BÜNDNIS 90/DIE GRÜNEN",
         "stimmen": 15112,
         "anteil": 15.5,
         "veraenderung": 9.2
       },
       {
         "name": "SPD",
+        "lang": "Sozialdemokratische Partei Deutschlands",
         "stimmen": 4093,
         "anteil": 4.2,
         "veraenderung": -0.3
       },
       {
         "name": "FSM",
+        "lang": "Freisinger Mitte e.V.",
         "stimmen": 4771,
         "anteil": 4.9,
         "veraenderung": 2.9
       },
       {
         "name": "ÖDP",
+        "lang": "Ökologisch-Demokratische Partei",
         "stimmen": 3554,
         "anteil": 3.6,
         "veraenderung": -2.9
       },
       {
         "name": "FDP",
+        "lang": "Freie Demokratische Partei",
         "stimmen": 2320,
         "anteil": 2.4,
         "veraenderung": -1
       },
       {
         "name": "Die Linke",
+        "lang": null,
         "stimmen": 3912,
         "anteil": 4,
         "veraenderung": 1.3
@@ -582,6 +1135,65 @@
       "waehler": 1575,
       "wahlbeteiligung": 68.8,
       "gueltige": 97493
+    },
+    "vergleich": {
+      "vergleichswahl": "Kreistagswahl 2020",
+      "listen": [
+        {
+          "name": "CSU",
+          "anteil": 31.8,
+          "vorher": 28.3,
+          "veraenderung": 3.5
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "anteil": 21.3,
+          "vorher": 26.7,
+          "veraenderung": -5.4
+        },
+        {
+          "name": "AfD",
+          "anteil": 12.3,
+          "vorher": 6.3,
+          "veraenderung": 5.9
+        },
+        {
+          "name": "GRÜNE",
+          "anteil": 15.5,
+          "vorher": 19.6,
+          "veraenderung": -4.1
+        },
+        {
+          "name": "SPD",
+          "anteil": 4.2,
+          "vorher": 4.5,
+          "veraenderung": -0.3
+        },
+        {
+          "name": "FSM",
+          "anteil": 4.9,
+          "vorher": 6.6,
+          "veraenderung": -1.7
+        },
+        {
+          "name": "ÖDP",
+          "anteil": 3.6,
+          "vorher": 3.4,
+          "veraenderung": 0.3
+        },
+        {
+          "name": "FDP",
+          "anteil": 2.4,
+          "vorher": 2,
+          "veraenderung": 0.4
+        },
+        {
+          "name": "Die Linke",
+          "anteil": 4,
+          "vorher": 2.7,
+          "veraenderung": 1.3
+        }
+      ]
     }
   },
   "09178130": {
@@ -589,54 +1201,63 @@
     "listen": [
       {
         "name": "CSU",
+        "lang": "Christlich-Soziale Union in Bayern e.V.",
         "stimmen": 91867,
         "anteil": 33.8,
         "veraenderung": -2.8
       },
       {
         "name": "FREIE WÄHLER",
+        "lang": "FREIE WÄHLER/Freie Wähler - Kreis Freising e.V.",
         "stimmen": 70169,
         "anteil": 25.8,
         "veraenderung": 8.3
       },
       {
         "name": "AfD",
+        "lang": "Alternative für Deutschland",
         "stimmen": 34678,
         "anteil": 12.8,
         "veraenderung": -8.4
       },
       {
         "name": "GRÜNE",
+        "lang": "BÜNDNIS 90/DIE GRÜNEN",
         "stimmen": 31787,
         "anteil": 11.7,
         "veraenderung": 4.9
       },
       {
         "name": "SPD",
+        "lang": "Sozialdemokratische Partei Deutschlands",
         "stimmen": 19836,
         "anteil": 7.3,
         "veraenderung": -0.2
       },
       {
         "name": "FSM",
+        "lang": "Freisinger Mitte e.V.",
         "stimmen": 4500,
         "anteil": 1.7,
         "veraenderung": -1.4
       },
       {
         "name": "ÖDP",
+        "lang": "Ökologisch-Demokratische Partei",
         "stimmen": 4440,
         "anteil": 1.6,
         "veraenderung": -0.9
       },
       {
         "name": "FDP",
+        "lang": "Freie Demokratische Partei",
         "stimmen": 6703,
         "anteil": 2.5,
         "veraenderung": 0.1
       },
       {
         "name": "Die Linke",
+        "lang": null,
         "stimmen": 7753,
         "anteil": 2.9,
         "veraenderung": 0.2
@@ -647,6 +1268,65 @@
       "waehler": 4415,
       "wahlbeteiligung": 52,
       "gueltige": 271733
+    },
+    "vergleich": {
+      "vergleichswahl": "Kreistagswahl 2020",
+      "listen": [
+        {
+          "name": "CSU",
+          "anteil": 33.8,
+          "vorher": 36.7,
+          "veraenderung": -2.8
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "anteil": 25.8,
+          "vorher": 21.1,
+          "veraenderung": 4.7
+        },
+        {
+          "name": "AfD",
+          "anteil": 12.8,
+          "vorher": 6.8,
+          "veraenderung": 6
+        },
+        {
+          "name": "GRÜNE",
+          "anteil": 11.7,
+          "vorher": 17.5,
+          "veraenderung": -5.8
+        },
+        {
+          "name": "SPD",
+          "anteil": 7.3,
+          "vorher": 7.5,
+          "veraenderung": -0.2
+        },
+        {
+          "name": "FSM",
+          "anteil": 1.7,
+          "vorher": 2.5,
+          "veraenderung": -0.9
+        },
+        {
+          "name": "ÖDP",
+          "anteil": 1.6,
+          "vorher": 2.3,
+          "veraenderung": -0.7
+        },
+        {
+          "name": "FDP",
+          "anteil": 2.5,
+          "vorher": 3,
+          "veraenderung": -0.6
+        },
+        {
+          "name": "Die Linke",
+          "anteil": 2.9,
+          "vorher": 2.6,
+          "veraenderung": 0.2
+        }
+      ]
     }
   },
   "09178132": {
@@ -654,54 +1334,63 @@
     "listen": [
       {
         "name": "CSU",
+        "lang": "Christlich-Soziale Union in Bayern e.V.",
         "stimmen": 17974,
         "anteil": 31.2,
         "veraenderung": -2.7
       },
       {
         "name": "FREIE WÄHLER",
+        "lang": "FREIE WÄHLER/Freie Wähler - Kreis Freising e.V.",
         "stimmen": 15192,
         "anteil": 26.4,
         "veraenderung": 12.7
       },
       {
         "name": "AfD",
+        "lang": "Alternative für Deutschland",
         "stimmen": 9948,
         "anteil": 17.3,
         "veraenderung": -14.4
       },
       {
         "name": "GRÜNE",
+        "lang": "BÜNDNIS 90/DIE GRÜNEN",
         "stimmen": 6880,
         "anteil": 12,
         "veraenderung": 3.9
       },
       {
         "name": "SPD",
+        "lang": "Sozialdemokratische Partei Deutschlands",
         "stimmen": 2571,
         "anteil": 4.5,
         "veraenderung": 1.1
       },
       {
         "name": "FSM",
+        "lang": "Freisinger Mitte e.V.",
         "stimmen": 831,
         "anteil": 1.4,
         "veraenderung": -0.8
       },
       {
         "name": "ÖDP",
+        "lang": "Ökologisch-Demokratische Partei",
         "stimmen": 1272,
         "anteil": 2.2,
         "veraenderung": -0.4
       },
       {
         "name": "FDP",
+        "lang": "Freie Demokratische Partei",
         "stimmen": 854,
         "anteil": 1.5,
         "veraenderung": -1.5
       },
       {
         "name": "Die Linke",
+        "lang": null,
         "stimmen": 2050,
         "anteil": 3.6,
         "veraenderung": 2
@@ -712,6 +1401,65 @@
       "waehler": 1077,
       "wahlbeteiligung": 68.4,
       "gueltige": 57572
+    },
+    "vergleich": {
+      "vergleichswahl": "Kreistagswahl 2020",
+      "listen": [
+        {
+          "name": "CSU",
+          "anteil": 31.2,
+          "vorher": 33.9,
+          "veraenderung": -2.7
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "anteil": 26.4,
+          "vorher": 31.7,
+          "veraenderung": -5.3
+        },
+        {
+          "name": "AfD",
+          "anteil": 17.3,
+          "vorher": 8,
+          "veraenderung": 9.3
+        },
+        {
+          "name": "GRÜNE",
+          "anteil": 12,
+          "vorher": 13.7,
+          "veraenderung": -1.7
+        },
+        {
+          "name": "SPD",
+          "anteil": 4.5,
+          "vorher": 3.3,
+          "veraenderung": 1.1
+        },
+        {
+          "name": "FSM",
+          "anteil": 1.4,
+          "vorher": 2.6,
+          "veraenderung": -1.2
+        },
+        {
+          "name": "ÖDP",
+          "anteil": 2.2,
+          "vorher": 2.9,
+          "veraenderung": -0.7
+        },
+        {
+          "name": "FDP",
+          "anteil": 1.5,
+          "vorher": 2.2,
+          "veraenderung": -0.8
+        },
+        {
+          "name": "Die Linke",
+          "anteil": 3.6,
+          "vorher": 1.6,
+          "veraenderung": 2
+        }
+      ]
     }
   },
   "09178133": {
@@ -719,54 +1467,63 @@
     "listen": [
       {
         "name": "CSU",
+        "lang": "Christlich-Soziale Union in Bayern e.V.",
         "stimmen": 32527,
         "anteil": 42,
         "veraenderung": 5.4
       },
       {
         "name": "FREIE WÄHLER",
+        "lang": "FREIE WÄHLER/Freie Wähler - Kreis Freising e.V.",
         "stimmen": 11625,
         "anteil": 15,
         "veraenderung": 2.8
       },
       {
         "name": "AfD",
+        "lang": "Alternative für Deutschland",
         "stimmen": 8983,
         "anteil": 11.6,
         "veraenderung": -4.6
       },
       {
         "name": "GRÜNE",
+        "lang": "BÜNDNIS 90/DIE GRÜNEN",
         "stimmen": 7674,
         "anteil": 9.9,
         "veraenderung": 3.1
       },
       {
         "name": "SPD",
+        "lang": "Sozialdemokratische Partei Deutschlands",
         "stimmen": 4439,
         "anteil": 5.7,
         "veraenderung": -1.3
       },
       {
         "name": "FSM",
+        "lang": "Freisinger Mitte e.V.",
         "stimmen": 2669,
         "anteil": 3.4,
         "veraenderung": -8.2
       },
       {
         "name": "ÖDP",
+        "lang": "Ökologisch-Demokratische Partei",
         "stimmen": 1720,
         "anteil": 2.2,
         "veraenderung": -3.4
       },
       {
         "name": "FDP",
+        "lang": "Freie Demokratische Partei",
         "stimmen": 5843,
         "anteil": 7.5,
         "veraenderung": 5.4
       },
       {
         "name": "Die Linke",
+        "lang": null,
         "stimmen": 2051,
         "anteil": 2.6,
         "veraenderung": 0.7
@@ -777,6 +1534,65 @@
       "waehler": 1324,
       "wahlbeteiligung": 64.6,
       "gueltige": 77531
+    },
+    "vergleich": {
+      "vergleichswahl": "Kreistagswahl 2020",
+      "listen": [
+        {
+          "name": "CSU",
+          "anteil": 42,
+          "vorher": 36.5,
+          "veraenderung": 5.4
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "anteil": 15,
+          "vorher": 16.2,
+          "veraenderung": -1.2
+        },
+        {
+          "name": "AfD",
+          "anteil": 11.6,
+          "vorher": 6.8,
+          "veraenderung": 4.8
+        },
+        {
+          "name": "GRÜNE",
+          "anteil": 9.9,
+          "vorher": 12.1,
+          "veraenderung": -2.3
+        },
+        {
+          "name": "SPD",
+          "anteil": 5.7,
+          "vorher": 7,
+          "veraenderung": -1.3
+        },
+        {
+          "name": "FSM",
+          "anteil": 3.4,
+          "vorher": 5.7,
+          "veraenderung": -2.2
+        },
+        {
+          "name": "ÖDP",
+          "anteil": 2.2,
+          "vorher": 2.1,
+          "veraenderung": 0.1
+        },
+        {
+          "name": "FDP",
+          "anteil": 7.5,
+          "vorher": 11.7,
+          "veraenderung": -4.1
+        },
+        {
+          "name": "Die Linke",
+          "anteil": 2.6,
+          "vorher": 1.9,
+          "veraenderung": 0.7
+        }
+      ]
     }
   },
   "09178136": {
@@ -784,54 +1600,63 @@
     "listen": [
       {
         "name": "CSU",
+        "lang": "Christlich-Soziale Union in Bayern e.V.",
         "stimmen": 40949,
         "anteil": 39.5,
         "veraenderung": 8.1
       },
       {
         "name": "FREIE WÄHLER",
+        "lang": "FREIE WÄHLER/Freie Wähler - Kreis Freising e.V.",
         "stimmen": 21998,
         "anteil": 21.2,
         "veraenderung": 4.5
       },
       {
         "name": "AfD",
+        "lang": "Alternative für Deutschland",
         "stimmen": 12199,
         "anteil": 11.8,
         "veraenderung": -14.4
       },
       {
         "name": "GRÜNE",
+        "lang": "BÜNDNIS 90/DIE GRÜNEN",
         "stimmen": 12239,
         "anteil": 11.8,
         "veraenderung": 5.5
       },
       {
         "name": "SPD",
+        "lang": "Sozialdemokratische Partei Deutschlands",
         "stimmen": 3920,
         "anteil": 3.8,
         "veraenderung": -0.2
       },
       {
         "name": "FSM",
+        "lang": "Freisinger Mitte e.V.",
         "stimmen": 4752,
         "anteil": 4.6,
         "veraenderung": 1.2
       },
       {
         "name": "ÖDP",
+        "lang": "Ökologisch-Demokratische Partei",
         "stimmen": 2429,
         "anteil": 2.3,
         "veraenderung": -4.3
       },
       {
         "name": "FDP",
+        "lang": "Freie Demokratische Partei",
         "stimmen": 2087,
         "anteil": 2,
         "veraenderung": -1.1
       },
       {
         "name": "Die Linke",
+        "lang": null,
         "stimmen": 3020,
         "anteil": 2.9,
         "veraenderung": 0.8
@@ -842,6 +1667,65 @@
       "waehler": 1776,
       "wahlbeteiligung": 66.4,
       "gueltige": 103593
+    },
+    "vergleich": {
+      "vergleichswahl": "Kreistagswahl 2020",
+      "listen": [
+        {
+          "name": "CSU",
+          "anteil": 39.5,
+          "vorher": 31.5,
+          "veraenderung": 8.1
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "anteil": 21.2,
+          "vorher": 26.2,
+          "veraenderung": -4.9
+        },
+        {
+          "name": "AfD",
+          "anteil": 11.8,
+          "vorher": 6.3,
+          "veraenderung": 5.4
+        },
+        {
+          "name": "GRÜNE",
+          "anteil": 11.8,
+          "vorher": 16.8,
+          "veraenderung": -4.9
+        },
+        {
+          "name": "SPD",
+          "anteil": 3.8,
+          "vorher": 4,
+          "veraenderung": -0.2
+        },
+        {
+          "name": "FSM",
+          "anteil": 4.6,
+          "vorher": 6.7,
+          "veraenderung": -2.1
+        },
+        {
+          "name": "ÖDP",
+          "anteil": 2.3,
+          "vorher": 3.1,
+          "veraenderung": -0.8
+        },
+        {
+          "name": "FDP",
+          "anteil": 2,
+          "vorher": 3.4,
+          "veraenderung": -1.3
+        },
+        {
+          "name": "Die Linke",
+          "anteil": 2.9,
+          "vorher": 2.1,
+          "veraenderung": 0.8
+        }
+      ]
     }
   },
   "09178137": {
@@ -849,54 +1733,63 @@
     "listen": [
       {
         "name": "CSU",
+        "lang": "Christlich-Soziale Union in Bayern e.V.",
         "stimmen": 42483,
         "anteil": 30.5,
         "veraenderung": 5
       },
       {
         "name": "FREIE WÄHLER",
+        "lang": "FREIE WÄHLER/Freie Wähler - Kreis Freising e.V.",
         "stimmen": 33907,
         "anteil": 24.3,
         "veraenderung": 6.2
       },
       {
         "name": "AfD",
+        "lang": "Alternative für Deutschland",
         "stimmen": 12812,
         "anteil": 9.2,
         "veraenderung": -20.7
       },
       {
         "name": "GRÜNE",
+        "lang": "BÜNDNIS 90/DIE GRÜNEN",
         "stimmen": 25112,
         "anteil": 18,
         "veraenderung": 13.6
       },
       {
         "name": "SPD",
+        "lang": "Sozialdemokratische Partei Deutschlands",
         "stimmen": 8850,
         "anteil": 6.3,
         "veraenderung": 0.3
       },
       {
         "name": "FSM",
+        "lang": "Freisinger Mitte e.V.",
         "stimmen": 5813,
         "anteil": 4.2,
         "veraenderung": 2
       },
       {
         "name": "ÖDP",
+        "lang": "Ökologisch-Demokratische Partei",
         "stimmen": 3715,
         "anteil": 2.7,
         "veraenderung": -5.1
       },
       {
         "name": "FDP",
+        "lang": "Freie Demokratische Partei",
         "stimmen": 2795,
         "anteil": 2,
         "veraenderung": -2.5
       },
       {
         "name": "Die Linke",
+        "lang": null,
         "stimmen": 3928,
         "anteil": 2.8,
         "veraenderung": 1.2
@@ -907,6 +1800,65 @@
       "waehler": 2312,
       "wahlbeteiligung": 67.4,
       "gueltige": 139415
+    },
+    "vergleich": {
+      "vergleichswahl": "Kreistagswahl 2020",
+      "listen": [
+        {
+          "name": "CSU",
+          "anteil": 30.5,
+          "vorher": 25.5,
+          "veraenderung": 5
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "anteil": 24.3,
+          "vorher": 29.9,
+          "veraenderung": -5.6
+        },
+        {
+          "name": "AfD",
+          "anteil": 9.2,
+          "vorher": 4.4,
+          "veraenderung": 4.8
+        },
+        {
+          "name": "GRÜNE",
+          "anteil": 18,
+          "vorher": 18.1,
+          "veraenderung": -0.1
+        },
+        {
+          "name": "SPD",
+          "anteil": 6.3,
+          "vorher": 6,
+          "veraenderung": 0.3
+        },
+        {
+          "name": "FSM",
+          "anteil": 4.2,
+          "vorher": 7.8,
+          "veraenderung": -3.6
+        },
+        {
+          "name": "ÖDP",
+          "anteil": 2.7,
+          "vorher": 4.5,
+          "veraenderung": -1.8
+        },
+        {
+          "name": "FDP",
+          "anteil": 2,
+          "vorher": 2.2,
+          "veraenderung": -0.2
+        },
+        {
+          "name": "Die Linke",
+          "anteil": 2.8,
+          "vorher": 1.6,
+          "veraenderung": 1.2
+        }
+      ]
     }
   },
   "09178138": {
@@ -914,54 +1866,63 @@
     "listen": [
       {
         "name": "CSU",
+        "lang": "Christlich-Soziale Union in Bayern e.V.",
         "stimmen": 41273,
         "anteil": 32.4,
         "veraenderung": 9.1
       },
       {
         "name": "FREIE WÄHLER",
+        "lang": "FREIE WÄHLER/Freie Wähler - Kreis Freising e.V.",
         "stimmen": 26052,
         "anteil": 20.4,
         "veraenderung": 0
       },
       {
         "name": "AfD",
+        "lang": "Alternative für Deutschland",
         "stimmen": 13993,
         "anteil": 11,
         "veraenderung": -15.2
       },
       {
         "name": "GRÜNE",
+        "lang": "BÜNDNIS 90/DIE GRÜNEN",
         "stimmen": 19505,
         "anteil": 15.3,
         "veraenderung": 8.6
       },
       {
         "name": "SPD",
+        "lang": "Sozialdemokratische Partei Deutschlands",
         "stimmen": 11286,
         "anteil": 8.9,
         "veraenderung": -1.6
       },
       {
         "name": "FSM",
+        "lang": "Freisinger Mitte e.V.",
         "stimmen": 6620,
         "anteil": 5.2,
         "veraenderung": 3.2
       },
       {
         "name": "ÖDP",
+        "lang": "Ökologisch-Demokratische Partei",
         "stimmen": 2498,
         "anteil": 2,
         "veraenderung": -3.7
       },
       {
         "name": "FDP",
+        "lang": "Freie Demokratische Partei",
         "stimmen": 2311,
         "anteil": 1.8,
         "veraenderung": -1.9
       },
       {
         "name": "Die Linke",
+        "lang": null,
         "stimmen": 3886,
         "anteil": 3,
         "veraenderung": 1.5
@@ -972,6 +1933,65 @@
       "waehler": 2126,
       "wahlbeteiligung": 66,
       "gueltige": 127424
+    },
+    "vergleich": {
+      "vergleichswahl": "Kreistagswahl 2020",
+      "listen": [
+        {
+          "name": "CSU",
+          "anteil": 32.4,
+          "vorher": 23.3,
+          "veraenderung": 9.1
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "anteil": 20.4,
+          "vorher": 26.2,
+          "veraenderung": -5.7
+        },
+        {
+          "name": "AfD",
+          "anteil": 11,
+          "vorher": 6.7,
+          "veraenderung": 4.3
+        },
+        {
+          "name": "GRÜNE",
+          "anteil": 15.3,
+          "vorher": 20.4,
+          "veraenderung": -5.1
+        },
+        {
+          "name": "SPD",
+          "anteil": 8.9,
+          "vorher": 10.5,
+          "veraenderung": -1.6
+        },
+        {
+          "name": "FSM",
+          "anteil": 5.2,
+          "vorher": 5.6,
+          "veraenderung": -0.4
+        },
+        {
+          "name": "ÖDP",
+          "anteil": 2,
+          "vorher": 3.8,
+          "veraenderung": -1.8
+        },
+        {
+          "name": "FDP",
+          "anteil": 1.8,
+          "vorher": 2,
+          "veraenderung": -0.2
+        },
+        {
+          "name": "Die Linke",
+          "anteil": 3,
+          "vorher": 1.5,
+          "veraenderung": 1.5
+        }
+      ]
     }
   },
   "09178140": {
@@ -979,54 +1999,63 @@
     "listen": [
       {
         "name": "CSU",
+        "lang": "Christlich-Soziale Union in Bayern e.V.",
         "stimmen": 25422,
         "anteil": 23.6,
         "veraenderung": 4.1
       },
       {
         "name": "FREIE WÄHLER",
+        "lang": "FREIE WÄHLER/Freie Wähler - Kreis Freising e.V.",
         "stimmen": 18969,
         "anteil": 17.6,
         "veraenderung": -9.4
       },
       {
         "name": "AfD",
+        "lang": "Alternative für Deutschland",
         "stimmen": 10943,
         "anteil": 10.2,
         "veraenderung": -9.4
       },
       {
         "name": "GRÜNE",
+        "lang": "BÜNDNIS 90/DIE GRÜNEN",
         "stimmen": 23490,
         "anteil": 21.8,
         "veraenderung": 16.9
       },
       {
         "name": "SPD",
+        "lang": "Sozialdemokratische Partei Deutschlands",
         "stimmen": 6495,
         "anteil": 6,
         "veraenderung": 0.3
       },
       {
         "name": "FSM",
+        "lang": "Freisinger Mitte e.V.",
         "stimmen": 13980,
         "anteil": 13,
         "veraenderung": 11
       },
       {
         "name": "ÖDP",
+        "lang": "Ökologisch-Demokratische Partei",
         "stimmen": 2767,
         "anteil": 2.6,
         "veraenderung": -12.6
       },
       {
         "name": "FDP",
+        "lang": "Freie Demokratische Partei",
         "stimmen": 2127,
         "anteil": 2,
         "veraenderung": -2
       },
       {
         "name": "Die Linke",
+        "lang": null,
         "stimmen": 3395,
         "anteil": 3.2,
         "veraenderung": 1.2
@@ -1037,6 +2066,65 @@
       "waehler": 1802,
       "wahlbeteiligung": 70.7,
       "gueltige": 107588
+    },
+    "vergleich": {
+      "vergleichswahl": "Kreistagswahl 2020",
+      "listen": [
+        {
+          "name": "CSU",
+          "anteil": 23.6,
+          "vorher": 19.5,
+          "veraenderung": 4.1
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "anteil": 17.6,
+          "vorher": 19.6,
+          "veraenderung": -1.9
+        },
+        {
+          "name": "AfD",
+          "anteil": 10.2,
+          "vorher": 4.9,
+          "veraenderung": 5.3
+        },
+        {
+          "name": "GRÜNE",
+          "anteil": 21.8,
+          "vorher": 27.1,
+          "veraenderung": -5.2
+        },
+        {
+          "name": "SPD",
+          "anteil": 6,
+          "vorher": 5.8,
+          "veraenderung": 0.3
+        },
+        {
+          "name": "FSM",
+          "anteil": 13,
+          "vorher": 15.2,
+          "veraenderung": -2.2
+        },
+        {
+          "name": "ÖDP",
+          "anteil": 2.6,
+          "vorher": 4,
+          "veraenderung": -1.4
+        },
+        {
+          "name": "FDP",
+          "anteil": 2,
+          "vorher": 2,
+          "veraenderung": 0
+        },
+        {
+          "name": "Die Linke",
+          "anteil": 3.2,
+          "vorher": 2,
+          "veraenderung": 1.2
+        }
+      ]
     }
   },
   "09178142": {
@@ -1044,54 +2132,63 @@
     "listen": [
       {
         "name": "CSU",
+        "lang": "Christlich-Soziale Union in Bayern e.V.",
         "stimmen": 33802,
         "anteil": 32.1,
         "veraenderung": 1
       },
       {
         "name": "FREIE WÄHLER",
+        "lang": "FREIE WÄHLER/Freie Wähler - Kreis Freising e.V.",
         "stimmen": 32770,
         "anteil": 31.1,
         "veraenderung": 15.2
       },
       {
         "name": "AfD",
+        "lang": "Alternative für Deutschland",
         "stimmen": 13675,
         "anteil": 13,
         "veraenderung": -20.6
       },
       {
         "name": "GRÜNE",
+        "lang": "BÜNDNIS 90/DIE GRÜNEN",
         "stimmen": 11763,
         "anteil": 11.2,
         "veraenderung": 3.7
       },
       {
         "name": "SPD",
+        "lang": "Sozialdemokratische Partei Deutschlands",
         "stimmen": 6992,
         "anteil": 6.6,
         "veraenderung": 1.7
       },
       {
         "name": "FSM",
+        "lang": "Freisinger Mitte e.V.",
         "stimmen": 838,
         "anteil": 0.8,
         "veraenderung": -1.3
       },
       {
         "name": "ÖDP",
+        "lang": "Ökologisch-Demokratische Partei",
         "stimmen": 1748,
         "anteil": 1.7,
         "veraenderung": -0.6
       },
       {
         "name": "FDP",
+        "lang": "Freie Demokratische Partei",
         "stimmen": 1005,
         "anteil": 1,
         "veraenderung": -0.8
       },
       {
         "name": "Die Linke",
+        "lang": null,
         "stimmen": 2801,
         "anteil": 2.7,
         "veraenderung": 1.7
@@ -1102,6 +2199,65 @@
       "waehler": 1759,
       "wahlbeteiligung": 72.2,
       "gueltige": 105394
+    },
+    "vergleich": {
+      "vergleichswahl": "Kreistagswahl 2020",
+      "listen": [
+        {
+          "name": "CSU",
+          "anteil": 32.1,
+          "vorher": 31.1,
+          "veraenderung": 1
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "anteil": 31.1,
+          "vorher": 33.5,
+          "veraenderung": -2.4
+        },
+        {
+          "name": "AfD",
+          "anteil": 13,
+          "vorher": 7.5,
+          "veraenderung": 5.5
+        },
+        {
+          "name": "GRÜNE",
+          "anteil": 11.2,
+          "vorher": 15.9,
+          "veraenderung": -4.7
+        },
+        {
+          "name": "SPD",
+          "anteil": 6.6,
+          "vorher": 4.9,
+          "veraenderung": 1.7
+        },
+        {
+          "name": "FSM",
+          "anteil": 0.8,
+          "vorher": 2.2,
+          "veraenderung": -1.5
+        },
+        {
+          "name": "ÖDP",
+          "anteil": 1.7,
+          "vorher": 1.8,
+          "veraenderung": -0.1
+        },
+        {
+          "name": "FDP",
+          "anteil": 1,
+          "vorher": 2.1,
+          "veraenderung": -1.2
+        },
+        {
+          "name": "Die Linke",
+          "anteil": 2.7,
+          "vorher": 1,
+          "veraenderung": 1.7
+        }
+      ]
     }
   },
   "09178143": {
@@ -1109,54 +2265,63 @@
     "listen": [
       {
         "name": "CSU",
+        "lang": "Christlich-Soziale Union in Bayern e.V.",
         "stimmen": 163975,
         "anteil": 31.4,
         "veraenderung": 6
       },
       {
         "name": "FREIE WÄHLER",
+        "lang": "FREIE WÄHLER/Freie Wähler - Kreis Freising e.V.",
         "stimmen": 92455,
         "anteil": 17.7,
         "veraenderung": -10.4
       },
       {
         "name": "AfD",
+        "lang": "Alternative für Deutschland",
         "stimmen": 54901,
         "anteil": 10.5,
         "veraenderung": -7.8
       },
       {
         "name": "GRÜNE",
+        "lang": "BÜNDNIS 90/DIE GRÜNEN",
         "stimmen": 109593,
         "anteil": 21,
         "veraenderung": 13.9
       },
       {
         "name": "SPD",
+        "lang": "Sozialdemokratische Partei Deutschlands",
         "stimmen": 42130,
         "anteil": 8.1,
         "veraenderung": -1
       },
       {
         "name": "FSM",
+        "lang": "Freisinger Mitte e.V.",
         "stimmen": 10798,
         "anteil": 2.1,
         "veraenderung": -0.8
       },
       {
         "name": "ÖDP",
+        "lang": "Ökologisch-Demokratische Partei",
         "stimmen": 10823,
         "anteil": 2.1,
         "veraenderung": 0.2
       },
       {
         "name": "FDP",
+        "lang": "Freie Demokratische Partei",
         "stimmen": 7839,
         "anteil": 1.5,
         "veraenderung": -2.5
       },
       {
         "name": "Die Linke",
+        "lang": null,
         "stimmen": 30153,
         "anteil": 5.8,
         "veraenderung": 2.5
@@ -1167,6 +2332,65 @@
       "waehler": 8843,
       "wahlbeteiligung": 61.8,
       "gueltige": 522667
+    },
+    "vergleich": {
+      "vergleichswahl": "Kreistagswahl 2020",
+      "listen": [
+        {
+          "name": "CSU",
+          "anteil": 31.4,
+          "vorher": 25.4,
+          "veraenderung": 6
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "anteil": 17.7,
+          "vorher": 18.3,
+          "veraenderung": -0.6
+        },
+        {
+          "name": "AfD",
+          "anteil": 10.5,
+          "vorher": 7.1,
+          "veraenderung": 3.4
+        },
+        {
+          "name": "GRÜNE",
+          "anteil": 21,
+          "vorher": 28.1,
+          "veraenderung": -7.1
+        },
+        {
+          "name": "SPD",
+          "anteil": 8.1,
+          "vorher": 9.1,
+          "veraenderung": -1
+        },
+        {
+          "name": "FSM",
+          "anteil": 2.1,
+          "vorher": 1.9,
+          "veraenderung": 0.2
+        },
+        {
+          "name": "ÖDP",
+          "anteil": 2.1,
+          "vorher": 4,
+          "veraenderung": -1.9
+        },
+        {
+          "name": "FDP",
+          "anteil": 1.5,
+          "vorher": 2.9,
+          "veraenderung": -1.4
+        },
+        {
+          "name": "Die Linke",
+          "anteil": 5.8,
+          "vorher": 3.2,
+          "veraenderung": 2.5
+        }
+      ]
     }
   },
   "09178144": {
@@ -1174,54 +2398,63 @@
     "listen": [
       {
         "name": "CSU",
+        "lang": "Christlich-Soziale Union in Bayern e.V.",
         "stimmen": 61155,
         "anteil": 36,
         "veraenderung": 2.1
       },
       {
         "name": "FREIE WÄHLER",
+        "lang": "FREIE WÄHLER/Freie Wähler - Kreis Freising e.V.",
         "stimmen": 43840,
         "anteil": 25.8,
         "veraenderung": 14
       },
       {
         "name": "AfD",
+        "lang": "Alternative für Deutschland",
         "stimmen": 22110,
         "anteil": 13,
         "veraenderung": -17.5
       },
       {
         "name": "GRÜNE",
+        "lang": "BÜNDNIS 90/DIE GRÜNEN",
         "stimmen": 17296,
         "anteil": 10.2,
         "veraenderung": 1.6
       },
       {
         "name": "SPD",
+        "lang": "Sozialdemokratische Partei Deutschlands",
         "stimmen": 8694,
         "anteil": 5.1,
         "veraenderung": 0.5
       },
       {
         "name": "FSM",
+        "lang": "Freisinger Mitte e.V.",
         "stimmen": 4815,
         "anteil": 2.8,
         "veraenderung": 0.5
       },
       {
         "name": "ÖDP",
+        "lang": "Ökologisch-Demokratische Partei",
         "stimmen": 3801,
         "anteil": 2.2,
         "veraenderung": -2.5
       },
       {
         "name": "FDP",
+        "lang": "Freie Demokratische Partei",
         "stimmen": 2976,
         "anteil": 1.7,
         "veraenderung": -0.2
       },
       {
         "name": "Die Linke",
+        "lang": null,
         "stimmen": 5400,
         "anteil": 3.2,
         "veraenderung": 1.4
@@ -1232,6 +2465,65 @@
       "waehler": 2926,
       "wahlbeteiligung": 68.7,
       "gueltige": 170087
+    },
+    "vergleich": {
+      "vergleichswahl": "Kreistagswahl 2020",
+      "listen": [
+        {
+          "name": "CSU",
+          "anteil": 36,
+          "vorher": 33.8,
+          "veraenderung": 2.1
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "anteil": 25.8,
+          "vorher": 30.5,
+          "veraenderung": -4.8
+        },
+        {
+          "name": "AfD",
+          "anteil": 13,
+          "vorher": 8.5,
+          "veraenderung": 4.5
+        },
+        {
+          "name": "GRÜNE",
+          "anteil": 10.2,
+          "vorher": 11.7,
+          "veraenderung": -1.6
+        },
+        {
+          "name": "SPD",
+          "anteil": 5.1,
+          "vorher": 4.6,
+          "veraenderung": 0.5
+        },
+        {
+          "name": "FSM",
+          "anteil": 2.8,
+          "vorher": 4.7,
+          "veraenderung": -1.9
+        },
+        {
+          "name": "ÖDP",
+          "anteil": 2.2,
+          "vorher": 2,
+          "veraenderung": 0.3
+        },
+        {
+          "name": "FDP",
+          "anteil": 1.7,
+          "vorher": 2.3,
+          "veraenderung": -0.6
+        },
+        {
+          "name": "Die Linke",
+          "anteil": 3.2,
+          "vorher": 1.8,
+          "veraenderung": 1.4
+        }
+      ]
     }
   },
   "09178145": {
@@ -1239,54 +2531,63 @@
     "listen": [
       {
         "name": "CSU",
+        "lang": "Christlich-Soziale Union in Bayern e.V.",
         "stimmen": 145389,
         "anteil": 29.5,
         "veraenderung": 3.5
       },
       {
         "name": "FREIE WÄHLER",
+        "lang": "FREIE WÄHLER/Freie Wähler - Kreis Freising e.V.",
         "stimmen": 88269,
         "anteil": 17.9,
         "veraenderung": -9.5
       },
       {
         "name": "AfD",
+        "lang": "Alternative für Deutschland",
         "stimmen": 55338,
         "anteil": 11.2,
         "veraenderung": -5.8
       },
       {
         "name": "GRÜNE",
+        "lang": "BÜNDNIS 90/DIE GRÜNEN",
         "stimmen": 94285,
         "anteil": 19.1,
         "veraenderung": 13
       },
       {
         "name": "SPD",
+        "lang": "Sozialdemokratische Partei Deutschlands",
         "stimmen": 48277,
         "anteil": 9.8,
         "veraenderung": 0.1
       },
       {
         "name": "FSM",
+        "lang": "Freisinger Mitte e.V.",
         "stimmen": 12659,
         "anteil": 2.6,
         "veraenderung": -0.4
       },
       {
         "name": "ÖDP",
+        "lang": "Ökologisch-Demokratische Partei",
         "stimmen": 19358,
         "anteil": 3.9,
         "veraenderung": 0.8
       },
       {
         "name": "FDP",
+        "lang": "Freie Demokratische Partei",
         "stimmen": 12403,
         "anteil": 2.5,
         "veraenderung": -3.1
       },
       {
         "name": "Die Linke",
+        "lang": null,
         "stimmen": 17256,
         "anteil": 3.5,
         "veraenderung": 1.3
@@ -1297,6 +2598,65 @@
       "waehler": 7981,
       "wahlbeteiligung": 53.3,
       "gueltige": 493234
+    },
+    "vergleich": {
+      "vergleichswahl": "Kreistagswahl 2020",
+      "listen": [
+        {
+          "name": "CSU",
+          "anteil": 29.5,
+          "vorher": 26,
+          "veraenderung": 3.5
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "anteil": 17.9,
+          "vorher": 17,
+          "veraenderung": 0.9
+        },
+        {
+          "name": "AfD",
+          "anteil": 11.2,
+          "vorher": 6.1,
+          "veraenderung": 5.1
+        },
+        {
+          "name": "GRÜNE",
+          "anteil": 19.1,
+          "vorher": 27.4,
+          "veraenderung": -8.3
+        },
+        {
+          "name": "SPD",
+          "anteil": 9.8,
+          "vorher": 9.7,
+          "veraenderung": 0.1
+        },
+        {
+          "name": "FSM",
+          "anteil": 2.6,
+          "vorher": 3.1,
+          "veraenderung": -0.5
+        },
+        {
+          "name": "ÖDP",
+          "anteil": 3.9,
+          "vorher": 5.6,
+          "veraenderung": -1.7
+        },
+        {
+          "name": "FDP",
+          "anteil": 2.5,
+          "vorher": 3,
+          "veraenderung": -0.5
+        },
+        {
+          "name": "Die Linke",
+          "anteil": 3.5,
+          "vorher": 2.2,
+          "veraenderung": 1.3
+        }
+      ]
     }
   },
   "09178150": {
@@ -1304,54 +2664,63 @@
     "listen": [
       {
         "name": "CSU",
+        "lang": "Christlich-Soziale Union in Bayern e.V.",
         "stimmen": 13545,
         "anteil": 24.8,
         "veraenderung": -0.4
       },
       {
         "name": "FREIE WÄHLER",
+        "lang": "FREIE WÄHLER/Freie Wähler - Kreis Freising e.V.",
         "stimmen": 17336,
         "anteil": 31.7,
         "veraenderung": 17.5
       },
       {
         "name": "AfD",
+        "lang": "Alternative für Deutschland",
         "stimmen": 7794,
         "anteil": 14.3,
         "veraenderung": -23.3
       },
       {
         "name": "GRÜNE",
+        "lang": "BÜNDNIS 90/DIE GRÜNEN",
         "stimmen": 6142,
         "anteil": 11.2,
         "veraenderung": 3.3
       },
       {
         "name": "SPD",
+        "lang": "Sozialdemokratische Partei Deutschlands",
         "stimmen": 3025,
         "anteil": 5.5,
         "veraenderung": 1.2
       },
       {
         "name": "FSM",
+        "lang": "Freisinger Mitte e.V.",
         "stimmen": 1876,
         "anteil": 3.4,
         "veraenderung": 0.9
       },
       {
         "name": "ÖDP",
+        "lang": "Ökologisch-Demokratische Partei",
         "stimmen": 1607,
         "anteil": 2.9,
         "veraenderung": -0.4
       },
       {
         "name": "FDP",
+        "lang": "Freie Demokratische Partei",
         "stimmen": 1359,
         "anteil": 2.5,
         "veraenderung": -1.3
       },
       {
         "name": "Die Linke",
+        "lang": null,
         "stimmen": 2008,
         "anteil": 3.7,
         "veraenderung": 2.6
@@ -1362,6 +2731,65 @@
       "waehler": 883,
       "wahlbeteiligung": 67.9,
       "gueltige": 54692
+    },
+    "vergleich": {
+      "vergleichswahl": "Kreistagswahl 2020",
+      "listen": [
+        {
+          "name": "CSU",
+          "anteil": 24.8,
+          "vorher": 25.2,
+          "veraenderung": -0.4
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "anteil": 31.7,
+          "vorher": 37.5,
+          "veraenderung": -5.8
+        },
+        {
+          "name": "AfD",
+          "anteil": 14.3,
+          "vorher": 7.9,
+          "veraenderung": 6.3
+        },
+        {
+          "name": "GRÜNE",
+          "anteil": 11.2,
+          "vorher": 14.2,
+          "veraenderung": -3
+        },
+        {
+          "name": "SPD",
+          "anteil": 5.5,
+          "vorher": 4.3,
+          "veraenderung": 1.2
+        },
+        {
+          "name": "FSM",
+          "anteil": 3.4,
+          "vorher": 3.3,
+          "veraenderung": 0.1
+        },
+        {
+          "name": "ÖDP",
+          "anteil": 2.9,
+          "vorher": 3.8,
+          "veraenderung": -0.9
+        },
+        {
+          "name": "FDP",
+          "anteil": 2.5,
+          "vorher": 2.6,
+          "veraenderung": -0.1
+        },
+        {
+          "name": "Die Linke",
+          "anteil": 3.7,
+          "vorher": 1,
+          "veraenderung": 2.6
+        }
+      ]
     }
   },
   "09178155": {
@@ -1369,54 +2797,63 @@
     "listen": [
       {
         "name": "CSU",
+        "lang": "Christlich-Soziale Union in Bayern e.V.",
         "stimmen": 23190,
         "anteil": 29.3,
         "veraenderung": -1.3
       },
       {
         "name": "FREIE WÄHLER",
+        "lang": "FREIE WÄHLER/Freie Wähler - Kreis Freising e.V.",
         "stimmen": 22955,
         "anteil": 29,
         "veraenderung": 9.2
       },
       {
         "name": "AfD",
+        "lang": "Alternative für Deutschland",
         "stimmen": 11413,
         "anteil": 14.4,
         "veraenderung": -12.8
       },
       {
         "name": "GRÜNE",
+        "lang": "BÜNDNIS 90/DIE GRÜNEN",
         "stimmen": 9641,
         "anteil": 12.2,
         "veraenderung": 4.5
       },
       {
         "name": "SPD",
+        "lang": "Sozialdemokratische Partei Deutschlands",
         "stimmen": 5043,
         "anteil": 6.4,
         "veraenderung": 1.4
       },
       {
         "name": "FSM",
+        "lang": "Freisinger Mitte e.V.",
         "stimmen": 1274,
         "anteil": 1.6,
         "veraenderung": -1.6
       },
       {
         "name": "ÖDP",
+        "lang": "Ökologisch-Demokratische Partei",
         "stimmen": 1518,
         "anteil": 1.9,
         "veraenderung": -0.1
       },
       {
         "name": "FDP",
+        "lang": "Freie Demokratische Partei",
         "stimmen": 1232,
         "anteil": 1.6,
         "veraenderung": -0.3
       },
       {
         "name": "Die Linke",
+        "lang": null,
         "stimmen": 2768,
         "anteil": 3.5,
         "veraenderung": 0.9
@@ -1427,6 +2864,65 @@
       "waehler": 1340,
       "wahlbeteiligung": 67.7,
       "gueltige": 79034
+    },
+    "vergleich": {
+      "vergleichswahl": "Kreistagswahl 2020",
+      "listen": [
+        {
+          "name": "CSU",
+          "anteil": 29.3,
+          "vorher": 30.6,
+          "veraenderung": -1.3
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "anteil": 29,
+          "vorher": 27.2,
+          "veraenderung": 1.8
+        },
+        {
+          "name": "AfD",
+          "anteil": 14.4,
+          "vorher": 7.7,
+          "veraenderung": 6.7
+        },
+        {
+          "name": "GRÜNE",
+          "anteil": 12.2,
+          "vorher": 19.8,
+          "veraenderung": -7.6
+        },
+        {
+          "name": "SPD",
+          "anteil": 6.4,
+          "vorher": 4.9,
+          "veraenderung": 1.4
+        },
+        {
+          "name": "FSM",
+          "anteil": 1.6,
+          "vorher": 2,
+          "veraenderung": -0.4
+        },
+        {
+          "name": "ÖDP",
+          "anteil": 1.9,
+          "vorher": 1.9,
+          "veraenderung": 0
+        },
+        {
+          "name": "FDP",
+          "anteil": 1.6,
+          "vorher": 3.2,
+          "veraenderung": -1.6
+        },
+        {
+          "name": "Die Linke",
+          "anteil": 3.5,
+          "vorher": 2.6,
+          "veraenderung": 0.9
+        }
+      ]
     }
   },
   "09178156": {
@@ -1434,54 +2930,63 @@
     "listen": [
       {
         "name": "CSU",
+        "lang": "Christlich-Soziale Union in Bayern e.V.",
         "stimmen": 29835,
         "anteil": 41.2,
         "veraenderung": 5
       },
       {
         "name": "FREIE WÄHLER",
+        "lang": "FREIE WÄHLER/Freie Wähler - Kreis Freising e.V.",
         "stimmen": 13992,
         "anteil": 19.3,
         "veraenderung": 5.7
       },
       {
         "name": "AfD",
+        "lang": "Alternative für Deutschland",
         "stimmen": 8215,
         "anteil": 11.3,
         "veraenderung": -10.4
       },
       {
         "name": "GRÜNE",
+        "lang": "BÜNDNIS 90/DIE GRÜNEN",
         "stimmen": 6986,
         "anteil": 9.6,
         "veraenderung": 3.5
       },
       {
         "name": "SPD",
+        "lang": "Sozialdemokratische Partei Deutschlands",
         "stimmen": 3300,
         "anteil": 4.6,
         "veraenderung": 0.4
       },
       {
         "name": "FSM",
+        "lang": "Freisinger Mitte e.V.",
         "stimmen": 2815,
         "anteil": 3.9,
         "veraenderung": 1.6
       },
       {
         "name": "ÖDP",
+        "lang": "Ökologisch-Demokratische Partei",
         "stimmen": 5037,
         "anteil": 6.9,
         "veraenderung": -3.5
       },
       {
         "name": "FDP",
+        "lang": "Freie Demokratische Partei",
         "stimmen": 1130,
         "anteil": 1.6,
         "veraenderung": -2.6
       },
       {
         "name": "Die Linke",
+        "lang": null,
         "stimmen": 1184,
         "anteil": 1.6,
         "veraenderung": 0.3
@@ -1492,6 +2997,65 @@
       "waehler": 1249,
       "wahlbeteiligung": 63.7,
       "gueltige": 72494
+    },
+    "vergleich": {
+      "vergleichswahl": "Kreistagswahl 2020",
+      "listen": [
+        {
+          "name": "CSU",
+          "anteil": 41.2,
+          "vorher": 36.2,
+          "veraenderung": 5
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "anteil": 19.3,
+          "vorher": 21.7,
+          "veraenderung": -2.4
+        },
+        {
+          "name": "AfD",
+          "anteil": 11.3,
+          "vorher": 6.1,
+          "veraenderung": 5.2
+        },
+        {
+          "name": "GRÜNE",
+          "anteil": 9.6,
+          "vorher": 13.6,
+          "veraenderung": -4
+        },
+        {
+          "name": "SPD",
+          "anteil": 4.6,
+          "vorher": 4.2,
+          "veraenderung": 0.4
+        },
+        {
+          "name": "FSM",
+          "anteil": 3.9,
+          "vorher": 10.4,
+          "veraenderung": -6.6
+        },
+        {
+          "name": "ÖDP",
+          "anteil": 6.9,
+          "vorher": 4.1,
+          "veraenderung": 2.8
+        },
+        {
+          "name": "FDP",
+          "anteil": 1.6,
+          "vorher": 2.3,
+          "veraenderung": -0.7
+        },
+        {
+          "name": "Die Linke",
+          "anteil": 1.6,
+          "vorher": 1.3,
+          "veraenderung": 0.3
+        }
+      ]
     }
   },
   "09178157": {
@@ -1499,54 +3063,63 @@
     "listen": [
       {
         "name": "CSU",
+        "lang": "Christlich-Soziale Union in Bayern e.V.",
         "stimmen": 48687,
         "anteil": 34.9,
         "veraenderung": 3
       },
       {
         "name": "FREIE WÄHLER",
+        "lang": "FREIE WÄHLER/Freie Wähler - Kreis Freising e.V.",
         "stimmen": 29931,
         "anteil": 21.5,
         "veraenderung": 5.2
       },
       {
         "name": "AfD",
+        "lang": "Alternative für Deutschland",
         "stimmen": 13643,
         "anteil": 9.8,
         "veraenderung": -14.1
       },
       {
         "name": "GRÜNE",
+        "lang": "BÜNDNIS 90/DIE GRÜNEN",
         "stimmen": 18960,
         "anteil": 13.6,
         "veraenderung": 7.1
       },
       {
         "name": "SPD",
+        "lang": "Sozialdemokratische Partei Deutschlands",
         "stimmen": 6767,
         "anteil": 4.9,
         "veraenderung": 0.7
       },
       {
         "name": "FSM",
+        "lang": "Freisinger Mitte e.V.",
         "stimmen": 11091,
         "anteil": 8,
         "veraenderung": 5.9
       },
       {
         "name": "ÖDP",
+        "lang": "Ökologisch-Demokratische Partei",
         "stimmen": 3788,
         "anteil": 2.7,
         "veraenderung": -7.8
       },
       {
         "name": "FDP",
+        "lang": "Freie Demokratische Partei",
         "stimmen": 2030,
         "anteil": 1.5,
         "veraenderung": -1.6
       },
       {
         "name": "Die Linke",
+        "lang": null,
         "stimmen": 4578,
         "anteil": 3.3,
         "veraenderung": 1.6
@@ -1557,6 +3130,65 @@
       "waehler": 2354,
       "wahlbeteiligung": 63,
       "gueltige": 139475
+    },
+    "vergleich": {
+      "vergleichswahl": "Kreistagswahl 2020",
+      "listen": [
+        {
+          "name": "CSU",
+          "anteil": 34.9,
+          "vorher": 31.9,
+          "veraenderung": 3
+        },
+        {
+          "name": "FREIE WÄHLER",
+          "anteil": 21.5,
+          "vorher": 23.9,
+          "veraenderung": -2.4
+        },
+        {
+          "name": "AfD",
+          "anteil": 9.8,
+          "vorher": 6.5,
+          "veraenderung": 3.3
+        },
+        {
+          "name": "GRÜNE",
+          "anteil": 13.6,
+          "vorher": 16.3,
+          "veraenderung": -2.7
+        },
+        {
+          "name": "SPD",
+          "anteil": 4.9,
+          "vorher": 4.2,
+          "veraenderung": 0.7
+        },
+        {
+          "name": "FSM",
+          "anteil": 8,
+          "vorher": 10.5,
+          "veraenderung": -2.6
+        },
+        {
+          "name": "ÖDP",
+          "anteil": 2.7,
+          "vorher": 3,
+          "veraenderung": -0.3
+        },
+        {
+          "name": "FDP",
+          "anteil": 1.5,
+          "vorher": 2.1,
+          "veraenderung": -0.6
+        },
+        {
+          "name": "Die Linke",
+          "anteil": 3.3,
+          "vorher": 1.7,
+          "veraenderung": 1.6
+        }
+      ]
     }
   }
 }
