@@ -1,0 +1,24 @@
+{
+  "name": "elections",
+  "version": "0.1.0",
+  "description": "Wahlergebnisse als Hexagon-Kartogramm",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    "./listen": "./src/kern/listen.js",
+    "./wahl": "./src/kern/wahl.js",
+    "./karte": "./src/kern/karte.js"
+  },
+  "scripts": {
+    "hole": "node scripts/hole.mjs",
+    "baue": "node scripts/baue.mjs",
+    "kartogramm": "node scripts/kartogramm.mjs",
+    "vorschau": "node scripts/vorschau.mjs"
+  },
+  "dependencies": {
+    "hexagonalmap": "github:bagruber/hexagonalmap"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2"
+  }
+}

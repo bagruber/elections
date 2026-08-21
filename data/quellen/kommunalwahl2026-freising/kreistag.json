@@ -1,0 +1,1562 @@
+{
+  "09178113": {
+    "gebiet": "09178113 - Allershausen",
+    "listen": [
+      {
+        "name": "CSU",
+        "stimmen": 58967,
+        "anteil": 36.2,
+        "veraenderung": 1.2
+      },
+      {
+        "name": "FREIE WÄHLER",
+        "stimmen": 37528,
+        "anteil": 23.1,
+        "veraenderung": 8.7
+      },
+      {
+        "name": "AfD",
+        "stimmen": 16972,
+        "anteil": 10.4,
+        "veraenderung": -16.8
+      },
+      {
+        "name": "GRÜNE",
+        "stimmen": 20724,
+        "anteil": 12.7,
+        "veraenderung": 8.6
+      },
+      {
+        "name": "SPD",
+        "stimmen": 12981,
+        "anteil": 8,
+        "veraenderung": 2
+      },
+      {
+        "name": "FSM",
+        "stimmen": 3079,
+        "anteil": 1.9,
+        "veraenderung": -2.5
+      },
+      {
+        "name": "ÖDP",
+        "stimmen": 2563,
+        "anteil": 1.6,
+        "veraenderung": -2.5
+      },
+      {
+        "name": "FDP",
+        "stimmen": 6638,
+        "anteil": 4.1,
+        "veraenderung": 1.1
+      },
+      {
+        "name": "Die Linke",
+        "stimmen": 3260,
+        "anteil": 2,
+        "veraenderung": 0.3
+      }
+    ],
+    "kennzahlen": {
+      "stimmberechtigte": 4554,
+      "waehler": 2742,
+      "wahlbeteiligung": 60.2,
+      "gueltige": 162712
+    }
+  },
+  "09178115": {
+    "gebiet": "09178115 - Attenkirchen",
+    "listen": [
+      {
+        "name": "CSU",
+        "stimmen": 24973,
+        "anteil": 26.7,
+        "veraenderung": 2.1
+      },
+      {
+        "name": "FREIE WÄHLER",
+        "stimmen": 21704,
+        "anteil": 23.2,
+        "veraenderung": 4.9
+      },
+      {
+        "name": "AfD",
+        "stimmen": 13591,
+        "anteil": 14.5,
+        "veraenderung": -8.4
+      },
+      {
+        "name": "GRÜNE",
+        "stimmen": 12372,
+        "anteil": 13.2,
+        "veraenderung": 5.6
+      },
+      {
+        "name": "SPD",
+        "stimmen": 8009,
+        "anteil": 8.5,
+        "veraenderung": 3.2
+      },
+      {
+        "name": "FSM",
+        "stimmen": 6237,
+        "anteil": 6.7,
+        "veraenderung": 3.6
+      },
+      {
+        "name": "ÖDP",
+        "stimmen": 3057,
+        "anteil": 3.3,
+        "veraenderung": -9.2
+      },
+      {
+        "name": "FDP",
+        "stimmen": 1669,
+        "anteil": 1.8,
+        "veraenderung": -1.6
+      },
+      {
+        "name": "Die Linke",
+        "stimmen": 2082,
+        "anteil": 2.2,
+        "veraenderung": -0.2
+      }
+    ],
+    "kennzahlen": {
+      "stimmberechtigte": 2185,
+      "waehler": 1502,
+      "wahlbeteiligung": 68.7,
+      "gueltige": 93694
+    }
+  },
+  "09178116": {
+    "gebiet": "Au i.d.Hallertau",
+    "listen": [
+      {
+        "name": "CSU",
+        "stimmen": 64443,
+        "anteil": 34.7,
+        "veraenderung": 2.5
+      },
+      {
+        "name": "FREIE WÄHLER",
+        "stimmen": 47462,
+        "anteil": 25.6,
+        "veraenderung": 11.8
+      },
+      {
+        "name": "AfD",
+        "stimmen": 28272,
+        "anteil": 15.2,
+        "veraenderung": -20.1
+      },
+      {
+        "name": "GRÜNE",
+        "stimmen": 15991,
+        "anteil": 8.6,
+        "veraenderung": 1.5
+      },
+      {
+        "name": "SPD",
+        "stimmen": 8321,
+        "anteil": 4.5,
+        "veraenderung": 0.3
+      },
+      {
+        "name": "FSM",
+        "stimmen": 7274,
+        "anteil": 3.9,
+        "veraenderung": 1.7
+      },
+      {
+        "name": "ÖDP",
+        "stimmen": 4762,
+        "anteil": 2.6,
+        "veraenderung": 0.4
+      },
+      {
+        "name": "FDP",
+        "stimmen": 5365,
+        "anteil": 2.9,
+        "veraenderung": 1.3
+      },
+      {
+        "name": "Die Linke",
+        "stimmen": 3846,
+        "anteil": 2.1,
+        "veraenderung": 0.7
+      }
+    ],
+    "kennzahlen": {
+      "stimmberechtigte": 4833,
+      "waehler": 3241,
+      "wahlbeteiligung": 67.1,
+      "gueltige": 185736
+    }
+  },
+  "09178120": {
+    "gebiet": "Eching",
+    "listen": [
+      {
+        "name": "CSU",
+        "stimmen": 134124,
+        "anteil": 32.4,
+        "veraenderung": 4.1
+      },
+      {
+        "name": "FREIE WÄHLER",
+        "stimmen": 69081,
+        "anteil": 16.7,
+        "veraenderung": -6.4
+      },
+      {
+        "name": "AfD",
+        "stimmen": 38515,
+        "anteil": 9.3,
+        "veraenderung": -4.1
+      },
+      {
+        "name": "GRÜNE",
+        "stimmen": 67986,
+        "anteil": 16.4,
+        "veraenderung": 12
+      },
+      {
+        "name": "SPD",
+        "stimmen": 48778,
+        "anteil": 11.8,
+        "veraenderung": -4.3
+      },
+      {
+        "name": "FSM",
+        "stimmen": 12888,
+        "anteil": 3.1,
+        "veraenderung": -0.7
+      },
+      {
+        "name": "ÖDP",
+        "stimmen": 12468,
+        "anteil": 3,
+        "veraenderung": -0.4
+      },
+      {
+        "name": "FDP",
+        "stimmen": 14795,
+        "anteil": 3.6,
+        "veraenderung": -1.5
+      },
+      {
+        "name": "Die Linke",
+        "stimmen": 14703,
+        "anteil": 3.6,
+        "veraenderung": 1.2
+      }
+    ],
+    "kennzahlen": {
+      "stimmberechtigte": 11089,
+      "waehler": 6602,
+      "wahlbeteiligung": 59.5,
+      "gueltige": 413338
+    }
+  },
+  "09178122": {
+    "gebiet": "Rudelzhausen",
+    "listen": [
+      {
+        "name": "CSU",
+        "stimmen": 38945,
+        "anteil": 34.4,
+        "veraenderung": -6.1
+      },
+      {
+        "name": "FREIE WÄHLER",
+        "stimmen": 34474,
+        "anteil": 30.5,
+        "veraenderung": 20.5
+      },
+      {
+        "name": "AfD",
+        "stimmen": 18689,
+        "anteil": 16.5,
+        "veraenderung": -14.9
+      },
+      {
+        "name": "GRÜNE",
+        "stimmen": 8299,
+        "anteil": 7.3,
+        "veraenderung": 0.6
+      },
+      {
+        "name": "SPD",
+        "stimmen": 4647,
+        "anteil": 4.1,
+        "veraenderung": 0.2
+      },
+      {
+        "name": "FSM",
+        "stimmen": 1439,
+        "anteil": 1.3,
+        "veraenderung": -1.1
+      },
+      {
+        "name": "ÖDP",
+        "stimmen": 2963,
+        "anteil": 2.6,
+        "veraenderung": 0.9
+      },
+      {
+        "name": "FDP",
+        "stimmen": 1918,
+        "anteil": 1.7,
+        "veraenderung": 0
+      },
+      {
+        "name": "Die Linke",
+        "stimmen": 1838,
+        "anteil": 1.6,
+        "veraenderung": -0.2
+      }
+    ],
+    "kennzahlen": {
+      "stimmberechtigte": 2751,
+      "waehler": 1893,
+      "wahlbeteiligung": 68.8,
+      "gueltige": 113212
+    }
+  },
+  "09178123": {
+    "gebiet": "Fahrenzhausen",
+    "listen": [
+      {
+        "name": "CSU",
+        "stimmen": 38199,
+        "anteil": 27.3,
+        "veraenderung": -1.5
+      },
+      {
+        "name": "FREIE WÄHLER",
+        "stimmen": 36344,
+        "anteil": 25.9,
+        "veraenderung": 9.2
+      },
+      {
+        "name": "AfD",
+        "stimmen": 21811,
+        "anteil": 15.6,
+        "veraenderung": -11.5
+      },
+      {
+        "name": "GRÜNE",
+        "stimmen": 18806,
+        "anteil": 13.4,
+        "veraenderung": 5.1
+      },
+      {
+        "name": "SPD",
+        "stimmen": 6001,
+        "anteil": 4.3,
+        "veraenderung": -0.1
+      },
+      {
+        "name": "FSM",
+        "stimmen": 2960,
+        "anteil": 2.1,
+        "veraenderung": -1.8
+      },
+      {
+        "name": "ÖDP",
+        "stimmen": 4384,
+        "anteil": 3.1,
+        "veraenderung": -0.3
+      },
+      {
+        "name": "FDP",
+        "stimmen": 8364,
+        "anteil": 6,
+        "veraenderung": 0.4
+      },
+      {
+        "name": "Die Linke",
+        "stimmen": 3298,
+        "anteil": 2.4,
+        "veraenderung": 0.3
+      }
+    ],
+    "kennzahlen": {
+      "stimmberechtigte": 3972,
+      "waehler": 2328,
+      "wahlbeteiligung": 58.6,
+      "gueltige": 140167
+    }
+  },
+  "09178124": {
+    "gebiet": "Freising",
+    "listen": [
+      {
+        "name": "CSU",
+        "stimmen": 214705,
+        "anteil": 16.3,
+        "veraenderung": 3.9
+      },
+      {
+        "name": "FREIE WÄHLER",
+        "stimmen": 151233,
+        "anteil": 11.5,
+        "veraenderung": -16.8
+      },
+      {
+        "name": "AfD",
+        "stimmen": 92288,
+        "anteil": 7,
+        "veraenderung": -3.7
+      },
+      {
+        "name": "GRÜNE",
+        "stimmen": 336361,
+        "anteil": 25.5,
+        "veraenderung": 20.9
+      },
+      {
+        "name": "SPD",
+        "stimmen": 97009,
+        "anteil": 7.3,
+        "veraenderung": 1.2
+      },
+      {
+        "name": "FSM",
+        "stimmen": 273035,
+        "anteil": 20.7,
+        "veraenderung": 18.2
+      },
+      {
+        "name": "ÖDP",
+        "stimmen": 57706,
+        "anteil": 4.4,
+        "veraenderung": -21.4
+      },
+      {
+        "name": "FDP",
+        "stimmen": 29240,
+        "anteil": 2.2,
+        "veraenderung": -3.8
+      },
+      {
+        "name": "Die Linke",
+        "stimmen": 68882,
+        "anteil": 5.2,
+        "veraenderung": 1.4
+      }
+    ],
+    "kennzahlen": {
+      "stimmberechtigte": 36064,
+      "waehler": 21037,
+      "wahlbeteiligung": 58.3,
+      "gueltige": 1320459
+    }
+  },
+  "09178125": {
+    "gebiet": "09178125 - Gammelsdorf",
+    "listen": [
+      {
+        "name": "CSU",
+        "stimmen": 16517,
+        "anteil": 34.6,
+        "veraenderung": -0.6
+      },
+      {
+        "name": "FREIE WÄHLER",
+        "stimmen": 13558,
+        "anteil": 28.4,
+        "veraenderung": 15.6
+      },
+      {
+        "name": "AfD",
+        "stimmen": 6817,
+        "anteil": 14.3,
+        "veraenderung": -15.3
+      },
+      {
+        "name": "GRÜNE",
+        "stimmen": 4283,
+        "anteil": 9,
+        "veraenderung": -0.1
+      },
+      {
+        "name": "SPD",
+        "stimmen": 2334,
+        "anteil": 4.9,
+        "veraenderung": 1
+      },
+      {
+        "name": "FSM",
+        "stimmen": 981,
+        "anteil": 2.1,
+        "veraenderung": 0.7
+      },
+      {
+        "name": "ÖDP",
+        "stimmen": 643,
+        "anteil": 1.3,
+        "veraenderung": -2.8
+      },
+      {
+        "name": "FDP",
+        "stimmen": 1368,
+        "anteil": 2.9,
+        "veraenderung": 1.4
+      },
+      {
+        "name": "Die Linke",
+        "stimmen": 1262,
+        "anteil": 2.6,
+        "veraenderung": 0.1
+      }
+    ],
+    "kennzahlen": {
+      "stimmberechtigte": 1276,
+      "waehler": 887,
+      "wahlbeteiligung": 69.5,
+      "gueltige": 47763
+    }
+  },
+  "09178129": {
+    "gebiet": "09178129 - Haag a.d.Amper",
+    "listen": [
+      {
+        "name": "CSU",
+        "stimmen": 31002,
+        "anteil": 31.8,
+        "veraenderung": 3.5
+      },
+      {
+        "name": "FREIE WÄHLER",
+        "stimmen": 20777,
+        "anteil": 21.3,
+        "veraenderung": 1.7
+      },
+      {
+        "name": "AfD",
+        "stimmen": 11952,
+        "anteil": 12.3,
+        "veraenderung": -14.4
+      },
+      {
+        "name": "GRÜNE",
+        "stimmen": 15112,
+        "anteil": 15.5,
+        "veraenderung": 9.2
+      },
+      {
+        "name": "SPD",
+        "stimmen": 4093,
+        "anteil": 4.2,
+        "veraenderung": -0.3
+      },
+      {
+        "name": "FSM",
+        "stimmen": 4771,
+        "anteil": 4.9,
+        "veraenderung": 2.9
+      },
+      {
+        "name": "ÖDP",
+        "stimmen": 3554,
+        "anteil": 3.6,
+        "veraenderung": -2.9
+      },
+      {
+        "name": "FDP",
+        "stimmen": 2320,
+        "anteil": 2.4,
+        "veraenderung": -1
+      },
+      {
+        "name": "Die Linke",
+        "stimmen": 3912,
+        "anteil": 4,
+        "veraenderung": 1.3
+      }
+    ],
+    "kennzahlen": {
+      "stimmberechtigte": 2290,
+      "waehler": 1575,
+      "wahlbeteiligung": 68.8,
+      "gueltige": 97493
+    }
+  },
+  "09178130": {
+    "gebiet": "Hallbergmoos",
+    "listen": [
+      {
+        "name": "CSU",
+        "stimmen": 91867,
+        "anteil": 33.8,
+        "veraenderung": -2.8
+      },
+      {
+        "name": "FREIE WÄHLER",
+        "stimmen": 70169,
+        "anteil": 25.8,
+        "veraenderung": 8.3
+      },
+      {
+        "name": "AfD",
+        "stimmen": 34678,
+        "anteil": 12.8,
+        "veraenderung": -8.4
+      },
+      {
+        "name": "GRÜNE",
+        "stimmen": 31787,
+        "anteil": 11.7,
+        "veraenderung": 4.9
+      },
+      {
+        "name": "SPD",
+        "stimmen": 19836,
+        "anteil": 7.3,
+        "veraenderung": -0.2
+      },
+      {
+        "name": "FSM",
+        "stimmen": 4500,
+        "anteil": 1.7,
+        "veraenderung": -1.4
+      },
+      {
+        "name": "ÖDP",
+        "stimmen": 4440,
+        "anteil": 1.6,
+        "veraenderung": -0.9
+      },
+      {
+        "name": "FDP",
+        "stimmen": 6703,
+        "anteil": 2.5,
+        "veraenderung": 0.1
+      },
+      {
+        "name": "Die Linke",
+        "stimmen": 7753,
+        "anteil": 2.9,
+        "veraenderung": 0.2
+      }
+    ],
+    "kennzahlen": {
+      "stimmberechtigte": 8495,
+      "waehler": 4415,
+      "wahlbeteiligung": 52,
+      "gueltige": 271733
+    }
+  },
+  "09178132": {
+    "gebiet": "09178132 - Hörgertshausen",
+    "listen": [
+      {
+        "name": "CSU",
+        "stimmen": 17974,
+        "anteil": 31.2,
+        "veraenderung": -2.7
+      },
+      {
+        "name": "FREIE WÄHLER",
+        "stimmen": 15192,
+        "anteil": 26.4,
+        "veraenderung": 12.7
+      },
+      {
+        "name": "AfD",
+        "stimmen": 9948,
+        "anteil": 17.3,
+        "veraenderung": -14.4
+      },
+      {
+        "name": "GRÜNE",
+        "stimmen": 6880,
+        "anteil": 12,
+        "veraenderung": 3.9
+      },
+      {
+        "name": "SPD",
+        "stimmen": 2571,
+        "anteil": 4.5,
+        "veraenderung": 1.1
+      },
+      {
+        "name": "FSM",
+        "stimmen": 831,
+        "anteil": 1.4,
+        "veraenderung": -0.8
+      },
+      {
+        "name": "ÖDP",
+        "stimmen": 1272,
+        "anteil": 2.2,
+        "veraenderung": -0.4
+      },
+      {
+        "name": "FDP",
+        "stimmen": 854,
+        "anteil": 1.5,
+        "veraenderung": -1.5
+      },
+      {
+        "name": "Die Linke",
+        "stimmen": 2050,
+        "anteil": 3.6,
+        "veraenderung": 2
+      }
+    ],
+    "kennzahlen": {
+      "stimmberechtigte": 1575,
+      "waehler": 1077,
+      "wahlbeteiligung": 68.4,
+      "gueltige": 57572
+    }
+  },
+  "09178133": {
+    "gebiet": "Hohenkammer",
+    "listen": [
+      {
+        "name": "CSU",
+        "stimmen": 32527,
+        "anteil": 42,
+        "veraenderung": 5.4
+      },
+      {
+        "name": "FREIE WÄHLER",
+        "stimmen": 11625,
+        "anteil": 15,
+        "veraenderung": 2.8
+      },
+      {
+        "name": "AfD",
+        "stimmen": 8983,
+        "anteil": 11.6,
+        "veraenderung": -4.6
+      },
+      {
+        "name": "GRÜNE",
+        "stimmen": 7674,
+        "anteil": 9.9,
+        "veraenderung": 3.1
+      },
+      {
+        "name": "SPD",
+        "stimmen": 4439,
+        "anteil": 5.7,
+        "veraenderung": -1.3
+      },
+      {
+        "name": "FSM",
+        "stimmen": 2669,
+        "anteil": 3.4,
+        "veraenderung": -8.2
+      },
+      {
+        "name": "ÖDP",
+        "stimmen": 1720,
+        "anteil": 2.2,
+        "veraenderung": -3.4
+      },
+      {
+        "name": "FDP",
+        "stimmen": 5843,
+        "anteil": 7.5,
+        "veraenderung": 5.4
+      },
+      {
+        "name": "Die Linke",
+        "stimmen": 2051,
+        "anteil": 2.6,
+        "veraenderung": 0.7
+      }
+    ],
+    "kennzahlen": {
+      "stimmberechtigte": 2051,
+      "waehler": 1324,
+      "wahlbeteiligung": 64.6,
+      "gueltige": 77531
+    }
+  },
+  "09178136": {
+    "gebiet": "Kirchdorf a.d.Amper",
+    "listen": [
+      {
+        "name": "CSU",
+        "stimmen": 40949,
+        "anteil": 39.5,
+        "veraenderung": 8.1
+      },
+      {
+        "name": "FREIE WÄHLER",
+        "stimmen": 21998,
+        "anteil": 21.2,
+        "veraenderung": 4.5
+      },
+      {
+        "name": "AfD",
+        "stimmen": 12199,
+        "anteil": 11.8,
+        "veraenderung": -14.4
+      },
+      {
+        "name": "GRÜNE",
+        "stimmen": 12239,
+        "anteil": 11.8,
+        "veraenderung": 5.5
+      },
+      {
+        "name": "SPD",
+        "stimmen": 3920,
+        "anteil": 3.8,
+        "veraenderung": -0.2
+      },
+      {
+        "name": "FSM",
+        "stimmen": 4752,
+        "anteil": 4.6,
+        "veraenderung": 1.2
+      },
+      {
+        "name": "ÖDP",
+        "stimmen": 2429,
+        "anteil": 2.3,
+        "veraenderung": -4.3
+      },
+      {
+        "name": "FDP",
+        "stimmen": 2087,
+        "anteil": 2,
+        "veraenderung": -1.1
+      },
+      {
+        "name": "Die Linke",
+        "stimmen": 3020,
+        "anteil": 2.9,
+        "veraenderung": 0.8
+      }
+    ],
+    "kennzahlen": {
+      "stimmberechtigte": 2676,
+      "waehler": 1776,
+      "wahlbeteiligung": 66.4,
+      "gueltige": 103593
+    }
+  },
+  "09178137": {
+    "gebiet": "Kranzberg",
+    "listen": [
+      {
+        "name": "CSU",
+        "stimmen": 42483,
+        "anteil": 30.5,
+        "veraenderung": 5
+      },
+      {
+        "name": "FREIE WÄHLER",
+        "stimmen": 33907,
+        "anteil": 24.3,
+        "veraenderung": 6.2
+      },
+      {
+        "name": "AfD",
+        "stimmen": 12812,
+        "anteil": 9.2,
+        "veraenderung": -20.7
+      },
+      {
+        "name": "GRÜNE",
+        "stimmen": 25112,
+        "anteil": 18,
+        "veraenderung": 13.6
+      },
+      {
+        "name": "SPD",
+        "stimmen": 8850,
+        "anteil": 6.3,
+        "veraenderung": 0.3
+      },
+      {
+        "name": "FSM",
+        "stimmen": 5813,
+        "anteil": 4.2,
+        "veraenderung": 2
+      },
+      {
+        "name": "ÖDP",
+        "stimmen": 3715,
+        "anteil": 2.7,
+        "veraenderung": -5.1
+      },
+      {
+        "name": "FDP",
+        "stimmen": 2795,
+        "anteil": 2,
+        "veraenderung": -2.5
+      },
+      {
+        "name": "Die Linke",
+        "stimmen": 3928,
+        "anteil": 2.8,
+        "veraenderung": 1.2
+      }
+    ],
+    "kennzahlen": {
+      "stimmberechtigte": 3430,
+      "waehler": 2312,
+      "wahlbeteiligung": 67.4,
+      "gueltige": 139415
+    }
+  },
+  "09178138": {
+    "gebiet": "Langenbach",
+    "listen": [
+      {
+        "name": "CSU",
+        "stimmen": 41273,
+        "anteil": 32.4,
+        "veraenderung": 9.1
+      },
+      {
+        "name": "FREIE WÄHLER",
+        "stimmen": 26052,
+        "anteil": 20.4,
+        "veraenderung": 0
+      },
+      {
+        "name": "AfD",
+        "stimmen": 13993,
+        "anteil": 11,
+        "veraenderung": -15.2
+      },
+      {
+        "name": "GRÜNE",
+        "stimmen": 19505,
+        "anteil": 15.3,
+        "veraenderung": 8.6
+      },
+      {
+        "name": "SPD",
+        "stimmen": 11286,
+        "anteil": 8.9,
+        "veraenderung": -1.6
+      },
+      {
+        "name": "FSM",
+        "stimmen": 6620,
+        "anteil": 5.2,
+        "veraenderung": 3.2
+      },
+      {
+        "name": "ÖDP",
+        "stimmen": 2498,
+        "anteil": 2,
+        "veraenderung": -3.7
+      },
+      {
+        "name": "FDP",
+        "stimmen": 2311,
+        "anteil": 1.8,
+        "veraenderung": -1.9
+      },
+      {
+        "name": "Die Linke",
+        "stimmen": 3886,
+        "anteil": 3,
+        "veraenderung": 1.5
+      }
+    ],
+    "kennzahlen": {
+      "stimmberechtigte": 3223,
+      "waehler": 2126,
+      "wahlbeteiligung": 66,
+      "gueltige": 127424
+    }
+  },
+  "09178140": {
+    "gebiet": "Marzling",
+    "listen": [
+      {
+        "name": "CSU",
+        "stimmen": 25422,
+        "anteil": 23.6,
+        "veraenderung": 4.1
+      },
+      {
+        "name": "FREIE WÄHLER",
+        "stimmen": 18969,
+        "anteil": 17.6,
+        "veraenderung": -9.4
+      },
+      {
+        "name": "AfD",
+        "stimmen": 10943,
+        "anteil": 10.2,
+        "veraenderung": -9.4
+      },
+      {
+        "name": "GRÜNE",
+        "stimmen": 23490,
+        "anteil": 21.8,
+        "veraenderung": 16.9
+      },
+      {
+        "name": "SPD",
+        "stimmen": 6495,
+        "anteil": 6,
+        "veraenderung": 0.3
+      },
+      {
+        "name": "FSM",
+        "stimmen": 13980,
+        "anteil": 13,
+        "veraenderung": 11
+      },
+      {
+        "name": "ÖDP",
+        "stimmen": 2767,
+        "anteil": 2.6,
+        "veraenderung": -12.6
+      },
+      {
+        "name": "FDP",
+        "stimmen": 2127,
+        "anteil": 2,
+        "veraenderung": -2
+      },
+      {
+        "name": "Die Linke",
+        "stimmen": 3395,
+        "anteil": 3.2,
+        "veraenderung": 1.2
+      }
+    ],
+    "kennzahlen": {
+      "stimmberechtigte": 2550,
+      "waehler": 1802,
+      "wahlbeteiligung": 70.7,
+      "gueltige": 107588
+    }
+  },
+  "09178142": {
+    "gebiet": "09178142 - Mauern",
+    "listen": [
+      {
+        "name": "CSU",
+        "stimmen": 33802,
+        "anteil": 32.1,
+        "veraenderung": 1
+      },
+      {
+        "name": "FREIE WÄHLER",
+        "stimmen": 32770,
+        "anteil": 31.1,
+        "veraenderung": 15.2
+      },
+      {
+        "name": "AfD",
+        "stimmen": 13675,
+        "anteil": 13,
+        "veraenderung": -20.6
+      },
+      {
+        "name": "GRÜNE",
+        "stimmen": 11763,
+        "anteil": 11.2,
+        "veraenderung": 3.7
+      },
+      {
+        "name": "SPD",
+        "stimmen": 6992,
+        "anteil": 6.6,
+        "veraenderung": 1.7
+      },
+      {
+        "name": "FSM",
+        "stimmen": 838,
+        "anteil": 0.8,
+        "veraenderung": -1.3
+      },
+      {
+        "name": "ÖDP",
+        "stimmen": 1748,
+        "anteil": 1.7,
+        "veraenderung": -0.6
+      },
+      {
+        "name": "FDP",
+        "stimmen": 1005,
+        "anteil": 1,
+        "veraenderung": -0.8
+      },
+      {
+        "name": "Die Linke",
+        "stimmen": 2801,
+        "anteil": 2.7,
+        "veraenderung": 1.7
+      }
+    ],
+    "kennzahlen": {
+      "stimmberechtigte": 2436,
+      "waehler": 1759,
+      "wahlbeteiligung": 72.2,
+      "gueltige": 105394
+    }
+  },
+  "09178143": {
+    "gebiet": "Moosburg a.d.Isar",
+    "listen": [
+      {
+        "name": "CSU",
+        "stimmen": 163975,
+        "anteil": 31.4,
+        "veraenderung": 6
+      },
+      {
+        "name": "FREIE WÄHLER",
+        "stimmen": 92455,
+        "anteil": 17.7,
+        "veraenderung": -10.4
+      },
+      {
+        "name": "AfD",
+        "stimmen": 54901,
+        "anteil": 10.5,
+        "veraenderung": -7.8
+      },
+      {
+        "name": "GRÜNE",
+        "stimmen": 109593,
+        "anteil": 21,
+        "veraenderung": 13.9
+      },
+      {
+        "name": "SPD",
+        "stimmen": 42130,
+        "anteil": 8.1,
+        "veraenderung": -1
+      },
+      {
+        "name": "FSM",
+        "stimmen": 10798,
+        "anteil": 2.1,
+        "veraenderung": -0.8
+      },
+      {
+        "name": "ÖDP",
+        "stimmen": 10823,
+        "anteil": 2.1,
+        "veraenderung": 0.2
+      },
+      {
+        "name": "FDP",
+        "stimmen": 7839,
+        "anteil": 1.5,
+        "veraenderung": -2.5
+      },
+      {
+        "name": "Die Linke",
+        "stimmen": 30153,
+        "anteil": 5.8,
+        "veraenderung": 2.5
+      }
+    ],
+    "kennzahlen": {
+      "stimmberechtigte": 14306,
+      "waehler": 8843,
+      "wahlbeteiligung": 61.8,
+      "gueltige": 522667
+    }
+  },
+  "09178144": {
+    "gebiet": "Nandlstadt",
+    "listen": [
+      {
+        "name": "CSU",
+        "stimmen": 61155,
+        "anteil": 36,
+        "veraenderung": 2.1
+      },
+      {
+        "name": "FREIE WÄHLER",
+        "stimmen": 43840,
+        "anteil": 25.8,
+        "veraenderung": 14
+      },
+      {
+        "name": "AfD",
+        "stimmen": 22110,
+        "anteil": 13,
+        "veraenderung": -17.5
+      },
+      {
+        "name": "GRÜNE",
+        "stimmen": 17296,
+        "anteil": 10.2,
+        "veraenderung": 1.6
+      },
+      {
+        "name": "SPD",
+        "stimmen": 8694,
+        "anteil": 5.1,
+        "veraenderung": 0.5
+      },
+      {
+        "name": "FSM",
+        "stimmen": 4815,
+        "anteil": 2.8,
+        "veraenderung": 0.5
+      },
+      {
+        "name": "ÖDP",
+        "stimmen": 3801,
+        "anteil": 2.2,
+        "veraenderung": -2.5
+      },
+      {
+        "name": "FDP",
+        "stimmen": 2976,
+        "anteil": 1.7,
+        "veraenderung": -0.2
+      },
+      {
+        "name": "Die Linke",
+        "stimmen": 5400,
+        "anteil": 3.2,
+        "veraenderung": 1.4
+      }
+    ],
+    "kennzahlen": {
+      "stimmberechtigte": 4262,
+      "waehler": 2926,
+      "wahlbeteiligung": 68.7,
+      "gueltige": 170087
+    }
+  },
+  "09178145": {
+    "gebiet": "Neufahrn b.Freising",
+    "listen": [
+      {
+        "name": "CSU",
+        "stimmen": 145389,
+        "anteil": 29.5,
+        "veraenderung": 3.5
+      },
+      {
+        "name": "FREIE WÄHLER",
+        "stimmen": 88269,
+        "anteil": 17.9,
+        "veraenderung": -9.5
+      },
+      {
+        "name": "AfD",
+        "stimmen": 55338,
+        "anteil": 11.2,
+        "veraenderung": -5.8
+      },
+      {
+        "name": "GRÜNE",
+        "stimmen": 94285,
+        "anteil": 19.1,
+        "veraenderung": 13
+      },
+      {
+        "name": "SPD",
+        "stimmen": 48277,
+        "anteil": 9.8,
+        "veraenderung": 0.1
+      },
+      {
+        "name": "FSM",
+        "stimmen": 12659,
+        "anteil": 2.6,
+        "veraenderung": -0.4
+      },
+      {
+        "name": "ÖDP",
+        "stimmen": 19358,
+        "anteil": 3.9,
+        "veraenderung": 0.8
+      },
+      {
+        "name": "FDP",
+        "stimmen": 12403,
+        "anteil": 2.5,
+        "veraenderung": -3.1
+      },
+      {
+        "name": "Die Linke",
+        "stimmen": 17256,
+        "anteil": 3.5,
+        "veraenderung": 1.3
+      }
+    ],
+    "kennzahlen": {
+      "stimmberechtigte": 14986,
+      "waehler": 7981,
+      "wahlbeteiligung": 53.3,
+      "gueltige": 493234
+    }
+  },
+  "09178150": {
+    "gebiet": "09178150 - Paunzhausen",
+    "listen": [
+      {
+        "name": "CSU",
+        "stimmen": 13545,
+        "anteil": 24.8,
+        "veraenderung": -0.4
+      },
+      {
+        "name": "FREIE WÄHLER",
+        "stimmen": 17336,
+        "anteil": 31.7,
+        "veraenderung": 17.5
+      },
+      {
+        "name": "AfD",
+        "stimmen": 7794,
+        "anteil": 14.3,
+        "veraenderung": -23.3
+      },
+      {
+        "name": "GRÜNE",
+        "stimmen": 6142,
+        "anteil": 11.2,
+        "veraenderung": 3.3
+      },
+      {
+        "name": "SPD",
+        "stimmen": 3025,
+        "anteil": 5.5,
+        "veraenderung": 1.2
+      },
+      {
+        "name": "FSM",
+        "stimmen": 1876,
+        "anteil": 3.4,
+        "veraenderung": 0.9
+      },
+      {
+        "name": "ÖDP",
+        "stimmen": 1607,
+        "anteil": 2.9,
+        "veraenderung": -0.4
+      },
+      {
+        "name": "FDP",
+        "stimmen": 1359,
+        "anteil": 2.5,
+        "veraenderung": -1.3
+      },
+      {
+        "name": "Die Linke",
+        "stimmen": 2008,
+        "anteil": 3.7,
+        "veraenderung": 2.6
+      }
+    ],
+    "kennzahlen": {
+      "stimmberechtigte": 1300,
+      "waehler": 883,
+      "wahlbeteiligung": 67.9,
+      "gueltige": 54692
+    }
+  },
+  "09178155": {
+    "gebiet": "09178155 - Wang",
+    "listen": [
+      {
+        "name": "CSU",
+        "stimmen": 23190,
+        "anteil": 29.3,
+        "veraenderung": -1.3
+      },
+      {
+        "name": "FREIE WÄHLER",
+        "stimmen": 22955,
+        "anteil": 29,
+        "veraenderung": 9.2
+      },
+      {
+        "name": "AfD",
+        "stimmen": 11413,
+        "anteil": 14.4,
+        "veraenderung": -12.8
+      },
+      {
+        "name": "GRÜNE",
+        "stimmen": 9641,
+        "anteil": 12.2,
+        "veraenderung": 4.5
+      },
+      {
+        "name": "SPD",
+        "stimmen": 5043,
+        "anteil": 6.4,
+        "veraenderung": 1.4
+      },
+      {
+        "name": "FSM",
+        "stimmen": 1274,
+        "anteil": 1.6,
+        "veraenderung": -1.6
+      },
+      {
+        "name": "ÖDP",
+        "stimmen": 1518,
+        "anteil": 1.9,
+        "veraenderung": -0.1
+      },
+      {
+        "name": "FDP",
+        "stimmen": 1232,
+        "anteil": 1.6,
+        "veraenderung": -0.3
+      },
+      {
+        "name": "Die Linke",
+        "stimmen": 2768,
+        "anteil": 3.5,
+        "veraenderung": 0.9
+      }
+    ],
+    "kennzahlen": {
+      "stimmberechtigte": 1978,
+      "waehler": 1340,
+      "wahlbeteiligung": 67.7,
+      "gueltige": 79034
+    }
+  },
+  "09178156": {
+    "gebiet": "09178156 - Wolfersdorf",
+    "listen": [
+      {
+        "name": "CSU",
+        "stimmen": 29835,
+        "anteil": 41.2,
+        "veraenderung": 5
+      },
+      {
+        "name": "FREIE WÄHLER",
+        "stimmen": 13992,
+        "anteil": 19.3,
+        "veraenderung": 5.7
+      },
+      {
+        "name": "AfD",
+        "stimmen": 8215,
+        "anteil": 11.3,
+        "veraenderung": -10.4
+      },
+      {
+        "name": "GRÜNE",
+        "stimmen": 6986,
+        "anteil": 9.6,
+        "veraenderung": 3.5
+      },
+      {
+        "name": "SPD",
+        "stimmen": 3300,
+        "anteil": 4.6,
+        "veraenderung": 0.4
+      },
+      {
+        "name": "FSM",
+        "stimmen": 2815,
+        "anteil": 3.9,
+        "veraenderung": 1.6
+      },
+      {
+        "name": "ÖDP",
+        "stimmen": 5037,
+        "anteil": 6.9,
+        "veraenderung": -3.5
+      },
+      {
+        "name": "FDP",
+        "stimmen": 1130,
+        "anteil": 1.6,
+        "veraenderung": -2.6
+      },
+      {
+        "name": "Die Linke",
+        "stimmen": 1184,
+        "anteil": 1.6,
+        "veraenderung": 0.3
+      }
+    ],
+    "kennzahlen": {
+      "stimmberechtigte": 1961,
+      "waehler": 1249,
+      "wahlbeteiligung": 63.7,
+      "gueltige": 72494
+    }
+  },
+  "09178157": {
+    "gebiet": "09178157 - Zolling",
+    "listen": [
+      {
+        "name": "CSU",
+        "stimmen": 48687,
+        "anteil": 34.9,
+        "veraenderung": 3
+      },
+      {
+        "name": "FREIE WÄHLER",
+        "stimmen": 29931,
+        "anteil": 21.5,
+        "veraenderung": 5.2
+      },
+      {
+        "name": "AfD",
+        "stimmen": 13643,
+        "anteil": 9.8,
+        "veraenderung": -14.1
+      },
+      {
+        "name": "GRÜNE",
+        "stimmen": 18960,
+        "anteil": 13.6,
+        "veraenderung": 7.1
+      },
+      {
+        "name": "SPD",
+        "stimmen": 6767,
+        "anteil": 4.9,
+        "veraenderung": 0.7
+      },
+      {
+        "name": "FSM",
+        "stimmen": 11091,
+        "anteil": 8,
+        "veraenderung": 5.9
+      },
+      {
+        "name": "ÖDP",
+        "stimmen": 3788,
+        "anteil": 2.7,
+        "veraenderung": -7.8
+      },
+      {
+        "name": "FDP",
+        "stimmen": 2030,
+        "anteil": 1.5,
+        "veraenderung": -1.6
+      },
+      {
+        "name": "Die Linke",
+        "stimmen": 4578,
+        "anteil": 3.3,
+        "veraenderung": 1.6
+      }
+    ],
+    "kennzahlen": {
+      "stimmberechtigte": 3737,
+      "waehler": 2354,
+      "wahlbeteiligung": 63,
+      "gueltige": 139475
+    }
+  }
+}

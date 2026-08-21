@@ -1,0 +1,378 @@
+/* Papierfarben und Legenden-Typografie wie im Schwesterprojekt hexagonalmap —
+   beides sind Karten, und sie sollen wie aus einer Werkstatt aussehen. */
+:root {
+  --paper: #f3efe7;
+  --panel: #eae4d6;
+  --ink: #211e19;
+  --ink-soft: #5d5647;
+  --rule: #cdc4b1;
+  --accent: #9c3618;
+
+  --label: 0.6875rem;
+  --step: 0.9375rem;
+
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--paper);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  /* minmax(0, …) statt 1fr: Rasterzellen wachsen sonst auf die max-content-Breite
+     ihres Inhalts, und eine einzige unteilbare URL in der Fußzeile zieht damit
+     die ganze Seite in die Breite. */
+  grid-template-columns: minmax(0, 1fr);
+  background: var(--paper);
+  color: var(--ink);
+  font: var(--step) / 1.55 ui-sans-serif, system-ui, "Segoe UI", Roboto, sans-serif;
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+h2,
+.feld-label {
+  font-size: var(--label);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.masthead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 1.25rem;
+  padding: 1.75rem 2rem 1.25rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.masthead h1 {
+  margin: 0;
+  font-size: 1.375rem;
+  font-weight: 620;
+  letter-spacing: -0.015em;
+}
+
+.stand {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.875rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+main {
+  width: min(74rem, 100%);
+  margin: 0 auto;
+  padding: 1.5rem 2rem 3rem;
+}
+
+/* Bedienung */
+
+.steuerung {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2rem;
+  align-items: flex-end;
+}
+
+.feld {
+  display: grid;
+  gap: 0.4rem;
+}
+
+select {
+  font: inherit;
+  font-size: 0.9375rem;
+  padding: 0.35rem 0.5rem;
+  background: #fbf9f4;
+  color: inherit;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  max-width: 22rem;
+}
+
+.segmented {
+  display: inline-flex;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  overflow: hidden;
+  background: #fbf9f4;
+}
+
+.segmented button {
+  font: inherit;
+  font-size: 0.875rem;
+  padding: 0.35rem 0.85rem;
+  border: 0;
+  border-right: 1px solid var(--rule);
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.segmented button:last-child {
+  border-right: 0;
+}
+
+.segmented button[aria-checked="true"] {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.segmented button:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+/* Der Hinweis auf unvollständige Listen ist kein Schmuck, sondern ein Vorbehalt
+   zum Gezeigten — er steht deshalb über der Karte, nicht darunter. */
+.hinweis {
+  margin: 1.25rem 0 0;
+  padding: 0.65rem 0.85rem;
+  border-left: 2px solid var(--accent);
+  background: #efe8db;
+  color: var(--ink-soft);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+/* Karte */
+
+.buehne {
+  margin: 1.5rem 0 0;
+}
+
+.karte {
+  background: #faf7f0;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 0.75rem;
+  overflow-x: auto;
+}
+
+.karte svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Der Umriss ist ohne Füllung gezeichnet; pointer-events macht seine Fläche
+   trotzdem anfassbar. Ohne das reagierte nur das einzelne Sechseck, und in den
+   Fugen dazwischen fiele die Ablesung jedes Mal aus. */
+.karte .edge {
+  pointer-events: all;
+}
+
+.karte text {
+  pointer-events: none;
+}
+
+.karte g[data-id] {
+  cursor: default;
+}
+
+.karte g[data-id]:hover .edge,
+.karte g[data-id]:focus-visible .edge {
+  stroke: var(--accent);
+  stroke-width: 4;
+}
+
+.karte g[data-id]:focus-visible {
+  outline: none;
+}
+
+.laedt {
+  margin: 0;
+  padding: 6rem 0;
+  text-align: center;
+  color: var(--ink-soft);
+}
+
+figcaption {
+  margin-top: 0.75rem;
+  color: var(--ink-soft);
+  font-size: 0.8125rem;
+  max-width: 60ch;
+}
+
+/* Legende und Ablesung */
+
+.unten {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+}
+
+.legende ul,
+.ablesung ul {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.875rem;
+}
+
+.legende li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ablesung li {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.feldchen {
+  width: 0.85rem;
+  height: 0.85rem;
+  flex: none;
+  border: 1px solid rgb(0 0 0 / 0.25);
+  border-radius: 2px;
+  align-self: center;
+}
+
+/* Dieselbe Schraffur wie in der Karte: „nicht angetreten“ ist ein eigener Fall,
+   keine Stufe am unteren Ende der Skala. */
+.schraffiert {
+  background: repeating-linear-gradient(45deg, #efebe1 0 2px, #cfc9bb 2px 4px);
+}
+
+.ablesung-kopf {
+  margin: 0.75rem 0 0;
+  font-weight: 620;
+}
+
+.ablesung-wert {
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.ablesung-fuss,
+.leer {
+  margin: 0.75rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.8125rem;
+}
+
+/* Tabelle — der zweite Kanal neben der Farbe. Sie ist nicht nur Beiwerk:
+   Rot und Grün liegen für Rot-Grün-Blinde dicht beieinander, und keine
+   Parteifarbe lässt sich dagegen umfärben. */
+
+.tabelle {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+}
+
+.tabelle-rahmen {
+  margin-top: 0.75rem;
+  overflow-x: auto;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: #faf7f0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.8125rem;
+}
+
+th,
+td {
+  padding: 0.35rem 0.6rem;
+  text-align: right;
+  white-space: nowrap;
+  border-bottom: 1px solid #e2dbc9;
+}
+
+th:first-child,
+td:first-child {
+  text-align: left;
+  position: sticky;
+  left: 0;
+  background: #faf7f0;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  background: var(--panel);
+  font-size: var(--label);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+thead th:first-child {
+  z-index: 1;
+  background: var(--panel);
+}
+
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 1.25rem 2rem 2rem;
+  color: var(--ink-soft);
+  font-size: 0.75rem;
+}
+
+footer p {
+  margin: 0 0 0.4rem;
+  max-width: 90ch;
+  /* Quellenangaben sind Adressen ohne Trennstellen; ohne das hier schiebt eine
+     einzige lange URL die ganze Seite in die Breite. */
+  overflow-wrap: anywhere;
+}
+
+footer a {
+  color: inherit;
+}
+
+@media (max-width: 48rem) {
+  main {
+    padding: 1.25rem 1rem 2rem;
+  }
+
+  .masthead,
+  footer {
+    padding-inline: 1rem;
+  }
+
+  .unten {
+    grid-template-columns: 1fr;
+  }
+}

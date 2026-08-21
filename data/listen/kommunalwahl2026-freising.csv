@@ -1,0 +1,20 @@
+ags;liste;sitze;anteil
+# Gemeinden ohne abrufbare Quelle. Je Liste eine Zeile; die Sitzsumme muss
+# der amtlichen Zahl in Klammern entsprechen, sonst bricht baue.mjs ab.
+# Was hier steht, geht den Quellen aus data/register.json vor.
+# 09178113  Allershausen — 20 Sitze amtlich: CSU 8, Wählergruppen 6, Grüne 3, SPD 3
+# 09178115  Attenkirchen — 14 Sitze amtlich: Wählergruppen 12, Gemeinsame Wahlvorschläge 2
+# 09178116  Au i.d.Hallertau — 20 Sitze amtlich: Wählergruppen 15, Gemeinsame Wahlvorschläge 3, AfD 2
+# 09178125  Gammelsdorf — 12 Sitze amtlich: Wählergruppen 12
+# 09178129  Haag a.d.Amper — 14 Sitze amtlich: Wählergruppen 9, CSU 5
+# 09178132  Hörgertshausen — 12 Sitze amtlich: Wählergruppen 12
+# 09178133  Hohenkammer — 14 Sitze amtlich: Wählergruppen 6, CSU 5, FDP 2, SPD 1
+# 09178137  Kranzberg — 16 Sitze amtlich: CSU 4, Gemeinsame Wahlvorschläge 4, Wählergruppen 3, Grüne 3, SPD 2
+# 09178138  Langenbach — 16 Sitze amtlich: Wählergruppen 6, Freie Wähler 4, CSU 2, SPD 2, Grüne 2
+# 09178140  Marzling — 16 Sitze amtlich: Wählergruppen 11, Grüne 3, CSU 2
+# 09178142  Mauern — 16 Sitze amtlich: Gemeinsame Wahlvorschläge 6, CSU 6, AfD 2, Grüne 1, SPD 1
+# 09178145  Neufahrn b.Freising — 30 Sitze amtlich: CSU 8, Grüne 7, Gemeinsame Wahlvorschläge 5, SPD 3, AfD 3, Wählergruppen 2, ÖDP 2
+# 09178150  Paunzhausen — 12 Sitze amtlich: Freie Wähler 5, Wählergruppen 3, CSU 2, Grüne 2
+# 09178155  Wang — 14 Sitze amtlich: Wählergruppen 14
+# 09178156  Wolfersdorf — 14 Sitze amtlich: Wählergruppen 14
+# 09178157  Zolling — 16 Sitze amtlich: Wählergruppen 9, CSU 6, AfD 1

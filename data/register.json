@@ -1,0 +1,24 @@
+{
+  "kommunalwahl2026-freising": {
+    "name": "Kommunalwahlen 2026, Landkreis Freising",
+    "datum": "2026-03-08",
+    "kreis": "09178",
+    "kreisname": "Landkreis Freising",
+    "datensatz": "freising",
+    "genesis": {
+      "sitze": "14431-005r",
+      "stimmen": "14431-003r"
+    },
+    "kreistag": "https://kreistagswahl.kreis-freising.de/ergebnisse_gemeinde_{ags}.html",
+    "gemeinden": {
+      "09178120": "https://wahlen.osrz-akdb.de/ob-p/178120/2/20260308/gemeinderatswahl_gemeinde/index.html",
+      "09178122": "https://wahlen.osrz-akdb.de/ob-p/178122/2/20260308/gemeinderatswahl_gemeinde/index.html",
+      "09178123": "https://wahlen.osrz-akdb.de/ob-p/178123/0/20260308/gemeinderatswahl_gemeinde/index.html",
+      "09178124": "https://wahl.freising.de/Stadtrat_2026/",
+      "09178130": "https://www.hallbergmoos.de/wahlen/Kommunal2026/",
+      "09178136": "https://wahlen.osrz-akdb.de/ob-p/178136/2/20260308/gemeinderatswahl_gemeinde/index.html",
+      "09178143": "https://wahlen.osrz-akdb.de/ob-p/178143/2/20260308/gemeinderatswahl_gemeinde/index.html",
+      "09178144": "https://markt-nandlstadt.de/wahlen2026/ergebnisse.html"
+    }
+  }
+}

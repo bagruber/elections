@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wahlkarten</title>
+    <meta
+      name="description"
+      content="Kommunalwahlergebnisse als Hexagon-Kartogramm — die Fläche einer Gemeinde ist die Größe ihres Gemeinderats."
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="src/ui/style.css" />
+
+    <!-- Der Kern kommt aus dem Schwesterprojekt. GitHub Pages liefert
+         Access-Control-Allow-Origin: *, der Import von hier funktioniert also,
+         ohne dass etwas gebaut oder mitgeliefert werden muss. -->
+    <script type="importmap">
+      {
+        "imports": {
+          "hexagonalmap": "https://bagruber.github.io/hexagonalmap/src/core/hexmap.js",
+          "hexagonalmap/svg": "https://bagruber.github.io/hexagonalmap/src/core/svg.js",
+          "hexagonalmap/parts": "https://bagruber.github.io/hexagonalmap/src/core/parts.js"
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <header class="masthead">
+      <h1>Wahlkarten</h1>
+      <label class="picker">
+        <span class="visually-hidden">Wahl</span>
+        <select id="wahl"></select>
+      </label>
+      <p class="stand" id="stand"></p>
+    </header>
+
+    <main>
+      <div class="steuerung">
+        <div class="feld">
+          <span class="feld-label" id="ansicht-label">Ansicht</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="ansicht-label" id="ansicht">
+            <button type="button" role="radio" aria-checked="true" data-ansicht="stärkste">Stärkste Liste</button>
+            <button type="button" role="radio" aria-checked="false" data-ansicht="sitze">Sitzverteilung</button>
+            <button type="button" role="radio" aria-checked="false" data-ansicht="liste">Eine Liste</button>
+          </div>
+        </div>
+
+        <div class="feld" id="liste-feld" hidden>
+          <label class="feld-label" for="liste">Liste</label>
+          <select id="liste"></select>
+        </div>
+
+        <div class="feld" id="ebene-feld" hidden>
+          <span class="feld-label" id="ebene-label">Gemessen an</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="ebene-label" id="ebene">
+            <button type="button" role="radio" aria-checked="true" data-ebene="gemeinderat">Gemeinderatswahl</button>
+            <button type="button" role="radio" aria-checked="false" data-ebene="kreistag">Kreistagswahl</button>
+          </div>
+        </div>
+      </div>
+
+      <p class="hinweis" id="hinweis"></p>
+
+      <figure class="buehne">
+        <div class="karte" id="karte" aria-busy="true">
+          <p class="laedt">Karte wird gerechnet …</p>
+        </div>
+        <figcaption id="bildunterschrift"></figcaption>
+      </figure>
+
+      <div class="unten">
+        <section class="legende" aria-labelledby="legende-titel">
+          <h2 id="legende-titel">Legende</h2>
+          <ul id="legende"></ul>
+        </section>
+
+        <section class="ablesung" aria-labelledby="ablesung-titel" aria-live="polite">
+          <h2 id="ablesung-titel">Gemeinde</h2>
+          <div id="ablesung"><p class="leer">Auf eine Fläche zeigen.</p></div>
+        </section>
+      </div>
+
+      <section class="tabelle" aria-labelledby="tabelle-titel">
+        <h2 id="tabelle-titel">Alle Zahlen</h2>
+        <div class="tabelle-rahmen">
+          <table id="tabelle"></table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p id="quellen"></p>
+      <p>
+        Geometrie: Verwaltungsgebiete 1:250 000 mit Einwohnerzahlen (VG250-EW), Stand 31.12.
+        © GeoBasis-DE / BKG 2026,
+        <a href="https://www.govdata.de/dl-de/by-2-0" rel="noreferrer">dl-de/by-2-0</a>.
+        Kartogramm mit <a href="https://github.com/bagruber/hexagonalmap" rel="noreferrer">hexagonalmap</a>.
+      </p>
+    </footer>
+
+    <script type="module" src="src/ui/app.js"></script>
+  </body>
+</html>

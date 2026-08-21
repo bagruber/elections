@@ -1,0 +1,12 @@
+[
+  {
+    "id": "kommunalwahl2026-freising",
+    "name": "Kommunalwahlen 2026, Landkreis Freising",
+    "datum": "2026-03-08",
+    "gebiet": "Landkreis Freising",
+    "ebenen": [
+      "gemeinderat",
+      "kreistag"
+    ]
+  }
+]
