@@ -1,9 +1,9 @@
-// Rendert die Ansichten einer Wahl nach vorschau/ — zum Anschauen und Prüfen.
+// Rendert die Ansichten einer Wahl nach vorschau/, zum Anschauen und Prüfen.
 //
 //   node scripts/vorschau.mjs kommunalwahl2026-freising-gemeinderat [liste]
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
-import { layout, zeichne, stärkste, spanne } from "../src/kern/karte.js";
+import { layout, zeichne, stärkste } from "../src/kern/karte.js";
 
 const wurzel = new URL("../", import.meta.url);
 const daten = new URL("node_modules/hexagonalmap/data/", wurzel);
@@ -53,5 +53,5 @@ for (const gemeinde of [...wahl.gemeinden].sort((a, b) => b.sitze - a.sitze)) {
   );
 }
 
-const { höchster, gemeinden } = spanne(wahl, liste);
+const { höchster, gemeinden } = wahl.listen.find((l) => l.id === liste)?.skala ?? {};
 console.log(`\nAnsicht „liste": ${liste}, angetreten in ${gemeinden} von ${wahl.gemeinden.length}, Spitzenwert ${höchster} %`);

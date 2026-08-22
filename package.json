@@ -6,14 +6,14 @@
   "license": "MIT",
   "exports": {
     "./listen": "./src/kern/listen.js",
-    "./wahl": "./src/kern/wahl.js",
     "./karte": "./src/kern/karte.js"
   },
   "scripts": {
     "hole": "node scripts/hole.mjs",
     "baue": "node scripts/baue.mjs",
     "kartogramm": "node scripts/kartogramm.mjs",
-    "vorschau": "node scripts/vorschau.mjs"
+    "vorschau": "node scripts/vorschau.mjs",
+    "test": "node --test \"test/**/*.test.mjs\""
   },
   "dependencies": {
     "hexagonalmap": "github:bagruber/hexagonalmap"

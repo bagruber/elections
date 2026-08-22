@@ -1,12 +1,17 @@
-/* Papierfarben und Legenden-Typografie wie im Schwesterprojekt hexagonalmap —
-   beides sind Karten, und sie sollen wie aus einer Werkstatt aussehen. */
+/* Zurückhaltend und neutral: die Seite soll nichts behaupten, was die Karte
+   nicht sagt. Auf moosburg.eu steht dieselbe Karte im dortigen Gewand; hier
+   trägt sie nichts als Grautöne, damit die Parteifarben die einzigen Farben auf
+   der Seite bleiben. */
 :root {
-  --paper: #f3efe7;
-  --panel: #eae4d6;
-  --ink: #211e19;
-  --ink-soft: #5d5647;
-  --rule: #cdc4b1;
-  --accent: #9c3618;
+  --paper: #fbfbfa;
+  --panel: #f1f1ef;
+  --ink: #1a1a19;
+  --ink-soft: #55554f;
+  --rule: #dededa;
+
+  /* Der Untergrund der Karte. Die Sättigungsskala steigt aus genau diesem Ton
+     auf; app.js liest ihn hier ab, damit beides nicht auseinanderläuft. */
+  --karte-grund: #ffffff;
 
   --label: 0.6875rem;
   --step: 0.9375rem;
@@ -111,7 +116,7 @@ select {
   font: inherit;
   font-size: 0.9375rem;
   padding: 0.35rem 0.5rem;
-  background: #fbf9f4;
+  background: #ffffff;
   color: inherit;
   border: 1px solid var(--rule);
   border-radius: 3px;
@@ -123,7 +128,7 @@ select {
   border: 1px solid var(--rule);
   border-radius: 3px;
   overflow: hidden;
-  background: #fbf9f4;
+  background: #ffffff;
 }
 
 .segmented button {
@@ -147,7 +152,7 @@ select {
 }
 
 /* Wo eine Ebene keinen prüfbaren Vergleich hat, bleibt der Knopf sichtbar, aber
-   erkennbar außer Betrieb — verschwände er, sprünge die Leiste beim Umschalten. */
+   erkennbar außer Betrieb, verschwände er, sprünge die Leiste beim Umschalten. */
 .segmented button:disabled {
   color: var(--rule);
   cursor: not-allowed;
@@ -155,17 +160,17 @@ select {
 
 .segmented button:focus-visible,
 select:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--ink);
   outline-offset: 1px;
 }
 
 /* Der Hinweis auf unvollständige Listen ist kein Schmuck, sondern ein Vorbehalt
-   zum Gezeigten — er steht deshalb über der Karte, nicht darunter. */
+   zum Gezeigten: er steht deshalb über der Karte, nicht darunter. */
 .hinweis {
   margin: 1.25rem 0 0;
   padding: 0.65rem 0.85rem;
-  border-left: 2px solid var(--accent);
-  background: #efe8db;
+  border-left: 2px solid var(--ink-soft);
+  background: var(--panel);
   color: var(--ink-soft);
   font-size: 0.8125rem;
   line-height: 1.5;
@@ -188,7 +193,7 @@ select:focus-visible {
 }
 
 .karte {
-  background: #faf7f0;
+  background: var(--karte-grund);
   border: 1px solid var(--rule);
   border-radius: 4px;
   padding: 0.75rem;
@@ -199,6 +204,10 @@ select:focus-visible {
   display: block;
   width: 100%;
   height: auto;
+  /* Auf schmalen Geräten schrumpft die Karte sonst so weit, dass 440 Sechsecke
+     zu Konfetti werden. Ab hier scrollt sie lieber seitlich, wofür der Behälter
+     schon eingerichtet ist. */
+  min-width: 34rem;
 }
 
 /* Der Umriss ist ohne Füllung gezeichnet; pointer-events macht seine Fläche
@@ -216,11 +225,26 @@ select:focus-visible {
   cursor: default;
 }
 
+/* Hervorgehoben wird ohne Farbe: die Doppellinie kehrt sich um, hell innen,
+   dunkel außen. Ein farbiger Umriss müsste sich gegen dreizehn Füllfarben
+   behaupten, und gegen die eigene wäre er unsichtbar. */
 .karte g[data-id]:hover .edge,
-.karte g[data-id]:focus-visible .edge {
-  stroke: var(--accent);
+.karte g[data-id]:focus-visible .edge,
+.karte g[data-id].gewählt .edge {
+  stroke: var(--karte-grund);
   stroke-width: 4;
 }
+
+.karte g[data-id]:hover .edge-halo,
+.karte g[data-id]:focus-visible .edge-halo,
+.karte g[data-id].gewählt .edge-halo {
+  stroke: var(--ink);
+  stroke-width: 8;
+}
+
+/* Angetippt bleibt angetippt. Ohne Zeiger ist das die einzige Möglichkeit, eine
+   Gemeinde festzuhalten, und auf der Einwohnerkarte trägt ein Drittel von ihnen
+   keinen Namen. */
 
 .karte g[data-id]:focus-visible {
   outline: none;
@@ -321,7 +345,7 @@ figcaption {
 /* Dieselbe Schraffur wie in der Karte: „nicht angetreten“ ist ein eigener Fall,
    keine Stufe am unteren Ende der Skala. */
 .schraffiert {
-  background: repeating-linear-gradient(45deg, #efebe1 0 2px, #cfc9bb 2px 4px);
+  background: repeating-linear-gradient(45deg, var(--karte-grund) 0 2px, var(--rule) 2px 4px);
 }
 
 .ablesung-kopf {
@@ -341,7 +365,7 @@ figcaption {
   font-size: 0.8125rem;
 }
 
-/* Herkunft — welche Angabe aus welcher Quelle stammt. Bei zwei Quellen, die
+/* Herkunft, welche Angabe aus welcher Quelle stammt. Bei zwei Quellen, die
    verschieden viel wissen, gehört das auf die Seite und nicht nur ins README. */
 
 .herkunft {
@@ -382,7 +406,7 @@ figcaption {
   }
 }
 
-/* Tabelle — der zweite Kanal neben der Farbe. Sie ist nicht nur Beiwerk:
+/* Tabelle: der zweite Kanal neben der Farbe. Sie ist nicht nur Beiwerk:
    Rot und Grün liegen für Rot-Grün-Blinde dicht beieinander, und keine
    Parteifarbe lässt sich dagegen umfärben. */
 
@@ -397,11 +421,14 @@ figcaption {
   overflow-x: auto;
   border: 1px solid var(--rule);
   border-radius: 4px;
-  background: #faf7f0;
+  background: var(--karte-grund);
 }
 
 table {
-  border-collapse: collapse;
+  /* separate statt collapse: mit collapse hält position:sticky auf den Zellen
+     nicht zuverlässig, und die erste Spalte muss beim Scrollen stehen bleiben. */
+  border-collapse: separate;
+  border-spacing: 0;
   width: 100%;
   font-size: 0.8125rem;
 }
@@ -411,7 +438,7 @@ td {
   padding: 0.35rem 0.6rem;
   text-align: right;
   white-space: nowrap;
-  border-bottom: 1px solid #e2dbc9;
+  border-bottom: 1px solid var(--rule);
 }
 
 th:first-child,
@@ -419,7 +446,7 @@ td:first-child {
   text-align: left;
   position: sticky;
   left: 0;
-  background: #faf7f0;
+  background: var(--karte-grund);
 }
 
 thead th {

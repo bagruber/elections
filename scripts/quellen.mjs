@@ -1,7 +1,7 @@
 // Abruf und Auswertung der Quellen. Jede Quelle liefert dieselbe Struktur:
 // je Gebiet ein Eintrag mit Kennzahlen und einem Ergebnis je Wahlvorschlag.
 //
-// GENESIS ist die amtliche Vollquelle — sie kennt jede Gemeinde, aber nur 48
+// GENESIS ist die amtliche Vollquelle. Sie kennt jede Gemeinde, aber nur 48
 // feste Wahlvorschlags-Kategorien: örtliche Listen fallen in „Gemeinsame
 // Wahlvorschläge" und „Wählergruppen". Die Wahlleitungen der Gemeinden nennen
 // die Listen beim Namen, decken aber jeweils nur ihr eigenes Gebiet ab.
@@ -75,7 +75,7 @@ const datum = (d) => d.split(".").reverse().join("-");
 
 /**
  * Ergebnistabelle einer Wahlleitung im Format der AKDB beziehungsweise elect iT.
- * Die Seiten liefern fertiges HTML — der CSV-Knopf dort baut seine Datei erst
+ * Die Seiten liefern fertiges HTML: der CSV-Knopf dort baut seine Datei erst
  * im Browser aus derselben Tabelle.
  *
  * @returns {{ gebiet: string, listen: Array<{name, stimmen, anteil, veraenderung}>, kennzahlen: object }}
@@ -101,7 +101,7 @@ export function leseAkdb(html) {
       if (bezeichnung === "Wähler") kennzahlen.wahlbeteiligung = zahl(anteil);
     } else if (!/Ungültige/.test(bezeichnung)) {
       // Hinter dem Kürzel steht der ausgeschriebene Name im abbr-Titel. Ohne ihn
-      // wäre „FWI" nicht von „FWO" zu unterscheiden — und nicht zu entscheiden,
+      // wäre „FWI" nicht von „FWO" zu unterscheiden, und nicht zu entscheiden,
       // ob beide zu den Freien Wählern gehören.
       const lang = text(zeile.match(/<abbr title="([^"]*)"/)?.[1] ?? "") || null;
       listen.push({
@@ -123,7 +123,7 @@ export function leseAkdb(html) {
  * Warum nicht aus der Spalte „Gewinn und Verlust in %-Punkten" der
  * Übersichtstabelle: die stimmt nicht. In Allershausen etwa führt die Tabelle
  * für die AfD −16,8 Punkte, während dieselbe Seite in der Grafik 4,1 % für 2020
- * und 10,4 % für 2026 ausweist — also +6,3. Für CSU, SPD und Die Linke passt
+ * und 10,4 % für 2026 ausweist, also +6,3. Für CSU, SPD und Die Linke passt
  * die Spalte, für die übrigen sechs Listen nicht. Die Grafik trägt beide
  * Ergebnisse als Zahl; daraus lässt sich die Veränderung selbst ausrechnen und
  * gegen die Anteile prüfen, statt einer Spalte zu glauben.
@@ -146,7 +146,7 @@ export function leseVergleich(html) {
         name: d.label,
         anteil: runde(d.value),
         vorher: alt.has(d.label) ? runde(alt.get(d.label)) : null,
-        // Wer neu antritt, hat keinen Vorwert — das ist etwas anderes als null
+        // Wer neu antritt, hat keinen Vorwert: das ist etwas anderes als null
         // Veränderung und bleibt deshalb leer.
         veraenderung: alt.has(d.label) ? runde(d.value - alt.get(d.label)) : null,
       })),
@@ -165,8 +165,8 @@ function entwerte(wert) {
 }
 
 /**
- * Nimmt die wählerbenannten Personen aus der Übersicht. Wo nur ein
- * Wahlvorschlag antritt — in Hörgertshausen ist es einer für alle zwölf Sitze —
+ * Nimmt die wählerbenannten Personen aus der Übersicht. Wo nur ein einziger
+ * Wahlvorschlag antritt, in Hörgertshausen einer für alle zwölf Sitze,
  * schreiben Wählerinnen und Wähler eigene Namen auf den Zettel. Die Software
  * führt jeden davon als eigene Zeile, unmittelbar vor der Summenzeile der
  * Gruppe. Wahlvorschläge sind das nicht: sie bekämen keinen Sitz und stünden
@@ -202,7 +202,7 @@ export function leseGewaehlte(html) {
     const zeilen = [...gesamt[0].matchAll(/<tr[\s\S]*?<\/tr>/g)].map((m) =>
       [...m[0].matchAll(/<(t[hd])[\s\S]*?<\/\1>/g)].map((c) => text(c[0]))
     );
-    // Die Spalten stehen nicht überall an derselben Stelle — manche Fassungen
+    // Die Spalten stehen nicht überall an derselben Stelle, manche Fassungen
     // schieben eine leere Spalte für das Listenzeichen dazwischen.
     const kopf = zeilen.findIndex((z) => z.some((f) => /^(Partei|Wahlvorschlag|Liste)$/.test(f)));
     if (kopf < 0) throw new Error("Keine Spalte mit dem Wahlvorschlag gefunden.");
@@ -236,7 +236,7 @@ export function leseGewaehlte(html) {
     const zeilen = [...tabelle[0].matchAll(/<tr[\s\S]*?<\/tr>/g)].map((m) =>
       [...m[0].matchAll(/<(t[hd])[\s\S]*?<\/\1>/g)].map((c) => text(c[0]))
     );
-    // Die Zeilen mischen th und td — der Name steht je nach Fassung im einen
+    // Die Zeilen mischen th und td: der Name steht je nach Fassung im einen
     // oder im anderen. Deshalb über die Kopfzeile gehen statt über feste Stellen.
     const kopf = zeilen.findIndex((z) => z.includes("Gewählt"));
     if (kopf < 0) continue;

@@ -5,7 +5,7 @@
 // Die amtliche Statistik deckt jede Gemeinde ab, kennt örtliche Listen aber nur
 // als „Wählergruppen" und „Gemeinsame Wahlvorschläge". Wo die Wahlleitung einer
 // Gemeinde ihre Listen selbst veröffentlicht, tritt deren Ergebnis an die Stelle
-// des Sammeltopfs — als Ganzes, nicht als Aufteilung: der Sammeltopf wäre sonst
+// des Sammeltopfs, als Ganzes, nicht als Aufteilung: der Sammeltopf wäre sonst
 // die Zwischenstufe, über die zwei Quellen gegeneinander gerechnet würden.
 //
 // Geprüft wird beides gegeneinander. Weicht die Sitzsumme einer Gemeinde von der
@@ -13,6 +13,7 @@
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { leseGenesis } from "./quellen.mjs";
+import { spanne, schwankung } from "../src/kern/skala.js";
 import {
   normalisiere,
   faerbeÖrtliche,
@@ -133,7 +134,7 @@ function gemeinderat() {
 
 /**
  * Die Karte fasst die Freien Wähler zusammen, die amtliche Statistik tut das
- * nicht — und der Unterschied ist groß genug, dass er dastehen muss.
+ * nicht, und der Unterschied ist groß genug, dass er dastehen muss.
  *
  * Die Freien Wähler sind keine Partei mit Ortsvereinen, sondern ein Verband
  * eigenständiger Wählergemeinschaften. Für die Statistik heißt das: eine
@@ -156,7 +157,7 @@ function freieWaehlerHinweis(datensatz) {
     text:
       `Die Freien Wähler sind hier als eine Liste gezählt: ${gruppe.sitze} Sitze aus ` +
       `${gruppe.teile?.length ?? 0} örtlichen Wahlvorschlägen, die den Namen führen. Die amtliche Statistik ` +
-      `zählt anders — unter „FREIE WÄHLER Bayern“ stehen dort nur ${amtlich} Sitze. Die übrigen sind ` +
+      `zählt anders, unter „FREIE WÄHLER Bayern“ stehen dort nur ${amtlich} Sitze. Die übrigen sind ` +
       `eigenständige Wählergemeinschaften und liegen in den Kategorien „Wählergruppen“ und „Gemeinsame ` +
       `Wahlvorschläge“. Beides ist richtig; die Zahlen sind nur nicht dasselbe.`,
   };
@@ -164,14 +165,14 @@ function freieWaehlerHinweis(datensatz) {
 
 /**
  * Kreistagswahl, je Gemeinde. Die einzige Wahl, bei der alle Gemeinden über
- * dieselben Listen abgestimmt haben — und damit die einzige, die sich zwischen
+ * dieselben Listen abgestimmt haben, und damit die einzige, die sich zwischen
  * ihnen ohne Vorbehalt vergleichen lässt. Sitze fallen im Kreistag an, nicht in
  * der Gemeinde; hier steht deshalb nur der Stimmenanteil.
  */
 function kreistag() {
   const gemeinden = Object.entries(kreistagQuellen).map(([ags, quelle]) => {
     // Gewinn und Verlust kommen aus der Vergleichsgrafik, nicht aus der Spalte
-    // daneben — siehe leseVergleich(). Geprüft wird beides gegeneinander: weicht
+    // daneben, siehe leseVergleich(). Geprüft wird beides gegeneinander: weicht
     // der Anteil der Grafik vom Anteil der Tabelle ab, stimmt eine Annahme nicht.
     const vorwahl = new Map((quelle.vergleich?.listen ?? []).map((l) => [l.name, l]));
     for (const l of quelle.listen) {
@@ -225,7 +226,7 @@ function ausAmtlich(sitze, stimmen) {
 /**
  * Ergebnis einer Gemeinde aus der Veröffentlichung ihrer Wahlleitung.
  *
- * Die Wahlleitungen zählen absolute Stimmen — bei bis zu vierzig Stimmen je
+ * Die Wahlleitungen zählen absolute Stimmen, bei bis zu vierzig Stimmen je
  * Wahlzettel sind das Zahlen, die sich zwischen Gemeinden nicht vergleichen
  * lassen. Die amtliche Statistik rechnet stattdessen mit gewichteten Stimmen und
  * gleicht dabei aus, dass eine Liste weniger Bewerber aufstellen kann als Sitze
@@ -245,7 +246,7 @@ function ausQuelle(quelle, gewichtetGesamt) {
       anteil,
       // Gewinn und Verlust stehen hier bewusst nicht. Die Gemeindeseiten führen
       // zwar eine Spalte dafür, aber keine Vergleichsgrafik, an der sie sich
-      // prüfen ließe — und auf den Kreistagsseiten derselben Software weicht
+      // prüfen ließe, und auf den Kreistagsseiten derselben Software weicht
       // genau diese Spalte bei sechs von neun Listen vom tatsächlichen Wert ab.
       // Eine Zahl, die man nicht nachrechnen kann, ist hier keine Zahl.
     };
@@ -261,7 +262,7 @@ function fertig(ebene, titel, gemeinden, quellenangaben) {
   }
 
   // Erst die Einzelsummen, denn die Gruppenzuordnung hängt an Sitzen und
-  // Gemeindezahl — und erst die Gruppe entscheidet, welche Farbe eine Liste
+  // Gemeindezahl, und erst die Gruppe entscheidet, welche Farbe eine Liste
   // bekommt. Was in einer Gruppe aufgeht, trägt deren Farbe, sonst widersprächen
   // sich Karte und Legende: die Legende zeigte ein Grau für „Gemeinsame
   // Wahlvorschläge“, die Karte dafür ein Violett.
@@ -287,7 +288,7 @@ function fertig(ebene, titel, gemeinden, quellenangaben) {
   // Zwei Arten von Farbkonflikt: Listen im selben Gremium liegen in der
   // Sitzansicht Feld an Feld, und die stärkste Liste zweier benachbarter
   // Gemeinden bildet in der Übersicht zwei aneinanderstoßende Blöcke. Beides
-  // muss sich unterscheiden — sonst sähen zwei verschiedene Wählergruppen wie
+  // muss sich unterscheiden, sonst sähen zwei verschiedene Wählergruppen wie
   // eine einzige über die Gemeindegrenze hinweg aus.
   const stärksteVon = new Map(gemeinden.map((g) => [g.ags, stärksteListe(g)]));
   const örtliche = faerbeÖrtliche(
@@ -297,7 +298,7 @@ function fertig(ebene, titel, gemeinden, quellenangaben) {
         ...nachbarschaft.map(([a, b]) => [stärksteVon.get(a), stärksteVon.get(b)].filter(Boolean)),
       ],
       // Was in der Übersicht stärkste Liste ist, steht in derselben Legende
-      // untereinander. Schön wäre eine eigene Farbe, nötig ist sie nicht — der
+      // untereinander. Schön wäre eine eigene Farbe, nötig ist sie nicht, der
       // Name steht daneben.
       weich: [[...new Set(stärksteVon.values())].filter(Boolean)],
     },
@@ -325,7 +326,7 @@ function fertig(ebene, titel, gemeinden, quellenangaben) {
       bisher.stimmen += eintrag.stimmen ?? 0;
       bisher.orte.add(gemeinde.ags);
       // Woraus die Gruppe besteht. Was in der amtlichen Statistik im Sammeltopf
-      // liegt, hat keinen Listennamen, den man nennen könnte — das wird gezählt,
+      // liegt, hat keinen Listennamen, den man nennen könnte: das wird gezählt,
       // nicht benannt, damit die Legende nicht mehr behauptet, als sie weiß.
       // Eine Parteispalte dagegen ist benannt, auch wenn sie aus GENESIS kommt.
       if (eintrag.art === "sammel") bisher.unbenannt += eintrag.sitze ?? 0;
@@ -340,12 +341,16 @@ function fertig(ebene, titel, gemeinden, quellenangaben) {
 
   const stimmenGesamt = [...gruppen.values()].reduce((a, l) => a + l.stimmen, 0);
   const listen = [...gruppen.values()]
-    .map(({ anteil, orte, teile, unbenannt, quellname, lang, veraenderung, ...l }) => ({
+    .map((l) => ({ ...l, skala: spanne(gemeinden, l.id), wandel: schwankung(gemeinden, l.id) }))
+    .map(({ anteil, orte, teile, unbenannt, quellname, lang, veraenderung, wandel, ...l }) => ({
       ...l,
       gemeinden: orte.size,
       anteil: runde((100 * l.stimmen) / stimmenGesamt),
+      // Die Skalen hängen allein an den Daten. Wer die Karte zeichnet, liest sie
+      // hier ab, statt sie noch einmal zu rechnen.
+      ...(wandel ? { wandel } : {}),
       // Die Legende soll auf Nachfrage sagen können, wer sich hinter „Freie
-      // Wähler" verbirgt — aber nur, wo es mehr als einen Namen zu nennen gibt.
+      // Wähler" verbirgt, aber nur, wo es mehr als einen Namen zu nennen gibt.
       ...(teile.size > 1 || unbenannt
         ? { teile: [...teile].sort((a, b) => b[1] - a[1]).map(([name, sitze]) => ({ name, sitze })) }
         : {}),
@@ -374,7 +379,7 @@ function beschreibeGruppe(gruppe, vorlage) {
 }
 
 /**
- * Die zweite Stufe des FW-Orange liegt der ÖDP nahe — näher, als zwei Farben
+ * Die zweite Stufe des FW-Orange liegt der ÖDP nahe, näher, als zwei Farben
  * nebeneinander liegen dürfen. Im Landkreis Freising stört das nicht, weil
  * beide nirgends im selben Rat sitzen. Das ist aber eine Eigenschaft dieser
  * Daten und keine des Verfahrens, also wird sie geprüft.
@@ -384,14 +389,14 @@ function pruefeOrangetopf(gemeinden, fwFarben) {
   for (const gemeinde of gemeinden) {
     const ids = gemeinde.ergebnis.map((e) => e.id);
     if (ids.includes("ÖDP") && ids.some((i) => gestuft.has(i))) {
-      abweichungen.push(`${gemeinde.ags} ${gemeinde.name}: zweite FW-Stufe trifft auf die ÖDP — die Farben liegen zu nah beieinander`);
+      abweichungen.push(`${gemeinde.ags} ${gemeinde.name}: zweite FW-Stufe trifft auf die ÖDP: die Farben liegen zu nah beieinander`);
     }
   }
 }
 
 /**
  * Zwei aneinandergrenzende Gemeinden, deren stärkste Listen verschieden sind,
- * aber gleich aussehen, verschmelzen in der Übersicht zu einem Klumpen — die
+ * aber gleich aussehen, verschmelzen in der Übersicht zu einem Klumpen, die
  * Karte behauptet dann eine Mehrheit, die es nicht gibt. Vier Farben für
  * einunddreißig örtliche Listen sind knapp genug, dass die Graphfärbung
  * scheitern kann; deshalb wird das Ergebnis geprüft und nicht angenommen.
@@ -411,7 +416,7 @@ function pruefeNachbarfarben(gemeinden, stärksteVon, farbeVon) {
 
 /**
  * Welche Zahl aus welcher Quelle stammt. Die Sitzverteilung ist überall
- * amtlich gedeckt — sie wird gegen GENESIS geprüft, sonst bricht der Lauf ab.
+ * amtlich gedeckt: sie wird gegen GENESIS geprüft, sonst bricht der Lauf ab.
  * Listennamen, Gewählte und Veränderungen gibt es nur dort, wo die Wahlleitung
  * der Gemeinde sie selbst veröffentlicht.
  */
@@ -427,7 +432,7 @@ function herkunft(gemeinden) {
 }
 
 /**
- * data/listen/<id>.csv — ags;liste;sitze;anteil, eine Zeile je Liste. Ergänzt
+ * data/listen/<id>.csv, ags;liste;sitze;anteil, eine Zeile je Liste. Ergänzt
  * die Gemeinden, für die es keine abrufbare Quelle gibt. Die Datei ist optional.
  */
 async function lieseNachpflege() {

@@ -6,20 +6,18 @@
     <title>Wahlkarten</title>
     <meta
       name="description"
-      content="Kommunalwahlergebnisse als Hexagon-Kartogramm — die Fläche einer Gemeinde ist die Größe ihres Gemeinderats."
+      content="Kommunalwahlergebnisse als Hexagon-Kartogramm: die Fläche einer Gemeinde ist die Größe ihres Gemeinderats."
     />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="src/ui/style.css" />
 
-    <!-- Der Kern kommt aus dem Schwesterprojekt. GitHub Pages liefert
-         Access-Control-Allow-Origin: *, der Import von hier funktioniert also,
-         ohne dass etwas gebaut oder mitgeliefert werden muss. -->
+    <!-- Gezeichnet wird von hexagonalmap, gerechnet nicht mehr: die Aufteilung
+         liegt als Datei bereit. Damit reicht der Zeichner, und der kommt von
+         GitHub Pages, wo Access-Control-Allow-Origin: * steht. -->
     <script type="importmap">
       {
         "imports": {
-          "hexagonalmap": "https://bagruber.github.io/hexagonalmap/src/core/hexmap.js",
-          "hexagonalmap/svg": "https://bagruber.github.io/hexagonalmap/src/core/svg.js",
-          "hexagonalmap/parts": "https://bagruber.github.io/hexagonalmap/src/core/parts.js"
+          "hexagonalmap/svg": "https://bagruber.github.io/hexagonalmap/src/core/svg.js"
         }
       }
     </script>
@@ -41,11 +39,19 @@
           <span class="feld-label" id="ansicht-label">Ansicht</span>
           <div class="segmented" role="radiogroup" aria-labelledby="ansicht-label" id="ansicht">
             <button type="button" role="radio" aria-checked="true" data-ansicht="stärkste">Stärkste Liste</button>
-            <button type="button" role="radio" aria-checked="false" data-ansicht="sitze">Sitzverteilung</button>
+            <button type="button" role="radio" aria-checked="false" data-ansicht="sitze" id="knopf-verteilung">Sitzverteilung</button>
             <button type="button" role="radio" aria-checked="false" data-ansicht="liste">Eine Liste</button>
             <button type="button" role="radio" aria-checked="false" data-ansicht="veränderung" id="knopf-veränderung">
               Gewinn und Verlust
             </button>
+          </div>
+        </div>
+
+        <div class="feld">
+          <span class="feld-label" id="grundlage-label">Fläche zeigt</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="grundlage-label" id="grundlage">
+            <button type="button" role="radio" aria-checked="true" data-grundlage="sitze">Sitze</button>
+            <button type="button" role="radio" aria-checked="false" data-grundlage="einwohner">Einwohner</button>
           </div>
         </div>
 

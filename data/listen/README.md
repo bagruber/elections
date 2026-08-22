@@ -14,6 +14,6 @@ ags;liste;sitze;anteil
 
 `anteil` ist der Stimmenanteil in Prozent, wie ihn die Gemeinde ausweist; die
 gewichteten Stimmen rechnet `baue.mjs` daraus zurück. Die Sitzsumme muss der
-amtlichen Zahl entsprechen — sonst bricht der Lauf ab.
+amtlichen Zahl entsprechen, sonst bricht der Lauf ab.
 
 Einträge hier gehen den abgerufenen Quellen vor.

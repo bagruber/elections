@@ -1,7 +1,7 @@
 // Wahlvorschläge: Schreibweisen vereinheitlichen, gruppieren, Farben vergeben.
 //
-// Zur Farbwahl: Parteifarben sind keine freie Entscheidung, sondern Konvention —
-// wer die CSU nicht schwarz und die SPD nicht rot färbt, macht die Karte
+// Zur Farbwahl: Parteifarben sind keine freie Entscheidung, sondern Konvention.
+// Wer die CSU nicht schwarz und die SPD nicht rot färbt, macht die Karte
 // schlechter lesbar, nicht besser. Die Werte hier sind die des Ratsinformations-
 // projekts council, damit dieselbe Partei in beiden Projekten dieselbe Farbe
 // trägt; zwei mussten für die Karte weichen und stehen unten begründet.
@@ -12,7 +12,7 @@
 // zuverlässig unterscheiden (ΔE ≥ 8 unter Farbfehlsichtigkeit, ≥ 15 bei
 // normalem Sehen, OKLab ×100). Im Landkreis Freising treten aber 31 örtliche
 // Listen an. Farbe kann sie nicht auseinanderhalten, und keine längere Leiter
-// ändert daran etwas — sie würde nur so tun. Deshalb zwei Konsequenzen:
+// ändert daran etwas: sie würde nur so tun. Deshalb zwei Konsequenzen:
 // zusammenfassen, was zusammengehört, und jede Fläche zusätzlich beschriften.
 
 /** Bundesweite Parteien mit ihren üblichen Farben. */
@@ -26,7 +26,7 @@ export const PARTEIEN = {
   FW: { name: "Freie Wähler", farbe: "#f28c15" },
   AfD: { name: "AfD", farbe: "#009de0" },
   // council führt die FDP als reines #ffed00. Auf Creme ist das ein Kontrast von
-  // 1,1:1 — die Fläche verschwindet. Tiefer geht es nicht: ab #d9bc00 kippt das
+  // 1,1:1: die Fläche verschwindet. Tiefer geht es nicht: ab #d9bc00 kippt das
   // Gelb ins Orange der Freien Wähler.
   FDP: { name: "FDP", farbe: "#e5c800" },
   LINKE: { name: "Die Linke", farbe: "#be3075" },
@@ -55,7 +55,7 @@ export const FEST = {
 };
 
 /**
- * Farbleiter für alle übrigen örtlichen Listen — die vier, die neben den
+ * Farbleiter für alle übrigen örtlichen Listen: die vier, die neben den
  * Parteifarben noch Platz haben. Vergeben werden sie per Graphfärbung: nur was
  * nebeneinander liegt, muss sich unterscheiden, und weit auseinanderliegende
  * Wählergruppen dürfen sich eine Farbe teilen.
@@ -64,7 +64,7 @@ export const ÖRTLICH = ["#2d47bc", "#7b2088", "#8861bc", "#c97b95"];
 
 /**
  * Zweite Stufe für den Fall, dass zwei Listen der Freien Wähler in einem Rat
- * sitzen — in Langenbach (FW und FWO) und Wang (FWI und FWV) ist das so. Beide
+ * sitzen, in Langenbach (FW und FWO) und Wang (FWI und FWV) ist das so. Beide
  * im selben Orange wären in der Sitzansicht ein Block statt zwei. Das Dunkelrot-
  * braun hält gegen das Orange ΔE 25, kommt aber der ÖDP nahe; dass die beiden
  * nie im selben Rat sitzen, prüft baue.mjs, statt es zu unterstellen.
@@ -87,7 +87,7 @@ const SYNONYME = [
 /**
  * Woran eine Partei in einem zusammengesetzten Listennamen zu erkennen ist.
  * Anders als SYNONYME muss das nicht den ganzen Namen treffen, sondern eine
- * Stelle darin — „Christlich-Soziale Union in Bayern e. V. / Freie Wähler
+ * Stelle darin, „Christlich-Soziale Union in Bayern e. V. / Freie Wähler
  * Kirchdorf" nennt zwei.
  */
 const MARKER = [
@@ -111,12 +111,12 @@ const rein = (name) =>
 
 /**
  * Vereinheitlicht eine Schreibweise. Was keiner Partei entspricht, bleibt als
- * eigene örtliche Liste erhalten — der Name ist dort die Information.
+ * eigene örtliche Liste erhalten: der Name ist dort die Information.
  *
  * @param {string} name  Kürzel oder Name, wie die Quelle ihn führt
  * @param {string} [lang] ausgeschriebener Name aus dem abbr-Titel der Quelle.
  *   Ohne ihn wäre „FWI" nicht von „FWO" zu trennen und nicht zu entscheiden, ob
- *   beide zu den Freien Wählern gehören — beide tun es.
+ *   beide zu den Freien Wählern gehören, beide tun es.
  * @returns {{ id, name, art: "partei"|"sammel"|"verbindung"|"örtlich", familie?, teile? }}
  */
 export function normalisiere(name, lang) {
@@ -138,7 +138,7 @@ export function normalisiere(name, lang) {
   const eigen = String(name).trim();
   const teile = parteienIn(`${eigen} ${lang ?? ""}`);
 
-  // Mehr als eine Partei im Namen — oder eine Partei plus etwas Örtliches — ist
+  // Mehr als eine Partei im Namen, oder eine Partei plus etwas Örtliches, ist
   // ein gemeinsamer Wahlvorschlag: „CSU/FW", „BfE, EM, ÖDP". Die Ausnahme sind
   // die Freien Wähler: „FREIE WÄHLER Bayern/Freie Wählergemeinschaft Mauern"
   // nennt zweimal dieselbe Familie und ist deshalb keine Verbindung zweier.
@@ -173,13 +173,13 @@ export function gruppeVon(liste, einzeln = 1) {
 
 /**
  * Vergibt Farben an die örtlichen Listen. Greedy über den Graphen der Listen,
- * die aneinanderstoßen — dieselbe Überlegung wie beim Färben angrenzender
+ * die aneinanderstoßen: dieselbe Überlegung wie beim Färben angrenzender
  * Gebiete: nur was nebeneinander liegt, muss sich unterscheiden.
  *
  * Zwei Arten von Bedingung, und sie sind nicht gleich viel wert. Zwei Listen im
  * selben Rat oder in benachbarten Gemeinden berühren sich auf der Karte: teilen
  * sie eine Farbe, verschmelzen sie zu einem Klumpen, und die Karte sagt etwas
- * Falsches. Zwei Listen in derselben Legende stehen nur untereinander — dort ist
+ * Falsches. Zwei Listen in derselben Legende stehen nur untereinander: dort ist
  * eine doppelte Farbe unschön, aber der Name daneben klärt sie auf. Bei vier
  * verfügbaren Farben und einunddreißig örtlichen Listen lassen sich nicht beide
  * Bedingungen erfüllen; also wird die harte zuerst bedient.
@@ -230,7 +230,7 @@ export function faerbeÖrtliche({ hart, weich = [] }, vorbelegt = {}) {
 }
 
 /**
- * Farben für die Listen der Freien Wähler. Alle tragen dasselbe Orange — die
+ * Farben für die Listen der Freien Wähler. Alle tragen dasselbe Orange, die
  * Ortsverbände sind eigenständig, gehören aber zusammen, und die Karte soll das
  * zeigen. Nur wo zwei von ihnen in einem Rat sitzen, bekommt die zweite eine
  * dunklere Stufe: gleiche Farbe hieße dort ein Block statt zwei.
