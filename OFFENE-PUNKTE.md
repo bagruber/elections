@@ -11,6 +11,9 @@ Alle Repos teilen sich einen pnpm-Store, der genau so weit dedupliziert, wie die
 Versionen uebereinstimmen. **Einzelne Pakete also nicht im Alleingang
 hochziehen** — das faellt allen anderen Repos zur Last.
 
+Die projektweiten Zielversionen stehen in `hausbasis/baseline.json`;
+`node ../hausbasis/check.mjs --kurz` zeigt, wo dieses Repo abweicht.
+
 ## Kein Build-Script
 
 Das Repo hat Dependencies, aber keinen `build`-Eintrag — die pnpm-Umstellung
