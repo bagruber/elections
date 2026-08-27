@@ -1,0 +1,62 @@
+name: Deploy auf moosburg.eu/data/wahlen/
+
+# Die Wahlkarte ist statisch und ohne Build-Step; ausgeliefert wird eine
+# zusammengestellte Auswahl: index.html, src/, die fertig gerechneten Daten
+# und der Zeichner hexagonalmap. Der kommt auf GitHub Pages per importmap
+# von bagruber.github.io — auf moosburg.eu verbietet das die
+# Content-Security-Policy der Domain (script-src 'self'), deshalb liegt er
+# in der Auslieferung lokal bei und die importmap wird umgeschrieben.
+# Bewusst im Workflow statt im Repo: der lokale Zeichner ist eine Eigenheit
+# dieses Hosts, die Pages-Variante bleibt unverändert.
+#
+# Braucht die Secrets FTP_HOST, FTP_USER, FTP_PASSWORD (dieselben wie in den
+# Geschwister-Repos); ohne sie scheitert der Spiegel-Schritt.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-data-wahlen
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - name: Auslieferung zusammenstellen
+        run: |
+          mkdir -p dist/data dist/vendor/hexagonalmap
+          cp index.html favicon.svg dist/
+          cp -r src dist/src
+          cp -r data/wahlen data/kartogramm dist/data/
+          cp node_modules/hexagonalmap/src/core/*.js dist/vendor/hexagonalmap/
+          sed -i 's|https://bagruber.github.io/hexagonalmap/src/core/svg.js|./vendor/hexagonalmap/svg.js|' dist/index.html
+          # Wenn die importmap in index.html eines Tages anders aussieht,
+          # soll der Deploy hier scheitern statt still die Pages-URL auszuliefern.
+          grep -q 'vendor/hexagonalmap/svg.js' dist/index.html
+
+      - name: Nach data/wahlen/ spiegeln
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./dist/
+          server-dir: data/wahlen/
+
+          # Alle Projekte teilen sich ein FTP-Konto. Kurz nach einer anderen
+          # Übertragung nimmt Hostinger die Verbindung verzögert an, und die
+          # 30 s Standard-Timeout der Action reichen dann nicht.
+          timeout: 120000
