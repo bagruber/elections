@@ -5,7 +5,9 @@ name: Deploy auf moosburg.eu/data/wahlen/
 # und der Zeichner hexagonalmap. Der kommt auf GitHub Pages per importmap
 # von bagruber.github.io — auf moosburg.eu verbietet das die
 # Content-Security-Policy der Domain (script-src 'self'), deshalb liegt er
-# in der Auslieferung lokal bei und die importmap wird umgeschrieben.
+# in der Auslieferung lokal bei. Die importmap selbst faellt dort auch unter
+# die CSP, weil sie inline steht; deshalb entfaellt sie, und der eine Import
+# zeigt direkt auf die lokale Kopie.
 # Bewusst im Workflow statt im Repo: der lokale Zeichner ist eine Eigenheit
 # dieses Hosts, die Pages-Variante bleibt unverändert.
 #
@@ -41,10 +43,13 @@ jobs:
           cp -r src dist/src
           cp -r data/wahlen data/kartogramm dist/data/
           cp node_modules/hexagonalmap/src/core/*.js dist/vendor/hexagonalmap/
-          sed -i 's|https://bagruber.github.io/hexagonalmap/src/core/svg.js|./vendor/hexagonalmap/svg.js|' dist/index.html
-          # Wenn die importmap in index.html eines Tages anders aussieht,
-          # soll der Deploy hier scheitern statt still die Pages-URL auszuliefern.
-          grep -q 'vendor/hexagonalmap/svg.js' dist/index.html
+          perl -0pi -e 's#\s*<script type="importmap">.*?</script>##s' dist/index.html
+          sed -i 's|from "hexagonalmap/svg"|from "../../vendor/hexagonalmap/svg.js"|' dist/src/kern/zeichne.js
+          # Scheitern statt still kaputt ausliefern: bleibt die Map stehen oder
+          # importiert ein Browser-Modul den Zeichner noch nackt, findet der
+          # Browser ihn auf moosburg.eu nicht. kern/karte.js laeuft nur in Node.
+          if grep -q importmap dist/index.html; then echo "Import Map noch in index.html"; exit 1; fi
+          if grep -rl '"hexagonalmap/' dist/src | grep -v 'kern/karte.js'; then echo "nackter Import uebrig"; exit 1; fi
 
       - name: Nach data/wahlen/ spiegeln
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
