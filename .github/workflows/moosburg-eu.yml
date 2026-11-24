@@ -52,7 +52,9 @@ jobs:
           if grep -rl '"hexagonalmap/' dist/src | grep -v 'kern/karte.js'; then echo "nackter Import uebrig"; exit 1; fi
 
       - name: Nach data/wahlen/ spiegeln
-        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        # v4.4.0, auf den Commit gepinnt: Ein verschobener Tag soll nicht
+        # unbemerkt anderen Code an das FTP-Passwort bringen.
+        uses: SamKirkland/FTP-Deploy-Action@110f9186c050f71550953127052e77650219c287
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
